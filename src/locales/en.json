@@ -1,9 +1,9 @@
 {
   "site": {
-    "name": "My Seafood Stand Wiki",
-    "shortName": "My Seafood Stand",
-    "tagline": "Complete Guides, Codes, Recipes & Tier Lists",
-    "description": "Your ultimate guide to My Seafood Stand on Roblox! Explore active codes, seafood recipes, best upgrades, profit strategies, and progression guides.",
+    "name": "Gladio Mori Wiki",
+    "shortName": "Gladio Mori",
+    "tagline": "Weapons, Armor, Combat Mechanics & Movesets",
+    "description": "Explore the Gladio Mori Wiki for weapons, armor, combat mechanics, movesets, PvP tips, multiplayer features, updates, and everything you need for the arena.",
     "legalNotice": "Non-official fan wiki. Made by players, for players."
   },
   "nav": {
@@ -26,23 +26,23 @@
   },
   "home": {
     "meta": {
-      "title": "My Seafood Stand Wiki — Codes, Recipes, Upgrades & Guides",
-      "description": "Complete My Seafood Stand guide on Roblox with active working codes, all fish & recipes, best upgrades tier list, and fast cash tips."
+      "title": "Gladio Mori Wiki — Weapons, Armor, Combat & Movesets",
+      "description": "Explore the Gladio Mori Wiki for weapons, armor, combat mechanics, movesets, PvP tips, multiplayer features, updates, and everything you need for the arena."
     },
     "hero": {
-      "eyebrow": "Fan-Made Community Wiki",
-      "title": "My Seafood Stand",
-      "description": "Master your restaurant in My Seafood Stand on Roblox. Access all active codes, complete fish & recipe catalog, optimal upgrades, and pro money-making strategies.",
+      "eyebrow": "Physics-Based Gladiator Combat",
+      "title": "Gladio Mori Wiki",
+      "description": "Gladio Mori is a physics-driven gladiator fighting game with organ-based damage, customizable movesets, brutal weapon combat, and up to four-player cross-platform PvP.",
       "stats": [
-        "All Codes",
-        "All Fish & Recipes",
-        "Upgrade Guides",
-        "Fast Cash Tips"
+        "1,149+ User Reviews",
+        "34 Weapons Available",
+        "17 Armor Pieces",
+        "4 Max Players"
       ],
-      "primaryCta": "Beginner Guide",
-      "secondaryCta": "Seafood Tier List",
-      "tertiaryCta": "Active Codes",
-      "videoLabel": "Official media"
+      "primaryCta": "Weapons & Combat Guide",
+      "secondaryCta": "Play on Steam",
+      "tertiaryCta": "Moveset Editor",
+      "videoLabel": "Official Trailer"
     },
     "updates": {
       "title": "Latest Updates",
@@ -180,7 +180,7 @@
       "cta": "Explore All Guides"
     },
     "explore": {
-      "title": "Explore My Seafood Stand Wiki",
+      "title": "Explore Gladio Mori Wiki",
       "description": "Master your seafood restaurant on Roblox with essential progression guides, active codes, complete fish & recipe catalogs, and optimal upgrade strategies.",
       "modules": [
         {
@@ -342,15 +342,15 @@
       ]
     },
     "finalCta": {
-      "title": "Ready to Master My Seafood Stand?",
-      "description": "From your first steps in Fort Adams to endgame boss fights our community wiki has you covered with free, up-to-date guides.",
-      "primary": "Read the Beginner Guide",
-      "secondary": "Play on Roblox"
+      "title": "Ready to Enter the Arena in Gladio Mori?",
+      "description": "Master brutal organ-based combat, customize lethal movesets, and dominate multiplayer matches with our community wiki guides.",
+      "primary": "Read the Combat Guide",
+      "secondary": "Play on Steam"
     }
   },
   "bosses": {
     "meta": {
-      "title": "Bosses — Complete Guide & Walkthrough | My Seafood Stand Wiki",
+      "title": "Bosses — Complete Guide & Walkthrough | Gladio Mori Wiki",
       "description": "Complete boss guides for My Seafood Stand — all bosses from tutorial Gelum to endgame encounters with strategies, drops, and respawn timers."
     },
     "overviewTitle": "Bosses Overview",
@@ -379,21 +379,21 @@
     "noGuidesAvailable": "No guides available yet. Check back soon!"
   },
   "footer": {
-    "aboutTitle": "My Seafood Stand Wiki",
-    "about": "My Seafood Stand Wiki is an independent fan-built guide hub covering progression routes, races, bosses, builds, and essential game knowledge for new and veteran players alike.",
+    "aboutTitle": "Gladio Mori Wiki",
+    "about": "Gladio Mori Wiki is an independent fan-built guide hub covering weapon stats, organ damage mechanics, moveset creation, arena tactics, and multiplayer strategies for new and veteran gladiators.",
     "quickLinks": "Quick Links",
     "guides": "Guides",
     "legal": "Legal",
-    "copyright": "2026 My Seafood Stand Wiki. Not affiliated with Midnight Continent or Roblox.",
-    "description": "Free Bleach-inspired fighting RPG on Roblox. 3 races, 130+ skills, Lv100 cap.",
-    "playGame": "Play My Seafood Stand",
-    "officialDiscord": "Official Discord",
+    "copyright": "2026 Gladio Mori Wiki. Not affiliated with Plebeian Studio.",
+    "description": "Physics-driven gladiator fighting game with organ-based damage, custom movesets, and multiplayer arena battles.",
+    "playGame": "Play Gladio Mori",
+    "officialDiscord": "Official Community",
     "officialYoutube": "Official YouTube",
-    "vvBuilder": "VV Builder (Skill Planner)",
+    "vvBuilder": "Moveset Editor",
     "beginnerGuide": "Beginner Guide",
-    "raceGuides": "Race Guides",
-    "bossGuides": "Boss Guides",
-    "buildGuide": "Build Guide",
+    "raceGuides": "Weapon Guides",
+    "bossGuides": "Combat Mechanics",
+    "buildGuide": "Moveset Guide",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service"
   }
