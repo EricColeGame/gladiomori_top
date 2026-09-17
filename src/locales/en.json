@@ -1,6 +1,6 @@
 {
   "site": {
-    "name": "Gladio Mori Wiki",
+    "name": "gladiomori Wiki",
     "shortName": "Gladio Mori",
     "tagline": "Weapons, Armor, Combat Mechanics & Movesets",
     "description": "Explore the Gladio Mori Wiki for weapons, armor, combat mechanics, movesets, PvP tips, multiplayer features, updates, and everything you need for the arena.",
@@ -34,27 +34,27 @@
     },
     "start": {
       "eyebrow": "Start Here",
-      "title": "Your My Seafood Stand Journey",
+      "title": "Your Gladio Mori Journey",
       "cards": [
         {
           "number": "1",
           "title": "Beginner Guide",
-          "description": "Master the Spirit World from day one with our comprehensive beginner guide covering controls, combat, and early progression."
+          "description": "Master the physics-based arena from day one with essential controls, movement, weapon handling, and survival basics."
         },
         {
           "number": "2",
-          "title": "Fastest Leveling",
-          "description": "Dominate early game and max your progression with the most efficient leveling routes and strategies."
+          "title": "Combat & Organ Damage",
+          "description": "Understand the realistic anatomy damage system, locational hits, bleed mechanics, and fatal strike principles."
         },
         {
           "number": "3",
-          "title": "Best Farming Spots",
-          "description": "Maximize your Soul Essence and EXP gains with optimal farming locations for every stage."
+          "title": "Move Editor Basics",
+          "description": "Create and customize lethal attack animations, string combos together, and build your personalized gladiator movesets."
         },
         {
           "number": "4",
-          "title": "How to Extract",
-          "description": "Learn the best methods and locations for extracting resources in My Seafood Stand."
+          "title": "Weapons & Equipment",
+          "description": "Compare 34 distinct weapons, shields, and modular armor sets within the equipment point budget for your build."
         }
       ]
     },
@@ -125,174 +125,268 @@
       ]
     },
     "aboutGame": {
-      "title": "What is My Seafood Stand?",
+      "title": "What is Gladio Mori?",
       "paragraphs": [
-        "My Seafood Stand is a stylized fighting RPG on Roblox inspired by the Bleach anime universe. Choose from three playable races Shinigami, Quincy, or Hollow each with unique progression systems, unlockable abilities, and evolution paths. Master over 130 skills as you fight your way to the level 100 cap.",
-        "Whether you're unlocking your first Shikai, evolving from a base Hollow into an Arrancar, or grinding Quincy Lieutenant missions, our wiki covers every system with detailed guides, data tables, and step-by-step walkthroughs."
+        "Gladio Mori is a physics-driven multiplayer gladiator fighting game developed by Plebeian Studio. Step into brutal arenas featuring a cutting-edge organ-based damage system where every slash, thrust, and blunt impact targets physical anatomy rather than a traditional health bar.",
+        "Craft your own attack moves using the comprehensive in-game animation move editor, equip 34 authentic weapons and modular armor sets, and engage in tactical arena battles across PC, PlayStation 5, and Xbox Series X|S with up to four-player cross-platform PvP."
       ],
       "stats": [
         {
           "label": "Developer",
-          "value": "Midnight Continent"
+          "value": "Plebeian Studio"
         },
         {
-          "label": "Platform",
-          "value": "Roblox"
+          "label": "Platforms",
+          "value": "PC, PS5, Xbox Series X|S"
         },
         {
           "label": "Genre",
-          "value": "Fighting RPG"
+          "value": "Physics Gladiator Combat"
         },
         {
-          "label": "Visits",
-          "value": "12.6M+"
+          "label": "Weapons Available",
+          "value": "34"
         },
         {
-          "label": "Favorites",
-          "value": "243K+"
+          "label": "Armor Pieces",
+          "value": "17"
         },
         {
-          "label": "Total Skills",
-          "value": "130+"
+          "label": "Max Players",
+          "value": "4 Players"
         },
         {
-          "label": "Level Cap",
-          "value": "100"
+          "label": "Steam Rating",
+          "value": "82% Positive"
         }
       ],
       "cta": "Explore All Guides"
     },
     "explore": {
       "title": "Explore Gladio Mori Wiki",
-      "description": "Master your seafood restaurant on Roblox with essential progression guides, active codes, complete fish & recipe catalogs, and optimal upgrade strategies.",
+      "description": "Master the physics-driven gladiator arena with complete weapon guides, custom moveset strategies, armor breakdowns, and multiplayer tactics.",
       "modules": [
         {
           "order": 1,
-          "name": "My Seafood Stand Working Codes",
-          "description": "Redeem the latest working codes to claim free coins, gems, exclusive cosmetics, and boost items before they expire.",
-          "href": "/codes/my-seafood-stand-codes",
-          "displayType": "code-box",
+          "name": "gladiomori Beginner Guide",
+          "description": "Master core physics combat, organ-based damage, dismemberment mechanics, and arena survival before entering multiplayer.",
+          "href": "/guide/gladiomori-beginner-guide",
+          "displayType": "step-by-step",
           "highlights": [
             {
-              "label": "Code",
-              "detail": "FULLRELEASE — Free Cash & Rewards"
+              "label": "1",
+              "detail": "Learn momentum-based movement, stamina pacing, and spacing"
             },
             {
-              "label": "Code",
-              "detail": "75KLIKES — Exclusive Ability Reroll"
+              "label": "2",
+              "detail": "Target vital organs and arteries instead of relying on health bars"
             },
             {
-              "label": "Tip",
-              "detail": "Codes are case-sensitive; enter them in the Settings menu"
+              "label": "3",
+              "detail": "Master directional parries, chamber blocks, and shield angles"
+            },
+            {
+              "label": "4",
+              "detail": "Manage equipment point budgets to balance agility and protection"
             }
           ]
         },
         {
           "order": 2,
-          "name": "Beginner Guide: How to Start & Serve Customers",
-          "description": "Step-by-step beginner guide covering customer ordering, food prep, station management, and cashier checkout mechanics.",
-          "href": "/guide/my-seafood-stand-beginner-guide",
-          "displayType": "feature-cards",
+          "name": "gladiomori Weapons",
+          "description": "Complete breakdown of all 34 weapons, attack characteristics, reach metrics, and optimal combat pairings.",
+          "href": "/combat/gladiomori-all-weapons",
+          "displayType": "tier-grid",
           "highlights": [
             {
-              "label": "Step 1",
-              "detail": "Take customer order at the stall front"
+              "label": "S",
+              "detail": "Longsword & Katana — Superior reach, versatile thrusts, and high lethal precision"
             },
             {
-              "label": "Step 2",
-              "detail": "Cook seafood on the grill or boil station"
+              "label": "A",
+              "detail": "Gladius & Scutum — Outstanding defense, rapid stabs, and reliable arena control"
             },
             {
-              "label": "Step 3",
-              "detail": "Serve warm food promptly for maximum customer tips"
+              "label": "B",
+              "detail": "Dane Axe & Warhammer — Heavy armor crushing power with deliberate recovery times"
+            },
+            {
+              "label": "C",
+              "detail": "Dagger & Short Spear — Agile close-quarters harassment requiring expert accuracy"
             }
           ]
         },
         {
           "order": 3,
-          "name": "Seafood & Fish Tier List",
-          "description": "Complete breakdown of all catchable fish and seafood ranked by market value, customer demand, and profit margins.",
-          "href": "/seafood/my-seafood-stand-tier-list",
-          "displayType": "tier-grid",
+          "name": "gladiomori Movesets",
+          "description": "Deep dive into the animation move editor: craft custom strikes, combine attacks into fluid combos, and test sequences.",
+          "href": "/mechanics/gladiomori-movesets",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "S Tier",
-              "detail": "King Crab · Lobster Boil — Highest profit per customer"
+              "label": "Editor",
+              "detail": "Frame-by-frame custom keyframe animation system"
             },
             {
-              "label": "A Tier",
-              "detail": "Salmon · Jumbo Shrimp · Tuna Steak — Reliable fast earners"
+              "label": "Combos",
+              "detail": "Chain light feints into devastating lethal finishers"
             },
             {
-              "label": "B Tier",
-              "detail": "Clams · Oysters · Squid — Great mid-game margin"
+              "label": "Momentum",
+              "detail": "Leverage physics velocity for maximum strike impact"
             },
             {
-              "label": "C Tier",
-              "detail": "Common Sardines · Small Crab — Starter seafood"
+              "label": "Presets",
+              "detail": "Load, export, and fine-tune community moveset templates"
+            },
+            {
+              "label": "Pugilist",
+              "detail": "Unarmed brawling techniques, sweeps, and throws"
+            },
+            {
+              "label": "Defense",
+              "detail": "Integrate active guard frames directly into attack recovery"
             }
           ]
         },
         {
           "order": 4,
-          "name": "Best Upgrades Progression",
-          "description": "Optimal order to spend your cash: expand kitchen stations, hire waitstaff, speed up grills, and upgrade seating.",
-          "href": "/upgrades/my-seafood-stand-best-upgrades",
-          "displayType": "feature-cards",
+          "name": "gladiomori Armor Guide",
+          "description": "Protect anatomical hitboxes with modular helmets, cuirasses, greaves, and shields balanced against equipment point weight.",
+          "href": "/items/gladiomori-armor",
+          "displayType": "tier-grid",
           "highlights": [
             {
-              "label": "Priority 1",
-              "detail": "Cooking Speed & Extra Burners — Clears customer backlog"
+              "label": "S",
+              "detail": "Heavy Steel Helmets — Total skull and facial protection against fatal decapitations"
             },
             {
-              "label": "Priority 2",
-              "detail": "Customer Seating Capacity — Increases simultaneous diners"
+              "label": "A",
+              "detail": "Segmented Cuirass & Greaves — Essential defense safeguarding heart, lungs, and limbs"
             },
             {
-              "label": "Priority 3",
-              "detail": "Auto-Chef / Waiter Staff — Passive hands-free revenue"
+              "label": "B",
+              "detail": "Medium Bronze Plate & Shields — Versatile balance between weight and organ coverage"
+            },
+            {
+              "label": "C",
+              "detail": "Light Leather Harness — Maximum movement speed and agility with minimal blunt absorption"
             }
           ]
         },
         {
           "order": 5,
-          "name": "How to Get Cash Fast",
-          "description": "Top money-making strategies, VIP evaluation, tip maximization, and high-efficiency serving tips.",
-          "href": "/guide/my-seafood-stand-how-to-get-cash-fast",
-          "displayType": "feature-cards",
+          "name": "gladiomori Game Modes",
+          "description": "Explore Campaign duels, competitive multiplayer, creative sandbox battles, endless waves, and custom tournament ladders.",
+          "href": "/modes/gladiomori-multiplayer",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "Combo",
-              "detail": "Chain orders quickly to build the Customer Happiness multiplier"
+              "label": "Campaign",
+              "detail": "Challenging single-player trials against progressive AI gladiators"
             },
             {
-              "label": "High Margin",
-              "detail": "Focus high-tier seafood boils during peak customer rush hours"
+              "label": "PvP",
+              "detail": "Brutal competitive duels and 4-player free-for-all showdowns"
             },
             {
-              "label": "Reinvest",
-              "detail": "Keep 20% cash reserve for fresh ingredient replenishment"
+              "label": "Creative",
+              "detail": "Unrestricted combat sandbox to experiment with moves and weapons"
+            },
+            {
+              "label": "Daily",
+              "detail": "Rotating daily duel challenges with competitive arena modifiers"
+            },
+            {
+              "label": "Local",
+              "detail": "Intense split-screen couch multiplayer for up to 4 gladiators"
+            },
+            {
+              "label": "Tournament",
+              "detail": "Structured bracket knockout matches to crown the champion"
             }
           ]
         },
         {
           "order": 6,
-          "name": "Plot Expansion & Stand Customization",
-          "description": "Unlock bigger land plots, arrange optimal cooking layouts, and add high-value decorative upgrades.",
-          "href": "/upgrades/my-seafood-stand-how-to-upgrade-plot",
-          "displayType": "feature-cards",
+          "name": "gladiomori Multiplayer Guide",
+          "description": "Set up online matches, invite friends across PC, PS5, and Xbox Series X|S, and optimize connection settings for smooth arena PvP.",
+          "href": "/modes/gladiomori-multiplayer",
+          "displayType": "step-by-step",
           "highlights": [
             {
-              "label": "Plot 1",
-              "detail": "Starter Beach Stand (3 Tables, 1 Grill)"
+              "label": "1",
+              "detail": "Select Multiplayer from the main menu and choose Host or Join Match"
             },
             {
-              "label": "Plot 2",
-              "detail": "Boardwalk Restaurant (6 Tables, 2 Grills, Boil Station)"
+              "label": "2",
+              "detail": "Configure cross-play lobbies supporting PC, PlayStation 5, and Xbox"
             },
             {
-              "label": "Plot 3",
-              "detail": "Luxury Pier Seafood Pavilion (Full Automation & VIP Seating)"
+              "label": "3",
+              "detail": "Set equipment point limits, round count, and selected arena hazard rules"
+            },
+            {
+              "label": "4",
+              "detail": "Ready up your custom movesets and enter the arena with up to 4 players"
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "name": "gladiomori Mods",
+          "description": "Discover community creations powered by mod.io: custom skins, unique arenas, community movesets, and texture packs.",
+          "href": "/items/gladiomori-custom-skins",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Skins",
+              "detail": "Equip community-crafted gladiator armor textures and outfits"
+            },
+            {
+              "label": "Arenas",
+              "detail": "Fight in custom community colosseums and hazard-filled pits"
+            },
+            {
+              "label": "Animations",
+              "detail": "Import shared movesets and custom fighting styles from mod.io"
+            },
+            {
+              "label": "Weapons",
+              "detail": "Test experimental weapons and balanced weapon re-skins"
+            },
+            {
+              "label": "Console",
+              "detail": "Cross-platform mod browsing support for PlayStation and Xbox"
+            },
+            {
+              "label": "Creation",
+              "detail": "Export and publish your custom content to the community hub"
+            }
+          ]
+        },
+        {
+          "order": 8,
+          "name": "gladiomori Updates",
+          "description": "Track official release patch notes, balance adjustments, upcoming console features, and roadmap announcements.",
+          "href": "/platforms/gladiomori-console-release",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Launch",
+              "detail": "Official 1.0 release on Steam PC, PlayStation 5, and Xbox Series X|S"
+            },
+            {
+              "label": "Roadmap",
+              "detail": "Upcoming console Move Editor updates, new arenas, and fresh weapons"
+            },
+            {
+              "label": "Patches",
+              "detail": "Regular physics stabilization, hitbox refinements, and netcode fixes"
+            },
+            {
+              "label": "Community",
+              "detail": "Featured community moveset highlights and tournament announcements"
             }
           ]
         }
@@ -300,27 +394,27 @@
     },
     "faq": {
       "title": "Frequently Asked Questions",
-      "description": "Quick answers to the most common questions about My Seafood Stand.",
+      "description": "Quick answers to the most common questions about Gladio Mori.",
       "items": [
         {
-          "question": "What is My Seafood Stand?",
-          "answer": "My Seafood Stand is a free-to-play fighting RPG on Roblox based on the Bleach anime. You choose one of game mechanics Shinigami (Soul Reaper), Quincy, or Hollow each with unique progression, combat abilities, and evolution systems. The game features 130+ skills, a level 100 cap, boss fights, and deep build customization."
+          "question": "What is Gladio Mori?",
+          "answer": "Gladio Mori is a physics-driven gladiator fighting game featuring realistic organ-based damage rather than conventional health bars. Developed by Plebeian Studio, Gladio Mori lets up to 4 players duel in brutal arenas using 34 weapons, customizable movesets, and full cross-play across PC, PS5, and Xbox Series X|S."
         },
         {
-          "question": "Which race should beginners pick?",
-          "answer": "Shinigami is the most straightforward starter race, while Hollow and Quincy offer more specialized progression routes. Compare their abilities before committing."
+          "question": "How does combat and damage work in Gladio Mori?",
+          "answer": "Combat in Gladio Mori is governed by true physics and anatomical hitboxes. Strikes wound specific body parts, sever arteries, cause internal bleeding, or pierce organs like the heart and brain, causing instantaneous collapse or rapid exhaustion."
         },
         {
-          "question": "What is the current level cap?",
-          "answer": "The current level cap is 100, with more than 130 skills available across trees and race progression systems."
+          "question": "Can you create custom moves in Gladio Mori?",
+          "answer": "Yes, Gladio Mori features an advanced in-game Move Editor that allows players to animate their own attacks, fine-tune keyframes, string fluid combos, and share custom movesets with the community."
         },
         {
-          "question": "Where do I find active codes?",
-          "answer": "Use the Codes page for working codes, rewards, expiration notes, and redeem instructions."
+          "question": "Does Gladio Mori support multiplayer and cross-play?",
+          "answer": "Yes, Gladio Mori supports up to 4-player battles including online PvP, local split-screen couch multiplayer, and full cross-platform play between PC, PlayStation 5, and Xbox Series X|S."
         },
         {
-          "question": "Are boss guides updated?",
-          "answer": "Boss pages are organized with spawn notes, attack patterns, strategies, drop tables, and related next steps for progression."
+          "question": "What weapons and armor are available in Gladio Mori?",
+          "answer": "Gladio Mori features 34 distinct weapons (including longswords, katanas, gladii, polearms, and daggers) and 17 armor pieces. Combatants balance protection and agility using an equipment point system."
         }
       ]
     },
@@ -336,7 +430,7 @@
     "activeCodes": "Active Codes",
     "updated": "Updated",
     "viewAllCodes": "View all codes",
-    "playOnRoblox": "Play on Roblox",
+    "playOnRoblox": "Play on Steam",
     "inThisSection": "In this section",
     "tableOfContents": "Table of Contents",
     "nextSteps": "Next Steps",
