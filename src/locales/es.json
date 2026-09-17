@@ -1,1 +1,364 @@
-{}
+{
+  "site": {
+    "name": "Gladio Mori Wiki",
+    "shortName": "Gladio Mori",
+    "tagline": "Guía Completa, Controles, Físicas & Estrategias de Combate",
+    "description": "La guía definitiva de la comunidad para Gladio Mori. Descubre físicas detalladas, guías de combate, armas, modos de juego y consejos para gladiadores.",
+    "legalNotice": "Gladio Mori Wiki es un sitio web no oficial creado por fans y no está afiliado con los desarrolladores ni editores del juego."
+  },
+  "nav": {
+    "guide": "Guía",
+    "mechanics": "Mecánicas",
+    "combat": "Combate",
+    "items": "Objetos",
+    "modes": "Modos",
+    "controls": "Controles",
+    "platforms": "Plataformas"
+  },
+  "home": {
+    "meta": {
+      "title": "Gladio Mori Wiki - Guía de Combate Cuerpo a Cuerpo & Físicas",
+      "description": "Domina Gladio Mori con nuestra guía completa. Aprende sobre físicas ragdoll, puntos vitales de órganos, armas, controles y tácticas de duelo."
+    },
+    "hero": {
+      "badge": "Guía Gladio Mori",
+      "title": "Domina la Arena en Gladio Mori",
+      "description": "Sumérgete en el innovador juego de lucha física multijugador. Aprende control muscular, posturas de armas, estocadas mortales y estrategias ganadoras.",
+      "primaryCta": "Jugar en Steam",
+      "secondaryCta": "Ver Guías",
+      "eyebrow": "GUÍA DE COMBATE GLADIO MORI",
+      "stats": [
+        "1,149+ User Reviews",
+        "34 Weapons Available",
+        "17 Armor Pieces",
+        "4 Max Players"
+      ],
+      "tertiaryCta": "Unirse a la comunidad",
+      "videoLabel": "Ver tráiler oficial"
+    },
+    "updates": {
+      "badge": "Artículos Recientes",
+      "title": "Últimas Guías & Novedades de Gladio Mori",
+      "description": "Mantente al día con las tácticas más recientes, actualizaciones de control y mecánicas de juego.",
+      "browse": "Explorar todas las guías",
+      "viewAll": "Ver todas las actualizaciones"
+    },
+    "start": {
+      "badge": "Comenzar",
+      "title": "Inicia tu Viaje en Gladio Mori",
+      "description": "Guías esenciales para principiantes y veteranos para sobrevivir en la implacable arena.",
+      "cards": [
+        {
+          "title": "Controles Básicos",
+          "description": "Domina la asignación de teclas, activación muscular y manejo del arma para un impacto devastador.",
+          "linkText": "Aprender Controles"
+        },
+        {
+          "title": "Físicas y Zonas de Impacto",
+          "description": "Comprende la física de muñeco de trapo, fracturas óseas y órganos vitales vulnerables.",
+          "linkText": "Entender Físicas"
+        },
+        {
+          "title": "Armas y Equipamiento",
+          "description": "Análisis detallado de hojas, armas de asta, escudos y su alcance en combate.",
+          "linkText": "Explorar Armas"
+        }
+      ],
+      "eyebrow": "GUÍA DE COMBATE GLADIO MORI"
+    },
+    "popular": {
+      "badge": "Temas Populares",
+      "title": "Guías Más Consultadas de Gladio Mori",
+      "description": "Las guías favoritas de la comunidad sobre técnicas avanzadas de combate y duelos en la arena.",
+      "eyebrow": "GUÍA DE COMBATE GLADIO MORI",
+      "quickLinks": [
+        "Hollow Progression",
+        "Fastest Leveling",
+        "Spirit Charms",
+        "All Boss Guides"
+      ],
+      "cards": [
+        {
+          "badge": "Beginner",
+          "title": "Beginner Guide",
+          "description": "Everything you need from your first login to mastering the basics of combat and progression.",
+          "href": "/beginner-guide"
+        },
+        {
+          "badge": "Updated",
+          "title": "Active Codes",
+          "description": "All working codes with rewards redeem before they expire.",
+          "href": "/codes"
+        },
+        {
+          "badge": "Updated",
+          "title": "Equipment Database",
+          "description": "94 items across 5 slots complete gear database with stats, rarity, and sources.",
+          "href": "/equipment"
+        },
+        {
+          "badge": "Popular",
+          "title": "Which Race Should You Pick?",
+          "description": "Shinigami, Quincy, or Hollow compare all three and find your perfect playstyle.",
+          "href": "/races/best-race"
+        },
+        {
+          "badge": "New",
+          "title": "Enemies & Monsters",
+          "description": "23 enemy types across 5 regions drops, locations, and farming tips.",
+          "href": "/enemies"
+        },
+        {
+          "badge": "Popular",
+          "title": "Boss Locations & Drops",
+          "description": "Every boss location, drop table, and respawn timer in one reference.",
+          "href": "/boss-locations-drops-respawn-times"
+        },
+        {
+          "badge": "Popular",
+          "title": "Best Builds",
+          "description": "Optimal stat allocation, skill tree picks, and Charm combos for every playstyle.",
+          "href": "/builds/best-builds"
+        },
+        {
+          "badge": "New",
+          "title": "Shikai Tier List",
+          "description": "All 6 Shinigami Shikai types ranked by PvP and PvE performance.",
+          "href": "/tier-list/shikai"
+        },
+        {
+          "badge": "New",
+          "title": "World Events Guide",
+          "description": "Supply Caches, Raids, and endgame world events with rare rewards.",
+          "href": "/world-events"
+        }
+      ]
+    },
+    "aboutGame": {
+      "badge": "Sobre el Juego",
+      "title": "¿Qué es Gladio Mori?",
+      "description": "Gladio Mori es un juego de combate gladiatorio multijugador basado en físicas, donde cada movimiento cuenta y cada impacto puede ser letal.",
+      "features": [
+        {
+          "title": "Simulación Física Precisa",
+          "description": "Sin animaciones predeterminadas: tu hoja sigue las leyes físicas, inercia y transferencia de momento."
+        },
+        {
+          "title": "Sistema de Órganos y Lesiones",
+          "description": "Modelo de daño con músculos, huesos y órganos vitales internos para un duelo hiperrealista."
+        },
+        {
+          "title": "Ataques Personalizados",
+          "description": "Crea tus propios movimientos y combos en el editor de animaciones y pruébalos en combate real."
+        },
+        {
+          "title": "Arena Multijugador",
+          "description": "Compite en línea o en local con amigos y demuestra tu maestría con el acero."
+        }
+      ],
+      "paragraphs": [
+        "Gladio Mori is a physics-driven multiplayer gladiator fighting game developed by Plebeian Studio. Step into brutal arenas featuring a cutting-edge organ-based damage system where every slash, thrust, and blunt impact targets physical anatomy rather than a traditional health bar.",
+        "Craft your own attack moves using the comprehensive in-game animation move editor, equip 34 authentic weapons and modular armor sets, and engage in tactical arena battles across PC, PlayStation 5, and Xbox Series X|S with up to four-player cross-platform PvP."
+      ],
+      "stats": [
+        {
+          "label": "Developer",
+          "value": "Plebeian Studio"
+        },
+        {
+          "label": "Platforms",
+          "value": "PC, PS5, Xbox Series X|S"
+        },
+        {
+          "label": "Genre",
+          "value": "Physics Gladiator Combat"
+        },
+        {
+          "label": "Weapons Available",
+          "value": "34"
+        },
+        {
+          "label": "Armor Pieces",
+          "value": "17"
+        },
+        {
+          "label": "Max Players",
+          "value": "4 Players"
+        },
+        {
+          "label": "Steam Rating",
+          "value": "82% Positive"
+        }
+      ],
+      "cta": "Explore All Guides"
+    },
+    "explore": {
+      "badge": "Explorar Contenido",
+      "title": "Módulos y Visión General de Gladio Mori",
+      "description": "Guías detalladas de mecánicas de combate, pasos de juego, modos y armamento.",
+      "modules": [
+        {
+          "name": "Gladio Mori Tutorial de Combate",
+          "type": "step-by-step",
+          "description": "Paso a paso para dominar la postura, distancia y sincronización en combate.",
+          "steps": [
+            {
+              "title": "Control de Distancia (Spacing)",
+              "description": "Mantén siempre la punta de tu arma entre tú y el oponente controlando el espacio de seguridad."
+            },
+            {
+              "title": "Uso de Inercia y Giro",
+              "description": "Gira todo el cuerpo al ejecutar el tajo para maximizar la energía cinética y penetración."
+            },
+            {
+              "title": "Ataque a Órganos Vitales",
+              "description": "Apunta a puntos vulnerables sin armadura como cuello, corazón o articulaciones para bajas inmediatas."
+            }
+          ]
+        },
+        {
+          "name": "Gladio Mori Arsenal de Armas",
+          "type": "tier-grid",
+          "description": "Categorías y atributos de las armas disponibles en Gladio Mori.",
+          "items": [
+            {
+              "name": "Espada Larga y Mandoble",
+              "description": "Excelente alcance y potencia de corte a dos manos para bloqueos y paradas seguras."
+            },
+            {
+              "name": "Estoques y Espadas de Punta",
+              "description": "Estocadas ultrarrápidas a órganos vitales con letal precisión a media distancia."
+            },
+            {
+              "name": "Dagas y Espadas Cortas",
+              "description": "Devastadoras en distancias muy cortas y agarres corporales tras cerrar la distancia."
+            },
+            {
+              "name": "Lanzas y Armas de Asta",
+              "description": "Dominio absoluto del espacio y ventaja de distancia frente a rivales agresivos."
+            }
+          ]
+        },
+        {
+          "name": "Gladio Mori Modos de Juego",
+          "type": "card-list",
+          "description": "Variantes y modalidades de combate disponibles.",
+          "items": [
+            {
+              "title": "Duelo 1 contra 1",
+              "description": "El clásico enfrentamiento honorable cara a cara en la arena sangrienta."
+            },
+            {
+              "title": "Todos contra Todos (FFA)",
+              "description": "Batallas caóticas con múltiples gladiadores compitiendo al mismo tiempo."
+            },
+            {
+              "title": "Combate por Equipos",
+              "description": "Coordinación táctica, flanqueos y defensa mutua en formación de equipo."
+            },
+            {
+              "title": "Modo Práctica y Editor",
+              "description": "Espacio libre para probar movimientos, maniquíes de prueba y editar técnicas propias."
+            }
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Preguntas Frecuentes sobre Gladio Mori",
+      "description": "Respuestas directas a las dudas más comunes sobre Gladio Mori.",
+      "items": [
+        {
+          "question": "¿Qué hace único el combate de Gladio Mori?",
+          "answer": "Gladio Mori no utiliza barras de vida genéricas ni animaciones pregrabadas; se basa completamente en físicas reales donde el daño depende de la velocidad del impacto y los órganos vitales alcanzados."
+        },
+        {
+          "question": "¿Se pueden crear movimientos personalizados?",
+          "answer": "¡Sí! El juego incluye un editor de animación integrado que permite diseñar tus propios ataques y compartirlos para usarlos en partidas."
+        },
+        {
+          "question": "¿Tiene Gladio Mori multijugador online?",
+          "answer": "Sí, incluye soporte completo para partidas multijugador en línea mediante Steam, así como juego en red local o Remote Play."
+        },
+        {
+          "question": "¿En qué plataformas se encuentra disponible Gladio Mori?",
+          "answer": "Gladio Mori está disponible actualmente para PC en la plataforma Steam. Los desarrolladores evalúan futuras plataformas."
+        }
+      ]
+    },
+    "finalCta": {
+      "badge": "Únete Ahora",
+      "title": "Forma Parte de la Comunidad de Gladio Mori",
+      "description": "Comparte tácticas, intercambia animaciones de combate y desafía a guerreros de todo el mundo.",
+      "primaryCta": "Gladio Mori en Steam",
+      "secondaryCta": "Explorar Guías",
+      "primary": "Gladio Mori en Steam",
+      "secondary": "Explorar guías"
+    }
+  },
+  "shared": {
+    "wikiNavigation": "Navegación Wiki",
+    "activeCodes": "Códigos Activos",
+    "updated": "Actualizado",
+    "viewAllCodes": "Ver todos los códigos",
+    "playOnRoblox": "Jugar en Steam",
+    "inThisSection": "En esta sección",
+    "tableOfContents": "Tabla de contenidos",
+    "nextSteps": "Siguientes pasos",
+    "needHelp": "¿Necesitas ayuda?",
+    "relatedReading": "Lecturas relacionadas",
+    "relatedGuides": "Guías relacionadas",
+    "readMore": "Leer más",
+    "officialMedia": "Medios oficiales",
+    "home": "Inicio",
+    "noGuidesAvailable": "No hay guías disponibles actualmente."
+  },
+  "footer": {
+    "aboutTitle": "Acerca de Gladio Mori Wiki",
+    "about": "Gladio Mori Wiki es un portal creado por la comunidad dedicado a guías, análisis de físicas y estrategias del juego Gladio Mori.",
+    "quickLinks": "Enlaces Rápidos",
+    "guides": "Guías",
+    "legal": "Legal",
+    "copyright": "Todos los derechos de Gladio Mori pertenecen a sus respectivos creadores.",
+    "description": "Tu recurso principal para dominar las tácticas de combate y las mecánicas de Gladio Mori.",
+    "playGame": "Juego en Steam",
+    "officialDiscord": "Discord Oficial",
+    "officialYoutube": "Canal Oficial de YouTube",
+    "vvBuilder": "Moveset Editor",
+    "beginnerGuide": "Beginner Guide",
+    "raceGuides": "Weapon Guides",
+    "bossGuides": "Combat Mechanics",
+    "buildGuide": "Moveset Guide",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "guide": {
+    "overviewTitle": "Guías y Consejos de Gladio Mori",
+    "overviewDescription": "Explora guías completas para Gladio Mori, desde consejos iniciales de supervivencia hasta avanzadas estrategias de combate."
+  },
+  "mechanics": {
+    "overviewTitle": "Físicas y Mecánicas de Gladio Mori",
+    "overviewDescription": "Análisis exhaustivo de la física ragdoll, órganos vitales, resistencia y cálculo de impacto en Gladio Mori."
+  },
+  "combat": {
+    "overviewTitle": "Combate y Tácticas en Gladio Mori",
+    "overviewDescription": "Domina posturas, paradas de hoja, control de distancia y ataques fulminantes en el combate de Gladio Mori."
+  },
+  "items": {
+    "overviewTitle": "Armas y Objetos en Gladio Mori",
+    "overviewDescription": "Catálogo completo de espadas, armas de asta, escudos y atributos de alcance en Gladio Mori."
+  },
+  "modes": {
+    "overviewTitle": "Modos de Juego y Arenas en Gladio Mori",
+    "overviewDescription": "Toda la información sobre duelos, todos contra todos, modos por equipos y el editor en Gladio Mori."
+  },
+  "controls": {
+    "overviewTitle": "Controles y Teclas de Gladio Mori",
+    "overviewDescription": "Mapeo de controles, configuraciones para mando y consejos de movimiento corporal en Gladio Mori."
+  },
+  "platforms": {
+    "overviewTitle": "Plataformas y Requisitos de Gladio Mori",
+    "overviewDescription": "Detalles sobre la versión de PC en Steam, requisitos del sistema y rendimiento de Gladio Mori."
+  }
+}

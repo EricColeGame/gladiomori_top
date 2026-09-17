@@ -1,1 +1,364 @@
-{}
+{
+  "site": {
+    "name": "Gladio Mori Wiki",
+    "shortName": "Gladio Mori",
+    "tagline": "総合攻略ガイド、操作方法、物理演算メカニクス＆戦闘戦略",
+    "description": "Gladio Moriの究極のコミュニティ攻略Wiki。物理演算、戦闘ガイド、武器、ゲームモード、決闘のヒントを徹底解説。",
+    "legalNotice": "Gladio Mori Wikiは非公式ファンサイトであり、ゲーム開発元および発売元とは一切関係ありません。"
+  },
+  "nav": {
+    "guide": "ガイド",
+    "mechanics": "メカニクス",
+    "combat": "戦闘",
+    "items": "アイテム",
+    "modes": "モード",
+    "controls": "操作方法",
+    "platforms": "プラットフォーム"
+  },
+  "home": {
+    "meta": {
+      "title": "Gladio Mori Wiki - 物理演算白兵戦ガイド＆戦略解説",
+      "description": "包括的なガイドでGladio Moriを極めよう。ラグドール物理演算、臓器命中判定、武器、操作方法、決闘戦術を網羅。"
+    },
+    "hero": {
+      "badge": "Gladio Mori 攻略ガイド",
+      "title": "Gladio Moriのアリーナを制覇せよ",
+      "description": "革新的な物理演算マルチプレイヤー剣戟アクションに参戦。筋肉の稼働、剣の構え、急所への刺突、あらゆる相手に対する勝利戦略を学ぼう。",
+      "primaryCta": "Steamでプレイ",
+      "secondaryCta": "ガイドを見る",
+      "eyebrow": "GLADIO MORI 攻略ガイド",
+      "stats": [
+        "1,149+ User Reviews",
+        "34 Weapons Available",
+        "17 Armor Pieces",
+        "4 Max Players"
+      ],
+      "tertiaryCta": "コミュニティに参加",
+      "videoLabel": "公式トレーラーを見る"
+    },
+    "updates": {
+      "badge": "最新記事",
+      "title": "最新 Gladio Mori ガイド＆アップデート情報",
+      "description": "最新の戦術、操作アップデート、ゲームシステムの変更点をいち早くお届けします。",
+      "browse": "すべてのガイドを見る",
+      "viewAll": "すべての更新を見る"
+    },
+    "start": {
+      "badge": "はじめに",
+      "title": "Gladio Moriの戦いを始めよう",
+      "description": "過酷なアリーナで生き残るために、初心者から上級者まで必読の基本ガイド。",
+      "cards": [
+        {
+          "title": "基本操作方法",
+          "description": "キー配置、筋肉の稼働、武器の振り方をマスターして最大の威力を発揮しよう。",
+          "linkText": "操作方法を学ぶ"
+        },
+        {
+          "title": "物理演算と急所判定",
+          "description": "ラグドール物理、骨折、致命的な急所臓器へのヒットシステムを理解しよう。",
+          "linkText": "物理システムを理解する"
+        },
+        {
+          "title": "武器と装備一覧",
+          "description": "長剣、刺突剣、長柄武器、盾の特徴や間合いを徹底比較。",
+          "linkText": "武器一覧を見る"
+        }
+      ],
+      "eyebrow": "GLADIO MORI 攻略ガイド"
+    },
+    "popular": {
+      "badge": "注目トピック",
+      "title": "人気の Gladio Mori ガイド",
+      "description": "コミュニティで最も閲覧されている高度な戦闘テクニックと決闘ガイド。",
+      "eyebrow": "GLADIO MORI 攻略ガイド",
+      "quickLinks": [
+        "Hollow Progression",
+        "Fastest Leveling",
+        "Spirit Charms",
+        "All Boss Guides"
+      ],
+      "cards": [
+        {
+          "badge": "Beginner",
+          "title": "Beginner Guide",
+          "description": "Everything you need from your first login to mastering the basics of combat and progression.",
+          "href": "/beginner-guide"
+        },
+        {
+          "badge": "Updated",
+          "title": "Active Codes",
+          "description": "All working codes with rewards redeem before they expire.",
+          "href": "/codes"
+        },
+        {
+          "badge": "Updated",
+          "title": "Equipment Database",
+          "description": "94 items across 5 slots complete gear database with stats, rarity, and sources.",
+          "href": "/equipment"
+        },
+        {
+          "badge": "Popular",
+          "title": "Which Race Should You Pick?",
+          "description": "Shinigami, Quincy, or Hollow compare all three and find your perfect playstyle.",
+          "href": "/races/best-race"
+        },
+        {
+          "badge": "New",
+          "title": "Enemies & Monsters",
+          "description": "23 enemy types across 5 regions drops, locations, and farming tips.",
+          "href": "/enemies"
+        },
+        {
+          "badge": "Popular",
+          "title": "Boss Locations & Drops",
+          "description": "Every boss location, drop table, and respawn timer in one reference.",
+          "href": "/boss-locations-drops-respawn-times"
+        },
+        {
+          "badge": "Popular",
+          "title": "Best Builds",
+          "description": "Optimal stat allocation, skill tree picks, and Charm combos for every playstyle.",
+          "href": "/builds/best-builds"
+        },
+        {
+          "badge": "New",
+          "title": "Shikai Tier List",
+          "description": "All 6 Shinigami Shikai types ranked by PvP and PvE performance.",
+          "href": "/tier-list/shikai"
+        },
+        {
+          "badge": "New",
+          "title": "World Events Guide",
+          "description": "Supply Caches, Raids, and endgame world events with rare rewards.",
+          "href": "/world-events"
+        }
+      ]
+    },
+    "aboutGame": {
+      "badge": "ゲーム概要",
+      "title": "Gladio Mori とは？",
+      "description": "Gladio Moriは、物理演算に基づいたマルチプレイヤー剣闘アクションゲームです。すべての挙動が物理に従い、一撃が致命傷となり得ます。",
+      "features": [
+        {
+          "title": "精密な物理演算シミュレーション",
+          "description": "定型のアニメーションはありません。剣の動きはすべて慣性と物理法則に従います。"
+        },
+        {
+          "title": "筋肉・臓器・負傷システム",
+          "description": "筋肉、骨、内臓器官までシミュレートされたダメージモデルによるリアルな白兵戦。"
+        },
+        {
+          "title": "カスタム攻撃技の作成",
+          "description": "アニメーションエディターで独自の構えや技を作成し、実戦に持ち込むことが可能。"
+        },
+        {
+          "title": "マルチプレイヤー闘技場",
+          "description": "オンラインやローカルでフレンドと対戦し、剣術の腕前を競い合おう。"
+        }
+      ],
+      "paragraphs": [
+        "Gladio Mori is a physics-driven multiplayer gladiator fighting game developed by Plebeian Studio. Step into brutal arenas featuring a cutting-edge organ-based damage system where every slash, thrust, and blunt impact targets physical anatomy rather than a traditional health bar.",
+        "Craft your own attack moves using the comprehensive in-game animation move editor, equip 34 authentic weapons and modular armor sets, and engage in tactical arena battles across PC, PlayStation 5, and Xbox Series X|S with up to four-player cross-platform PvP."
+      ],
+      "stats": [
+        {
+          "label": "Developer",
+          "value": "Plebeian Studio"
+        },
+        {
+          "label": "Platforms",
+          "value": "PC, PS5, Xbox Series X|S"
+        },
+        {
+          "label": "Genre",
+          "value": "Physics Gladiator Combat"
+        },
+        {
+          "label": "Weapons Available",
+          "value": "34"
+        },
+        {
+          "label": "Armor Pieces",
+          "value": "17"
+        },
+        {
+          "label": "Max Players",
+          "value": "4 Players"
+        },
+        {
+          "label": "Steam Rating",
+          "value": "82% Positive"
+        }
+      ],
+      "cta": "Explore All Guides"
+    },
+    "explore": {
+      "badge": "コンテンツ一覧",
+      "title": "Gladio Mori ゲーム概要＆主要モジュール",
+      "description": "戦闘システム、ステップガイド、ゲームモード、各種武器の解説。",
+      "modules": [
+        {
+          "name": "Gladio Mori 戦闘チュートリアル",
+          "type": "step-by-step",
+          "description": "間合い、構え、タイミングを極めるステップバイステップ手順。",
+          "steps": [
+            {
+              "title": "間合いの管理 (Spacing)",
+              "description": "常に切っ先を相手との間に置き、安全な戦闘距離を保ちます。"
+            },
+            {
+              "title": "慣性と体幹の回転",
+              "description": "腕だけでなく体全体を回転させてスイングし、運動エネルギーと威力を最大化します。"
+            },
+            {
+              "title": "急所への的確な一撃",
+              "description": "首、心臓、関節などの無防備な部位を正確に狙い、致命傷を与えます。"
+            }
+          ]
+        },
+        {
+          "name": "Gladio Mori 武器ラインナップ",
+          "type": "tier-grid",
+          "description": "ゲーム内に登場する各武器種の特徴と運用法。",
+          "items": [
+            {
+              "name": "長剣・両手剣",
+              "description": "リーチと切断力に優れ、両手持ちによる安定した受け流しが可能な万能武器。"
+            },
+            {
+              "name": "レイピア・刺突剣",
+              "description": "中距離から急所を電光石火で貫く、極めて高い刺突精度と速度を誇る武器。"
+            },
+            {
+              "name": "短剣・ダガー",
+              "description": "極至近距離や組み打ちで絶大な威力を発揮。相手の懐に潜り込む戦法に最適。"
+            },
+            {
+              "name": "槍・長柄武器",
+              "description": "圧倒的な射程の長さを誇り、突進してくる相手を安全圏から迎撃可能。"
+            }
+          ]
+        },
+        {
+          "name": "Gladio Mori ゲームモード",
+          "type": "card-list",
+          "description": "挑戦可能な戦闘モード一覧。",
+          "items": [
+            {
+              "title": "1対1 決闘",
+              "description": "闘技場の砂上で繰り広げられる伝統的かつ名誉ある一騎打ち。"
+            },
+            {
+              "title": "フリーフォーオール (FFA)",
+              "description": "複数の剣闘士が入り乱れる大乱戦サバイバルモード。"
+            },
+            {
+              "title": "チームデスマッチ",
+              "description": "味方との連携や挟撃が勝敗を分けるチーム対抗戦。"
+            },
+            {
+              "title": "練習モード＆エディター",
+              "description": "ダミー相手の技検証やオリジナル技のモーション作成ができるモード。"
+            }
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Gladio Mori に関するよくある質問",
+      "description": "Gladio Moriに関する主要な疑問に分かりやすく回答します。",
+      "items": [
+        {
+          "question": "Gladio Moriの戦闘システムの最大の特徴は何ですか？",
+          "answer": "Gladio Moriは事前定義されたヒット判定アニメーションを使わず、完全な物理演算で刃の衝突や威力を計算します。内部臓器へのダメージも精密に再現されます。"
+        },
+        {
+          "question": "オリジナルの攻撃モーションを作ることはできますか？",
+          "answer": "はい！ゲーム内のアニメーションエディターを使用して独自の斬撃や刺突技を作成し、オンラインマッチで実際に使用できます。"
+        },
+        {
+          "question": "オンラインマルチプレイに対応していますか？",
+          "answer": "はい、Steamを通じたオンライン対戦、ローカル対戦、Remote Play Togetherに対応しています。"
+        },
+        {
+          "question": "どのプラットフォームでプレイできますか？",
+          "answer": "現在はPC（Steam）にて配信されています。"
+        }
+      ]
+    },
+    "finalCta": {
+      "badge": "今すぐ参戦",
+      "title": "Gladio Mori コミュニティに参加しよう",
+      "description": "戦術を研究し、モーションデータを共有し、世界中のプレイヤーと腕を競い合いましょう。",
+      "primaryCta": "SteamでGladio Moriを入手",
+      "secondaryCta": "ガイド一覧へ",
+      "primary": "SteamでGladio Moriを入手",
+      "secondary": "ガイド一覧へ"
+    }
+  },
+  "shared": {
+    "wikiNavigation": "Wikiナビゲーション",
+    "activeCodes": "有効な引き換えコード",
+    "updated": "更新日",
+    "viewAllCodes": "すべてのコードを見る",
+    "playOnRoblox": "Steamでプレイ",
+    "inThisSection": "このセクションの内容",
+    "tableOfContents": "目次",
+    "nextSteps": "次のステップ",
+    "needHelp": "サポートが必要ですか？",
+    "relatedReading": "関連記事",
+    "relatedGuides": "関連ガイド",
+    "readMore": "続きを読む",
+    "officialMedia": "公式メディア",
+    "home": "ホーム",
+    "noGuidesAvailable": "現在利用可能なガイドはありません。"
+  },
+  "footer": {
+    "aboutTitle": "Gladio Mori Wiki について",
+    "about": "Gladio Mori Wikiは、物理演算剣闘アクションGladio Moriのガイド、戦略、物理システム解説を提供するファン運営ポータルです。",
+    "quickLinks": "クイックリンク",
+    "guides": "ガイド一覧",
+    "legal": "法的情報",
+    "copyright": "Gladio Moriのすべての権利は原著作権者に帰属します。",
+    "description": "Gladio Moriの戦闘戦術とメカニクスを極めるための情報源。",
+    "playGame": "Steamでプレイ",
+    "officialDiscord": "公式Discord",
+    "officialYoutube": "公式YouTube",
+    "vvBuilder": "Moveset Editor",
+    "beginnerGuide": "Beginner Guide",
+    "raceGuides": "Weapon Guides",
+    "bossGuides": "Combat Mechanics",
+    "buildGuide": "Moveset Guide",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "guide": {
+    "overviewTitle": "Gladio Mori 初心者＆攻略ガイド",
+    "overviewDescription": "基本の立ち回りから高度な決闘戦術まで、Gladio Moriの総合攻略ガイドをお届けします。"
+  },
+  "mechanics": {
+    "overviewTitle": "Gladio Mori 物理演算＆システムメカニクス",
+    "overviewDescription": "ラグドール物理、臓器急所、スタミナ、ダメージ計算の詳細解説。"
+  },
+  "combat": {
+    "overviewTitle": "Gladio Mori 戦闘技術＆戦術解説",
+    "overviewDescription": "構え、受け流し、間合いの掌握、致命的なコンボなどGladio Moriの戦闘術。"
+  },
+  "items": {
+    "overviewTitle": "Gladio Mori 武器＆装備一覧",
+    "overviewDescription": "長剣、刺突剣、長柄武器、盾などの性能と射程特性を網羅。"
+  },
+  "modes": {
+    "overviewTitle": "Gladio Mori ゲームモード＆闘技場一覧",
+    "overviewDescription": "1対1決闘、乱戦、チーム戦、カスタムエディターの解説。"
+  },
+  "controls": {
+    "overviewTitle": "Gladio Mori 操作方法＆キー割り当て",
+    "overviewDescription": "キーボード＆マウス操作、コントローラー設定、直感的な身体操作のコツ。"
+  },
+  "platforms": {
+    "overviewTitle": "Gladio Mori 対応プラットフォーム＆動作環境",
+    "overviewDescription": "Steam版PC動作環境、パフォーマンス最適化設定などの情報。"
+  }
+}
