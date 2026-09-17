@@ -51,17 +51,25 @@
         {
           "title": "Grundlegende Steuerung",
           "description": "Meistern Sie Tastenbelegungen, Muskelaktivierung und Waffenführung für maximale Schlagkraft.",
-          "linkText": "Steuerung lernen"
+          "linkText": "Steuerung lernen",
+          "number": "1"
         },
         {
           "title": "Physik & Trefferzonen",
           "description": "Verstehen Sie die Ragdoll-Physik, Knochenbrüche und lebenswichtige Organ-Trefferzonen.",
-          "linkText": "Physik verstehen"
+          "linkText": "Physik verstehen",
+          "number": "2"
         },
         {
           "title": "Waffen & Ausrüstung",
           "description": "Detaillierte Übersicht aller Klingen, Stangenwaffen, Schilde und ihrer spezifischen Reichweiten.",
-          "linkText": "Waffen ansehen"
+          "linkText": "Waffen ansehen",
+          "number": "3"
+        },
+        {
+          "number": "4",
+          "title": "Waffen & Ausrüstung",
+          "description": "Vergleichen Sie 34 einzigartige Waffen, Schilde und modulare Rüstungssets innerhalb des Ausrüstungspunkte-Budgets."
         }
       ],
       "eyebrow": "GLADIO MORI KAMPF-GUIDE"
@@ -214,6 +222,27 @@
               "title": "Präzise Treffer platzieren",
               "description": "Zielen Sie auf ungeschützte Schwachstellen wie Hals, Herz oder Gelenke für sofortige Wirkung."
             }
+          ],
+          "order": 1,
+          "href": "/guide/gladiomori-beginner-guide",
+          "displayType": "step-by-step",
+          "highlights": [
+            {
+              "label": "1",
+              "detail": "Learn momentum-based movement, stamina pacing, and spacing"
+            },
+            {
+              "label": "2",
+              "detail": "Target vital organs and arteries instead of relying on health bars"
+            },
+            {
+              "label": "3",
+              "detail": "Master directional parries, chamber blocks, and shield angles"
+            },
+            {
+              "label": "4",
+              "detail": "Manage equipment point budgets to balance agility and protection"
+            }
           ]
         },
         {
@@ -237,6 +266,27 @@
               "name": "Stangenwaffen & Speere",
               "description": "Maximale Distanzvorteile und Zonenbeherrschung gegen anstürmende Kontrahenten."
             }
+          ],
+          "order": 2,
+          "href": "/combat/gladiomori-all-weapons",
+          "displayType": "tier-grid",
+          "highlights": [
+            {
+              "label": "S",
+              "detail": "Longsword & Katana — Superior reach, versatile thrusts, and high lethal precision"
+            },
+            {
+              "label": "A",
+              "detail": "Gladius & Scutum — Outstanding defense, rapid stabs, and reliable arena control"
+            },
+            {
+              "label": "B",
+              "detail": "Dane Axe & Warhammer — Heavy armor crushing power with deliberate recovery times"
+            },
+            {
+              "label": "C",
+              "detail": "Dagger & Short Spear — Agile close-quarters harassment requiring expert accuracy"
+            }
           ]
         },
         {
@@ -259,6 +309,35 @@
             {
               "title": "Trainingsmodus & Editor",
               "description": "Freies Experimentieren mit Trefferzonen, Dummies und dem benutzerdefinierten Move-Editor."
+            }
+          ],
+          "order": 3,
+          "href": "/mechanics/gladiomori-movesets",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Editor",
+              "detail": "Frame-by-frame custom keyframe animation system"
+            },
+            {
+              "label": "Combos",
+              "detail": "Chain light feints into devastating lethal finishers"
+            },
+            {
+              "label": "Momentum",
+              "detail": "Leverage physics velocity for maximum strike impact"
+            },
+            {
+              "label": "Presets",
+              "detail": "Load, export, and fine-tune community moveset templates"
+            },
+            {
+              "label": "Pugilist",
+              "detail": "Unarmed brawling techniques, sweeps, and throws"
+            },
+            {
+              "label": "Defense",
+              "detail": "Integrate active guard frames directly into attack recovery"
             }
           ]
         }
