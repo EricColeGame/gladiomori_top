@@ -1,0 +1,130 @@
+export const metadata = {
+  title: "Guía de pantalla dividida en Gladio Mori: Configuración y modos multijugador local",
+  description: "Aprende cómo funcionan la pantalla dividida y el multijugador local en Gladio Mori. Descubre configuraciones de hardware, consejos para combos y detalles del juego local vs. online.",
+  category: "modes",
+  date: "2026-09-18",
+}
+
+Dominar el combate con espadas basado en físicas es infinitamente más gratificante cuando tu oponente está sentado justo a tu lado en el sofá. Empezar a jugar con la **pantalla dividida de Gladio Mori** te ofrece una arena inmediata y sin latencia para poner a prueba tus animaciones de ataque personalizadas contra tus amigos. Ya sea que quieras practicar paradas tácticas u organizar un torneo en el salón, configurar adecuadamente la **pantalla dividida de Gladio Mori** garantiza tasas de fotogramas fluidas, una correcta asignación de mandos y partidas equilibradas.
+
+En esta guía en profundidad, desglosamos todo lo que necesitas saber sobre la acción versus local, optimización de rendimiento, solución de problemas con los mandos y las limitaciones confirmadas por el desarrollador entre salas offline y online.
+
+---
+
+## Cómo funcionan el multijugador local y la pantalla dividida en Gladio Mori
+
+*Gladio Mori* destaca sobre los juegos de lucha tradicionales gracias a su profundo editor modular de movimientos y sus físicas de ragdoll modeladas anatómicamente. Debido a que la detección de impactos depende del contacto real del arma, la velocidad de la hoja y el impacto óseo, disputar combates de forma local proporciona el entorno competitivo más puro posible. No existe jitter de red, artefactos de rollback ni desincronización entre clientes.
+
+El modo multijugador local divide la vista de forma dinámica o fija el encuadre de la cámara para que ambos luchadores tengan una visibilidad total sobre sus posturas y distancias. Al preparar una sesión en el sofá, comprender la configuración de pantalla y controles te evitará molestos bloqueos de entrada a mitad del combate.
+
+### Resumen del modo versus local
+
+| Característica | Juego local en sofá | Salas online |
+| :--- | :--- | :--- |
+| **Latencia de entrada** | Submilisegundo (directa por hardware) | Variable (ping de red + búfer) |
+| **Jugadores locales simultáneos** | Hasta 2 luchadores (duelo estándar) | 1 por equipo cliente |
+| **Soporte de movimientos personalizados** | Sí (cargados desde guardados locales) | Sí (sincronización verificada de movimientos) |
+| **Carga de hardware** | Moderada (renderizado de dos perspectivas) | Baja a moderada (una sola vista) |
+| **Cambio de equipamiento** | Requiere reiniciar sala o ronda | Gestionado en cada reinicio de combate |
+
+Para consultar los parches de equilibrio más recientes, devlogs y compilaciones verificadas, visita el [Punto de encuentro de la comunidad de Gladio Mori en Steam](https://steamcommunity.com/app/2689120) y mantén tu cliente local totalmente actualizado.
+
+---
+
+## Pantalla dividida vs. Multijugador online en Gladio Mori: ¿Qué está admitido?
+
+Una duda habitual entre los jugadores es si dos personas pueden jugar juntas en un mismo PC y unirse a servidores de emparejamiento público. Los debates en los foros oficiales han aclarado esta cuestión de forma precisa.
+
+Según los informes de la comunidad y las declaraciones confirmadas del desarrollador del juego, RedDuelist, el título gestiona los entornos local y online como estructuras completamente independientes. En concreto, no es posible jugar en la **pantalla dividida de Gladio Mori** dentro de una sala de emparejamiento online activa. El multijugador local es estrictamente offline para preservar la integridad de la sincronización.
+
+### Matriz comparativa de modos
+
+| Funcionalidad multijugador | Estado de soporte | Notas del desarrollador / Contexto de la comunidad |
+| :--- | :--- | :--- |
+| **Pantalla dividida local pura** | Totalmente admitida | Mandos plug-and-play para duelos 1v1 locales |
+| **Híbrido local + online (combo)** | No admitido | El desarrollador RedDuelist confirmó que el online es de un solo cliente |
+| **Steam Remote Play Together** | Solución funcional | Retransmite tu pantalla local a un amigo online |
+| **Cambio de arma a mitad de partida** | Limitado | Actualmente requiere reiniciar la instancia del combate |
+| **Espectador en pantalla compartida** | Admitido | Los mandos no utilizados pueden alternar el control entre rondas |
+
+Aunque algunos jugadores han solicitado la integración combinada de local y online, el motor basado en físicas impone exigencias muy estrictas a la tasa de refresco de la simulación (tick rate). Si deseas luchar con un amigo que está lejos sin invitarlo a casa, Steam Remote Play Together ofrece una alternativa viable al retransmitir tu pantalla local directamente a su monitor.
+
+---
+
+## Configuración paso a paso para jugar en pantalla dividida local
+
+Preparar el juego para un enfrentamiento cara a cara solo lleva unos minutos, pero configurar los controles correctamente de antemano evita conflictos entre dispositivos. Sigue este flujo sistemático para iniciar tu sesión.
+
+### Lista de comprobación para la configuración
+
+1. **Conectar los mandos principales**: Conecta dos mandos compatibles con XInput (como mandos de Xbox Series X/S o DualSense) antes de iniciar el cliente del juego.
+2. **Configurar Steam Input**: Abre los ajustes de Steam, ve a la pestaña Mando y asegúrate de desactivar las configuraciones de escritorio estándar para evitar pulsaciones duplicadas de botones.
+3. **Iniciar el juego**: Entra en el menú principal y selecciona el modo de duelo/versus local.
+4. **Asignar perfiles**: Asigna al Jugador 1 y al Jugador 2 sus respectivos perfiles de control y combinaciones de animaciones personalizadas.
+5. **Ajustar la escala de resolución**: Si el rendimiento de tu hardware baja de 60 fotogramas por segundo al renderizar pantallas divididas, reduce el detalle de sombras y la persistencia de los ragdolls.
+
+### Configuraciones del sistema recomendadas para una pantalla dividida fluida
+
+Renderizar dos perspectivas simultáneas en un título con físicas complejas exige más llamadas de dibujado de GPU y CPU que los modos para un jugador. A continuación se muestran los perfiles de hardware que garantizan una experiencia sólida a más de 60 FPS durante los intercambios más intensos.
+
+| Nivel de hardware | Resolución objetivo | GPU recomendada | CPU recomendada | Rendimiento esperado |
+| :--- | :--- | :--- | :--- | :--- |
+| **Gama mínima para salón** | 1080p a 60 FPS | GTX 1660 Super / RX 5600 XT | Ryzen 5 3600 / Core i5-10400 | 60 FPS sólidos, sombras bajas |
+| **Especificaciones esports óptimas** | 1440p a 120 FPS | RTX 3070 / RX 6700 XT | Ryzen 7 5800X / Core i5-12600K | 120 FPS bloqueados, ragdolls al máximo |
+| **TV 4K para salón** | 4K (2160p) a 60 FPS | RTX 4070 / RX 7800 XT | Ryzen 7 7800X3D / Core i7-13700K | 60 FPS cinematográficos en pantalla grande |
+
+---
+
+## Optimización de conjuntos de movimientos para combates en sofá
+
+El punto fuerte del juego reside en su suite de animaciones, donde los jugadores crean manualmente golpes, fintas, estocadas y paradas. Al iniciar una partida en la **pantalla dividida de Gladio Mori**, contar con un arsenal optimizado aumentará notablemente tu tasa de victorias frente a un rival que observa cada uno de tus movimientos.
+
+En una partida a pantalla dividida, tu adversario puede anticipar visualmente tus fotogramas de inicio a través de la división del monitor. Dado que mirar la pantalla del rival es una realidad inevitable de los combates en el sofá, debes diseñar conjuntos de movimientos centrados en recuperaciones rápidas y datos de fotogramas engañosos en lugar de ataques con preparaciones largas y predecibles.
+
+### Arquetipos de ataque esenciales para el juego local
+
+| Arquetipo de ataque | Tipo de arma ideal | Velocidad de inicio (Frames) | Riesgo de recuperación | Objetivo estratégico |
+| :--- | :--- | :--- | :--- | :--- |
+| **Estocada seca y rápida** | Estoque / Espada corta | Muy rápida (10-15 frames) | Bajo | Castigar golpes al aire amplios a través de la guardia central |
+| **Corte descendente vertical** | Espadón / Claymore | Moderada (25-35 frames) | Alto | Romper guardias bajas y provocar derribos |
+| **Finta de barrido bajo** | Sable curvado | Cancelación rápida | Medio | Provocar paradas antes de redirigir a un corte |
+| **Parada de cámara defensiva** | Cualquier escudo/hoja | Ventana activa inmediata | Extremo en caso de fallo | Contrarrestar a quienes abusan de cortes a gran velocidad |
+
+### Consejos estratégicos para duelos en el sofá
+
+- **Enmascara tu postura**: Varía la posición de tus pies de forma impredecible. Dado que tu amigo puede ver tus acciones y tu postura, alternar entre guardia alta y baja evitará que anticipe paradas.
+- **Prioriza la penetración de armadura**: Si vuestras reglas locales permiten placas de armadura pesada, los golpes contundentes o las estocadas estrechas dirigidas a la ranura del visor garantizan incapacitaciones limpias de un solo golpe.
+- **Gestiona la resistencia con cabeza**: Pasarte de la raya con golpes de gran daño dejará a tu luchador exhausto, dejando una ventana de ejecución sencilla para un oponente atento.
+
+---
+
+## Solución de problemas comunes en pantalla dividida local
+
+Incluso en equipos PC potentes, gestionar dos mandos a través de una interfaz de pantalla dividida puede ocasionar conflictos ocasionales de dispositivos o problemas de controladores. Utiliza esta tabla diagnóstica para resolver rápidamente cualquier inconveniente.
+
+### Guía de diagnóstico y soluciones
+
+| Síntoma | Causa raíz | Solución práctica inmediata |
+| :--- | :--- | :--- |
+| **Ambos mandos controlan al Jugador 1** | Asignación duplicada de XInput/DirectInput | Desactiva el soporte de mando genérico en Steam; activa únicamente la configuración de Xbox. |
+| **Fluidez desigual de fotogramas o microtirones** | Sobrecarga de la GPU por el dibujado de doble vista | Reduce la resolución de sombras dinámicas y bloquea la tasa de refresco desde el Panel de control de Nvidia o AMD Adrenalin. |
+| **El segundo jugador no puede elegir movimientos personalizados** | Restricciones de lectura en la carpeta de animaciones de usuario | Asegúrate de que los archivos de animación residan en el directorio compartido accesible para todos los perfiles locales. |
+| **Un mando se desconecta en mitad de la ronda** | Modo de ahorro de energía USB que suspende los puertos | Ve al Administrador de dispositivos de Windows -> Controladoras de bus serie universal -> Propiedades -> Desmarca "Permitir que el equipo apague este dispositivo". |
+
+Aplicando estas rápidas soluciones, tus partidas en la **pantalla dividida de Gladio Mori** mantendrán una respuesta excelente, serán justas y estarán libres de desconexiones inesperadas.
+
+---
+
+## Preguntas frecuentes
+
+### ¿Se puede jugar a pantalla dividida en Gladio Mori online contra oponentes aleatorios?
+No. Tal como confirman los informes de la comunidad y las comunicaciones de los desarrolladores, el juego local es estrictamente offline. No es posible ejecutar una configuración de pantalla dividida y unirse simultáneamente a un servidor de emparejamiento online. Si quieres jugar con un amigo que está en otra ubicación, deberás recurrir a Steam Remote Play Together.
+
+### ¿Cuántos jugadores pueden jugar a Gladio Mori en una sola pantalla?
+Actualmente, los combates locales estándar están diseñados para duelos 1v1. La vista se divide o se ajusta para ofrecer a los dos jugadores una conciencia espacial total que les permita gestionar las distancias y los tiempos de sus armas.
+
+### ¿Funcionan correctamente los movimientos personalizados en la pantalla dividida de Gladio Mori?
+Sí. Ambos combatientes pueden seleccionar sus cadenas de ataque personalizadas y posturas defensivas en la pantalla de selección de personaje antes de iniciar la ronda, siempre que los archivos estén guardados en el PC anfitrión.
+
+### ¿Por qué el juego no detecta el mando del Jugador 2?
+Esto suele deberse a conflictos con Steam Input. Asegúrate de que ambos mandos estén encendidos y reconocidos por Windows antes de iniciar el juego. Si las entradas del Jugador 2 replican las del Jugador 1, comprueba los ajustes de mando en Steam y desactiva el software de mapeo de terceros que pueda estar combinando dispositivos virtuales en un único canal. Disputar tu partida en la **pantalla dividida de Gladio Mori** con mandos nativos XInput garantizará una detección perfecta en todo momento.

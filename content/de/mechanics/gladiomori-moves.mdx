@@ -1,0 +1,120 @@
+export const metadata = {
+  title: "Gladio Mori Moves-Guide: Meistern des Animations-Editors und der Kampfmechaniken",
+  description: "Meistern Sie Gladio Mori Moves mit unserem umfassenden Guide zu benutzerdefinierten Animations-Frames, Kampfmechaniken, Organzielen und Community-Movesets.",
+  category: "mechanics",
+  date: "2026-09-18",
+}
+
+Das Beherrschen Ihrer Kampfanimations-Timeline ist in der Arena der entscheidende Faktor zwischen Ruhm und Enthauptung. In diesem brutalen, physikbasierten Gladiatoren-Simulator entscheidet das Verständnis der Funktionsweise von **gladiomori moves** darüber, ob Ihre Klinge eine lebenswichtige Arterie des Gegners durchtrennt oder wirkungslos an dessen Rüstung abprallt. Im Gegensatz zu herkömmlichen Kampfspielen, die Sie in starre, vorgefertigte Angriffsketten zwingen, bestimmen die von Ihnen erstellten, individuellen **gladiomori moves** direkt den Schwung, den Schwerpunkt und die Tödlichkeit Ihres Kriegers.
+
+Entwickelt vom finnischen Solo-Entwickler Plebeian Studio, stellt der Titel traditionelle Brawler-Klischees auf den Kopf. Sie werden hier weder leuchtende Lebensbalken noch generische Schadenszahlen finden; stattdessen dreht sich der Kampf um realistische anatomische Verletzungen, Ausdauergrenzen und spielergesteuerte kinetische Energie. Ganz gleich, ob Sie einen unorthodoxen Fechtstoß von Grund auf selbst erstellen oder von der Community erprobte Kampfroutinen herunterladen möchten – diese Übersicht deckt jedes grundlegende Element ab, das Sie zum Siegen benötigen.
+
+## Das physikbasierte Kampfsystem verstehen
+
+Bevor Sie sich Hals über Kopf in die Keyframe-Erstellung stürzen, müssen Sie verstehen, wie das Spiel Benutzereingaben in physische Tödlichkeit übersetzt. Jeder Schlag, jede Parade und jedes Ausweichmanöver wird von dynamischen Kollisionen, skelettaler Hebelwirkung und dem Gewicht der Waffe bestimmt.
+
+Anstatt sich auf klassische Unverwundbarkeits-Frames (i-Frames) zu verlassen, basiert die Verteidigung vollständig auf physischer Blockade. Trifft der Kopf einer Dänenaxt oder einer Mordaxt (Pollaxe) während der Erholungsphase Ihres Schwungs auf eine ungeschützte Kehle, sterben Sie sofort. Aus diesem Grund müssen effektive Movesets aggressive Reichweite und defensive Verwundbarkeit sorgfältig gegeneinander abwägen.
+
+| Kampfkomponente | Kernfunktion | Auswirkung auf das Move-Design |
+| :--- | :--- | :--- |
+| **Organ-Targeting** | Bestimmt tödliche Traumata (Herz, Gehirn, Lunge, Arterien) | Angriffe müssen die Waffen schneiden präzise auf ungepanzerte Vitalzonen ausrichten. |
+| **Skelett-Rigging** | Verfolgt Knochenausrichtung, Gelenkrotation und Gleichgewicht | Breite Haltungen verbessern die Balance, verlangsamen jedoch Richtungswechsel. |
+| **Ausdauerverbrauch** | Begrenzt anhaltende Angriffsserien | Übermäßig komplexe Bewegungen erschöpfen den Kämpfer schnell und führen zu trägen Schlägen. |
+| **Kantenausrichtung** | Berechnet Schnitttiefe im Vergleich zur Wucht | Hiebe müssen im korrekten Klingenwinkel treffen, um Fleisch oder Arterien zu durchtrennen. |
+| **Aufprallgeschwindigkeit** | Bestimmt Rüstungsdurchdringung und Niederschlag | Längere Ausholbewegungen erzeugen höhere kinetische Kraft auf Kosten der Verwundbarkeit. |
+
+Die Erfahrung zeigt, dass viele Neulinge auffällige, sich drehende Kunststücke entwerfen, die auf dem Papier einschüchternd wirken, in Mehrspieler-Partien jedoch kläglich versagen. Ein Kämpfer, der eine 360-Grad-Drehung ausführt, entblößt für mehrere verwundbare Frames Rücken, Hals und Wirbelsäule – eine Einladung für erfahrene Gegner zu einem sofortigen Konterstoß.
+
+## Der In-Game Move-Editor: Schritt-für-Schritt-Anleitung
+
+Der Move-Editor ist das Herzstück der Charakteranpassung. Hier manipulieren Sie eine virtuelle Ragdoll-Puppe auf einer linearen Keyframe-Timeline und passen Gelenkrotationen, Gliedmaßenstreckung und Gewichtsverteilung an.
+
+```
+Ablauf der Keyframe-Timeline:
+[Ausholphase] -> [Beschleunigungsphase] -> [Aktive Hitbox / Treffer] -> [Schwungauslauf] -> [Haltungs-Reset]
+```
+
+Beim Erstellen eigener **gladiomori moves** besteht Ihr Hauptziel darin, die Geschwindigkeit während der aktiven Trefferphase zu maximieren und gleichzeitig Aushol- sowie Erholungszeiten zu minimieren.
+
+| Phase | Empfohlene Dauer (Ticks/Frames) | Hauptfokus | Häufige Fehler |
+| :--- | :--- | :--- | :--- |
+| **Ausholen (Windup)** | 4 – 8 Frames | Verlagerung des Schwerpunkts; Hebelwirkung aufbauen | Schlagrichtung zu früh verraten (Telegraphing) |
+| **Beschleunigung** | 3 – 5 Frames | Schwung aus Hüfte und Oberkörper für die Rotation nutzen | Gliedmaßen bewegen, ohne den Rumpf einzubeziehen |
+| **Aktive Hitbox** | 2 – 4 Frames | Präzise Klingenausrichtung; Zielen auf Vitalzonen | Waffenspitze hinter den Handgelenken hinterherziehen lassen |
+| **Schwungauslauf (Follow-through)** | 4 – 6 Frames | Kinetische Kraft absorbieren; Balance wiederherstellen | Überdrehen über die Ziellinie hinaus |
+| **Reset** | 5 – 10 Frames | Übergang zurück in die defensive Grundhaltung | Kopf oder Rippen ungeschützt lassen |
+
+Um einen zuverlässigen Schlag zu kreieren, beginnen Sie damit, die Füße und Hüften Ihres Kämpfers zu positionieren. Rotationskraft entsteht im Unterkörper; bleiben Ihre Füße beim Führen einer Zweihandwaffe unbeweglich, fehlt dem Schlag die nötige Wucht. Neigen Sie den Oberkörper bei einem Abwärtshieb leicht nach vorne, um das Körpergewicht wirkungsvoll in den Hieb zu legen.
+
+Community-Berichte betonen den Wert kurzer, wiederholbarer Übergangsanimationen. Endet Ihr Angriff in einer unnatürlichen, überstreckten Pose, erzwingt die Engine eine langsame Erholungsphase, die Ihren Gladiator wehrlos gegen Konterangriffe macht.
+
+## Mechaniken von Organschäden und Hitbox-Priorisierung
+
+Anders als bei Spielen mit traditionellen Lebensbalken hängt der Sieg in der Arena vollständig von struktureller und anatomischer Zerstörung ab. Das Verständnis der inneren Anatomie beeinflusst direkt, wie Sie Ihre **gladiomori moves** gestalten.
+
+Ein Treffer auf den Bizeps oder Unterarm des Gegners trennt Muskelgewebe ab und verhindert, dass er die Deckung aufrechterhalten oder schwere Zweihandwaffen führen kann. Das Durchtrennen der Halsschlagader oder Drosselvene führt zu rapide fortschreitendem Blutverlust und innerhalb von Sekunden zur Bewusstlosigkeit. Ein direkter Wuchtschlag gegen den Schädel bewirkt das sofortige Versagen aller motorischen Funktionen.
+
+| Zielzone | Primäre anatomische Folge | Bester Waffentyp zur Ausnutzung | Strategischer Wert |
+| :--- | :--- | :--- | :--- |
+| **Schädel / Hals** | Sofortiger K.o., rasches Verbluten, Enthauptung | Zweihandäxte, schwere Stangenwaffen, Stoßschwerter | Hohes Risiko, beendet den Kampf unmittelbar |
+| **Brustkorb / Herz** | Schwerer Ausdauerverlust, schneller Tod durch Lungenkollaps | Spitz zulaufende Stoßklingen, schmale Speerspitzen | Ideal für Konter gegen weite Schwungangriffe |
+| **Unterarme / Hände** | Entwaffnung, Unfähigkeit zu parieren oder zu blocken | Schnelle einhändige Ritterschwerter, Dolche | Sicherster Stoßschaden bei minimalem Eigenrisiko |
+| **Oberschenkel / Knie** | Zusammenbruch der Mobilität, Verlust der Ausweichfähigkeit | Tiefe Feger-Angriffe, Halberden/Äxte im niedrigen Winkel | Nimmt aggressiven Rush-Down-Strategien den Wind aus den Segeln |
+
+Richten Sie beim Programmieren von **gladiomori moves** Ihre Waffenspitze gezielt auf Bereiche mit hoher Letalitätswahrscheinlichkeit aus. Vertikale Überkopfhiebe sollten geradlinig durch die Mittellinie geführt werden, um den Schädel zu spalten oder durch das Schlüsselbein in die Herzhöhle einzudringen. Horizontale Seithiebe entfalten ihr Potenzial am besten auf exakter Halshöhe.
+
+## Modding und Community-Movesets über Mod.io
+
+Mit aktuellen Updates hat Plebeian Studio das mod.io-Framework direkt in die Benutzeroberfläche des Spiels integriert. Dieses System ermöglicht es Spielern auf dem PC – und auf kommenden Konsolenversionen –, benutzerdefinierte Ausrüstung, Arenen und Movesets ohne manuelle Dateibearbeitung herunterzuladen, zu testen und zu teilen. Sie können laufende Community-Kreationen und Patch-Meilensteine direkt im [Gladio Mori Steam-Community-Hub](https://store.steampowered.com/app/2689790/Gladio_Mori/) mitverfolgen.
+
+Das Modding-Update hat die Waffenvielfalt erheblich erweitert und Ausrüstung wie die Pollaxe zusammen mit modularen Rüstungsteilen wie Armschienen eingeführt. Die Pollaxe übernimmt effektiv die vielseitige Handhabung der Dänenaxt, bietet aber zusätzlich verheerende Wucht und Haken-Funktionalität.
+
+| Community-Moveset-Stil | Hauptstärken | Eigene Schwächen | Empfohlene Waffenkombinationen |
+| :--- | :--- | :--- | :--- |
+| **Historische HEMA-Hut** | Schnelle Erholungsframes, starke Verteidigung der Mittellinie | Kürzere Reichweite, geringerer kinetischer Rückstoß | Langschwert, Ritterschwert, Rapier |
+| **Berserker-Schwung** | Überwältigende Wucht, durchbricht Paraden mühelos | Langes Ausholen, anfällig für schnelle Stöße | Dänenaxt, Mordaxt (Pollaxe), schwerer Streitkolben |
+| **Asymmetrischer Tieffeger** | Trifft Beine unterhalb von Standardschilden | Macht den Kämpfer anfällig für Überkopf-Abwärtshiebe | Kurze Speere, Falchions, Rabenschnäbel |
+| **Finte-zu-Stoß-Routine** | Verleitet Gegner zu verfrühten Paraden | Hoher Ausdauerverbrauch bei Fehlschlägen | Estoc, Spada da Lato, Pike |
+
+Über die Plattform heruntergeladene Movesets aus der Community synchronisieren sich beim Betreten von Mehrspieler-Servern automatisch, was einen fairen Wettbewerb in allen Matches gewährleistet. Spieler isolieren häufig erfolgreiche Animationsfolgen, optimieren deren Schwungauslauf-Frames zur Ausdauerschonung und laden die verbesserten Versionen wieder hoch.
+
+## Fortgeschrittene Kampftaktiken: Finten, Beinarbeit und Ausdauer
+
+Das Erstellen außergewöhnlicher Animationen ist nur die halbe Miete; zu wissen, wie man seine individuellen **gladiomori moves** gegen reale Gegner im dynamischen Kampf einsetzt, unterscheidet Legenden von Gefallenen.
+
+### Die kinetische Drehbewegung (Kinetic Pivot)
+
+Verlassen Sie sich niemals ausschließlich auf die standardmäßigen Bewegungstasten, um Ihre Schläge zu platzieren. Sobald Ihre Angriffsanimation in die Beschleunigungsphase eintritt, drehen Sie die Kamera manuell mit, um den Kopf der Waffe durch das Ziel zu peitschen. Diese Technik – unter erfahrenen Spielern als „Accelerating“ oder „Dragging“ bekannt – ermöglicht es Ihnen, gegnerische Parade-Hitboxen zu umgehen oder ungeschützte Gliedmaßen früher als erwartet zu treffen.
+
+### Ein ausgewogenes Move-Deck zusammenstellen
+
+Ihr Moveset sollte niemals nur aus langsamen, schweren Überkopfhieben bestehen. Eine ausgewogene Zusammenstellung erfordert drei primäre taktische Archetypen:
+
+1. **Der Unterbrecher (Interrupter):** Ein blitzschneller, geradliniger Stoß, der aggressive Gegner während deren Ausholphase abfangen soll.
+2. **Der Raumschaffer (Zone Clearer):** Ein weiter horizontaler Hieb, der einen breiten Bogen abdeckt, um seitliche Beinarbeit und Rollen abzustrafen.
+3. **Der Rüstungsbrecher (Armor Breaker):** Ein schwerer Schlag mit nach vorne verlagertem Schwerpunkt, der gegnerische Deckungen zerschmettert, Ausdauer raubt und Schädel-Hirn-Traumata verursacht.
+
+```
+Kampf-Entscheidungsbaum:
+Gegner stürmt vor -> Unterbrecher ausführen (Stoß) -> Gegner betäuben
+Gegner hält hohe Deckung -> Tieffeger ausführen -> Oberschenkel/Sehnen durchtrennen
+Gegner verfehlt schweren Schlag -> Rüstungsbrecher ausführen -> Entblößten Schädel zertrümmern
+```
+
+### Ausdauer-Ökonomie
+
+Jede Modifikation auf der Timeline hat physische Konsequenzen. Wer Geschwindigkeit und Bewegungsradius einer schweren Waffe erhöht, steigert auch deren Ausdauerverbrauch drastisch. Leert sich Ihre Ausdauerleiste während eines Schlagabtauschs vollständig, werden die Hiebe Ihres Kämpfers sichtbar träge und Ihre Deckung bricht für einfache Konterangriffe auf. Gestalten Sie Ihre Animationssequenzen schlank, zielgerichtet und frei von unnötigen Schnörkeln.
+
+## Häufig gestellte Fragen (FAQ)
+
+### Kann ich meine benutzerdefinierten gladiomori moves mit anderen Spielern online teilen?
+Ja. Dank der integrierten mod.io-Schnittstelle können Sie Ihre benutzerdefinierten Animationssets direkt über das Spielmenü exportieren und veröffentlichen. Wenn Sie einer Mehrspieler-Lobby beitreten, laden die anderen Teilnehmer Ihre aktiven Moveset-Sequenzen automatisch herunter, was nahtlose und synchronisierte Begegnungen gewährleistet.
+
+### Warum fühlen sich meine eigenen gladiomori moves im Kampf träge und kraftlos an?
+Träge Angriffe resultieren meist aus einer fehlerhaften kinetischen Kette im Move-Editor. Wenn Ihre Animation nur die Arme des Gladiators bewegt, ohne Hüfte und Brustkorb mitzudrehen, fehlt der Waffe die notwendige Geschwindigkeit. Stellen Sie sicher, dass Ihre Aushol-Frames Rumpfrotationen und Gewichtsverlagerungen nach vorne enthalten, um die Aufprallkraft der Waffe zu maximieren.
+
+### Welche Waffe eignet sich am besten für Anfänger, die gladiomori moves lernen wollen?
+Die Dänenaxt oder das klassische zweihändige Langschwert bieten den ausgewogensten Kompromiss aus Reichweite, defensiver Abdeckungsfläche und Schnitteffizienz. Ihre vielseitigen Handhabungsmuster ermöglichen es Ihnen, sowohl mit weiten Fegeschlägen als auch mit präzisen Stoßbewegungen zu experimentieren, während Sie sich mit dem Timeline-Editor vertraut machen.
+
+### Verbrauchen unterschiedliche Moves auch unterschiedlich viel Ausdauer?
+Ja. Die Engine berechnet die Ausdauerkosten dynamisch auf Basis der insgesamt bewegten Masse, der Geschwindigkeit der Gliedmaßenstreckung und des Gewichts Ihrer angelegten Ausrüstung. Schnelle, kraftvolle Ganzkörperdrehungen zehren deutlich schneller an der Ausdauer als kontrollierte, kompakte Stöße.

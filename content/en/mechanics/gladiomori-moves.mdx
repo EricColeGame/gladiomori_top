@@ -1,0 +1,120 @@
+export const metadata = {
+  title: "Gladio Mori Moves Guide: Mastering the Animation Editor and Combat Mechanics",
+  description: "Master Gladio Mori moves with our complete guide to custom animation frames, combat mechanics, organ targeting, and community moveset integration.",
+  category: "mechanics",
+  date: "2026-09-18",
+}
+
+Mastering your combat animation timeline is the single most important factor between glory and decapitation inside the arena. In this brutal physics-based gladiator simulator, understanding how **gladiomori moves** function determines whether your blade pierces an opponent's vital artery or harmlessly glances off their armor. Unlike conventional fighting games that lock you into rigid, pre-rendered attack strings, the custom **gladiomori moves** you design directly dictate your warrior's momentum, center of gravity, and lethality. 
+
+Developed by Finnish solo developer Plebeian Studio, the title flips traditional brawler tropes on their head. You will not find glowing hit points or generic damage numbers here; instead, combat revolves around realistic anatomical trauma, stamina thresholds, and player-authored kinetic energy. Whether you want to hand-craft an unorthodox fencing thrust or download community-tested combat routines, this breakdown covers every fundamental element you need to dominate.
+
+## Understanding the Physics-Driven Combat System
+
+Before diving headfirst into keyframe authoring, you must grasp how the game translates user input into physical lethality. Every swing, parry, or dodge is governed by dynamic collisions, skeletal leverage, and weapon weight.
+
+Rather than relying on canned invincibility frames (i-frames), defense relies entirely on physical obstruction. If a Dane axe or pollaxe head connects with an exposed throat during your swing recovery, you die immediately. Because of this, effective movesets balance aggressive reach against defensive exposure.
+
+| Combat Component | Core Function | Impact on Move Design |
+| :--- | :--- | :--- |
+| **Organ Targeting** | Determines lethal trauma (heart, brain, lungs, arteries) | Attacks must align weapon edges with unarmored vital zones. |
+| **Skeletal Rigging** | Tracks bone alignment, joint rotation, and balance | Wide stances improve balance but slow down directional recovery. |
+| **Stamina Depletion** | Limits sustained offensive flurries | Overly complex movements rapidly exhaust the fighter, causing sluggish swings. |
+| **Edge Alignment** | Calculates cut depth versus blunt force | Slashes must hit at the proper blade angle to sever flesh or arteries. |
+| **Impact Velocity** | Determines armor penetration and knockdown | Longer windups generate higher kinetic force at the cost of vulnerability. |
+
+Player experience shows that many newcomers build flashy, spinning flourishes that look intimidating on paper but collapse in multiplayer matches. A fighter committed to a 360-degree spin exposes their back, neck, and spine for several vulnerable frames, inviting an immediate counter-thrust from experienced opponents.
+
+## The In-Game Move Editor: Step-by-Step Breakdown
+
+The move editor is the heart of character customization. Here, you manipulate a virtual ragdoll mannequin across a linear keyframe timeline, tweaking joint rotations, limb extensions, and weight distribution.
+
+```
+Keyframe Timeline Flow:
+[Windup Phase] -> [Acceleration Phase] -> [Active Hitbox / Release] -> [Follow-through] -> [Reset Stance]
+```
+
+When building custom **gladiomori moves**, your primary objective is maximizing velocity during the active release phase while minimizing windup and recovery latency. 
+
+| Phase | Recommended Duration (Ticks/Frames) | Key Focus | Common Pitfall |
+| :--- | :--- | :--- | :--- |
+| **Windup** | 4 – 8 Frames | Shifting center of mass; setting up leverage | Telegraphing direction too early |
+| **Acceleration** | 3 – 5 Frames | Driving through hips and torso for rotation | Moving limbs without core torso engagement |
+| **Active Hitbox** | 2 – 4 Frames | Precise blade alignment; targeting vitals | Letting weapon tip drag behind the wrists |
+| **Follow-through** | 4 – 6 Frames | Absorbing kinetic force; returning balance | Over-rotating past the target line |
+| **Reset** | 5 – 10 Frames | Transitioning back to defensive guard | Leaving head or ribs uncovered |
+
+To create a dependable strike, begin by posing your fighter's feet and hips. Rotational power originates from the lower body; if your feet remain static while swinging a two-handed weapon, the strike lacks blunt concussive force. Tilt the torso forward slightly during a downward chop to transfer downward body weight into the strike.
+
+Community reports emphasize the value of short, repeatable transition animations. If your attack ends in an awkward, hyper-extended pose, the engine forces a sluggish recovery phase, leaving your gladiator defenseless against counterattacks.
+
+## Organ Damage Mechanics and Hitbox Prioritization
+
+Unlike titles governed by traditional health bars, victory in the arena depends entirely on structural and anatomical destruction. Understanding internal biology directly impacts how you author your **gladiomori moves**.
+
+Striking an enemy's bicep or forearm severs the muscle tissue, preventing them from raising their guard or holding heavy two-handed weaponry. Piercing the carotid artery or jugular vein induces rapid blood loss, leading to unconsciousness within seconds. A direct concussive blow to the cranium results in immediate motor shutdown.
+
+| Target Zone | Primary Anatomical Consequence | Best Weapon Archetype to Exploit | Strategic Value |
+| :--- | :--- | :--- | :--- |
+| **Cranial / Neck** | Instant knockout, rapid bleedout, decapitation | Two-handed axes, heavy polearms, thrusting swords | High risk, instant fight-ending lethality |
+| **Thorax / Heart** | Severe stamina failure, rapid death via lung collapse | Tapered thrusting blades, narrow spear points | Ideal for counters against wide swinging attacks |
+| **Forearms / Hands** | Weapon disarm, inability to parry or maintain guard | Quick one-handed arming swords, daggers | Safest poke-style damage with minimal risk |
+| **Femoral / Knees** | Mobility collapse, inability to dodge or advance | Low sweeping strikes, low-angle halberds/axes | Cripples aggressive rush-down playstyles |
+
+When programming **gladiomori moves**, orient your weapon tip toward high-percentage lethal zones. Vertical overhead chops should track straight through the centerline to crack the skull or cleave down through the collarbone into the heart cavity. Meanwhile, horizontal side cuts work best when leveled directly at throat height.
+
+## Modding and Community Movesets via Mod.io
+
+With recent updates, Plebeian Studio integrated the mod.io framework directly into the game's interface. This system allows players on PC—and upcoming console versions—to download, test, and share custom equipment, arenas, and movesets without manual file editing. You can track ongoing community creations and patch milestones directly on the [Gladio Mori Steam community hub](https://store.steampowered.com/app/2689790/Gladio_Mori/).
+
+The modding update significantly expanded weapon diversity, introducing gear like the pollaxe alongside modular armor pieces like protective bracers. The pollaxe effectively borrows the versatile handling mechanics of the Daneaxe while providing devastating blunt force and hook capability.
+
+| Community Moveset Style | Primary Strengths | Inherent Weaknesses | Recommended Weapon Pairings |
+| :--- | :--- | :--- | :--- |
+| **Historical HEMA Guard** | Tight recovery frames, strong centerline defense | Shorter reach, lower kinetic knockback | Longsword, Arming Sword, Rapier |
+| **Berserker Momentum** | Overwhelming blunt impact, breaks parries easily | Long windup, wide open to quick thrusts | Daneaxe, Pollaxe, Heavy Maul |
+| **Asymmetric Low-Sweeper** | Attacks lower limbs under standard shields | Leaves fighter vulnerable to overhead downward chops | Short Spears, Falchions, War Picks |
+| **Feint-to-Thrust Routine** | Baits opponent into parrying early | Heavy stamina consumption on missed hits | Estoc, Spada da Lato, Pike |
+
+Community-sourced movesets downloaded through the platform automatically synchronize when joining multiplayer servers, ensuring competitive fairness across matches. Players frequently isolate successful animation strings, refine their follow-through frames to conserve stamina, and re-upload improved iterations.
+
+## Advanced Combat Tactics: Feints, Footwork, and Stamina
+
+Crafting exceptional animations is only half the battle; knowing how to deploy your custom **gladiomori moves** against real opponents in dynamic combat separates legends from corpses.
+
+### Managing the Kinetic Pivot
+
+Never rely entirely on default movement keys to position your strikes. As your attack animation begins its acceleration phase, manually pivot your camera to whip the weapon head through the target. This technique—known among experienced players as "accelerating" or "dragging"—allows you to bypass parry hitboxes or strike unguarded limbs earlier than expected.
+
+### Structuring a Balanced Deck
+
+Your loadout should never consist purely of slow, heavy overhead strikes. A balanced configuration requires three primary tactical archetypes:
+
+1. **The Interrupter:** A lightning-fast, linear jab (usually a straight thrust) designed to intercept aggressive opponents during their windup frames.
+2. **The Zone Clearer:** A broad horizontal slash that sweeps across a wide arc to punish sideways footwork and rolls.
+3. **The Armor Breaker:** A heavy, weight-forward strike designed to smash through raised defenses, drain enemy stamina, and inflict concussive head trauma.
+
+```
+Combat Decision Tree:
+Enemy rushes forward -> Execute Interrupter (Thrust) -> Stun opponent
+Enemy holds high guard -> Execute Low Sweeper -> Sever femoral/tendons
+Enemy whiffs heavy strike -> Execute Armor Breaker -> Crush exposed skull
+```
+
+### Stamina Economy
+
+Every keyframe modification has physical consequences. Increasing the speed and trajectory of a heavy weapon drastically amplifies its stamina consumption. If an exchange drains your stamina meter entirely, your warrior's swings become visibly sluggish, leaving your guard open to simple counter-attacks. Keep your animation sequences lean, deliberate, and free of unnecessary flourishes.
+
+## Frequently Asked Questions
+
+### Can I share my custom gladiomori moves with other players online?
+Yes. Thanks to the built-in mod.io integration, you can export and publish your custom animation sets directly from the in-game menu. When you enter a multiplayer lobby, other participants automatically download and render your active moveset strings, ensuring seamless, synchronized combat encounters.
+
+### Why do my custom gladiomori moves feel slow and weak during combat?
+Sluggish strikes usually stem from poor kinetic chain design in the move editor. If your animation only moves the gladiator's arms without rotating the hips and chest, the weapon lacks velocity. Ensure your windup frames incorporate torso rotation and forward weight shifts to maximize weapon impact force.
+
+### What is the best weapon for beginners learning gladiomori moves?
+The Daneaxe or standard two-handed longsword offers the most forgiving balance of reach, defensive surface area, and cutting efficiency. Their versatile handling templates allow you to experiment with both wide sweeping slashes and accurate thrusting motions while learning the timeline editor.
+
+### Do custom moves consume different amounts of stamina?
+Yes. The engine calculates stamina costs dynamically based on the total mass moved, the velocity of the limb extensions, and the weight of your equipped gear. Rapid, violent full-body rotations drain stamina significantly faster than controlled, compact thrusts.

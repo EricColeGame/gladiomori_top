@@ -1,0 +1,139 @@
+export const metadata = {
+  title: "Guía de la física de Gladio Mori: cómo funciona su motor de combate realista",
+  description: "Domina el avanzado motor de física de Gladio Mori. Descubre cómo el impulso, las colisiones de hojas, la cinética muscular y las hitboxes definen cada duelo.",
+  category: "mechanics",
+  date: "2026-09-18",
+}
+
+Cada duelo en los juegos de combate cuerpo a cuerpo modernos depende de la precisión, pero pocos títulos exigen tanta conciencia biomecánica como este juego de lucha histórica. Comprender la **física de Gladio Mori** es la línea divisoria literal entre ejecutar una decapitación quirúrgica y quedar completamente desequilibrado. En lugar de depender de animaciones predefinidas o hitboxes estáticas, el juego calcula cada golpe, bloqueo y traspié en tiempo real. Si quieres dominar la arena en Steam, PlayStation 5 y Xbox Series X/S, dominar los principios fundamentales detrás del sistema de **física de Gladio Mori** es una necesidad absoluta.
+
+---
+
+## Los fundamentos clave de la física de Gladio Mori
+
+La mayoría de los juegos de lucha dependen de los "active frames": cajas de daño invisibles vinculadas a animaciones prediseñadas. Por el contrario, la simulación aquí opera mediante interacciones físicas continuas. Los golpes de tu gladiador poseen masa real, velocidad y palanca calculadas a partir de la posición de los pies, la rotación del torso y la articulación de la muñeca.
+
+Cuando tu arma entra en contacto, el juego evalúa el ángulo de incidencia, la velocidad relativa y el punto de impacto a lo largo de la hoja. Impactar cerca de la punta genera una mayor velocidad lineal, mientras que golpear más cerca de la guardia genera más palanca rotacional para desestabilizar la defensa del oponente.
+
+```
+Impulso de golpe lineal = Masa del arma × Velocidad angular en el punto de impacto
+```
+
+Debido a esta simulación activa, cada superficie física interactúa de forma dinámica:
+
+* **Fricción hoja contra hoja:** El cruce de espadas hace que las armas se deslicen, se traben o se desvíen según el ángulo y la fuerza aplicada.
+* **Transferencia de impulso:** Los golpes pesados que fallan arrastran a tu gladiador hacia adelante, exponiendo tus flancos desprotegidos.
+* **Resistencia anatómica:** Cortar carne blanda ofrece poca resistencia, mientras que golpear hueso o acero transfiere ondas de choque directamente a las muñecas de tu luchador.
+
+Para probar estas interacciones de primera mano, puedes adquirir el título directamente a través de la [página oficial de Gladio Mori en la tienda de Steam](https://store.steampowered.com/app/2689190/Gladio_Mori/), donde las actualizaciones de la comunidad detallan con frecuencia los ajustes del motor.
+
+---
+
+## Anatomía de un ataque: velocidad, masa y arcos de armas
+
+En los juegos tradicionales de acción hack-and-slash, las armas más grandes simplemente infligen números de daño base más altos. Aquí, el daño que provocas depende por completo de cuánta energía cinética transfieras durante el contacto. Comprender la **física de Gladio Mori** subyacente detrás de tus golpes garantiza que no desperdicies resistencia en ataques débiles o rozaduras superficiales.
+
+### Comparativa de energía cinética por arma
+
+| Tipo de arma | Masa base (kg) | Punto de impacto ideal | Multiplicador de energía cinética | Factor de resistencia en recuperación |
+| :--- | :--- | :--- | :--- | :--- |
+| **Gladius** | 0.85 | Tercio superior | 1.1x | Bajo (Reinicio rápido) |
+| **Espada larga** | 1.45 | Centro de percusión real | 1.6x | Moderado |
+| **Falx** | 1.80 | Punta interior curvada | 2.1x | Alto (Riesgo de sobreextensión) |
+| **Lanza / Hastam** | 1.20 | Punta / Eje de estocada | 1.8x | Moderado (Direccional) |
+| **Scutum (Escudo)**| 4.20 | Borde central / Umbo | 1.4x (Contundente) | Muy alto |
+
+Un corte que roza a un objetivo durante el inicio del movimiento carece prácticamente de potencia cinética. Por el contrario, conectar en el punto máximo de giro de la cadera maximiza la velocidad del filo. La experiencia de los jugadores demuestra con frecuencia que balancear en exceso armas curvas como la Falx desplazará el centro de gravedad más allá del pie adelantado, dejándote expuesto a contragolpes inmediatos.
+
+---
+
+## Detección de colisiones y el modelo de daño dinámico
+
+En lugar de los puntos de vida tradicionales, el daño se determina mediante la penetración en los tejidos, el daño estructural óseo y las hemorragias arteriales. El motor de **física de Gladio Mori** procesa los impactos a través de capas de colisión diferenciadas, cotejando el material del objetivo frente al filo del arma entrante.
+
+```
+Fuerza de impacto = (Masa × Velocidad) / Área de superficie de contacto
+```
+
+Una punta fina concentra una inmensa presión sobre un área de superficie minúscula, lo que hace que las estocadas sean devastadoras contra cotas de malla, mientras que los impactos amplios distribuyen la fuerza a lo largo de las placas de armadura.
+
+### Zonas de impacto y tipos de trauma
+
+| Zona corporal | Resultado de impacto cortante | Resultado de impacto perforante | Consecuencia de colisión contundente |
+| :--- | :--- | :--- | :--- |
+| **Bóveda craneal** | Aturdimiento inmediato / Laceración de cuero cabelludo | Muerte instantánea (Cerebral) | Derribo por conmoción severa |
+| **Cuello / Garganta** | Hemorragia fatal rápida | Colapso letal de vías respiratorias | Trauma traqueal / Desorientación |
+| **Hombro / Torso** | Corte muscular profundo / Desarme | Perforación de órganos (Neumotórax) | Fractura de costillas / Pérdida de resistencia |
+| **Antebrazos / Manos**| Caída del arma / Tendones seccionados | Punción / Pérdida de fuerza de agarre | Esguince de muñeca / Desvío de guardia |
+| **Piernas / Rodillas** | Corte de tendón de la corva / Pérdida de movilidad | Punción / Traspié | Luxación rotuliana / Caída al suelo |
+
+Los informes de la comunidad destacan que los golpes que rozan y rebotan en yelmos de hierro pesado a menudo se deslizan inofensivamente hacia las hombreras, convirtiendo lo que parecía un golpe mortal en una colisión menor.
+
+---
+
+## Posicionamiento, equilibrio y fricción ambiental
+
+Las espadas no ganan duelos de forma aislada; la parte inferior del cuerpo lo determina todo. La simulación modela la fricción contra el suelo y el centro de masa de manera constante. Pisar arena blanda, tierra húmeda o piedra manchada de sangre altera directamente la tracción de tu gladiador.
+
+Cuando ejecutas un tajo pesado, tu centro de masa se desplaza hacia adelante. Si un oponente entra en tu distancia y te empuja, el impulso frontal existente amplifica su empuje, provocando que tu personaje tropiece o colapse en un estado de ragdoll.
+
+### Calificaciones de tracción según la superficie de la arena
+
+| Superficie de la arena | Coeficiente de fricción | Estabilidad de pivote | Penalización de recuperación | Riesgo de resbalar al girar |
+| :--- | :--- | :--- | :--- | :--- |
+| **Arena seca de arena** | 0.72 | Alta | Base (0%) | Bajo |
+| **Losa de piedra resbaladiza**| 0.45 | Baja | +25% de retraso en recuperación | Alto |
+| **Suelo ensangrentado** | 0.38 | Muy baja | +40% de retraso en recuperación | Extremo |
+| **Tablones de madera**| 0.65 | Moderada | +10% de retraso en recuperación | Moderado |
+
+Para mantener el equilibrio, evita girar 180 grados mientras ejecutas un ataque vertical descendente. Mantener una postura baja preserva tu umbral de equilibrio, asegurando que absorbas los impactos de las paradas sin caer de espaldas contra los peligros de la arena.
+
+---
+
+## Tácticas de combate avanzadas impulsadas por la física del juego
+
+Aprovechar el detallado sistema de **física de Gladio Mori** permite a los luchadores hábiles derrotar a oponentes fuertemente blindados mediante palanca mecánica en lugar de fuerza bruta. Al manipular los ángulos, puedes neutralizar armas amenazantes antes de que generen una velocidad letal.
+
+### Tácticas esenciales basadas en la física
+
+* **La traba y la palanca:** Atrapa la hoja de tu oponente contra tu guardia cerca de la empuñadura. Como posees una palanca mecánica superior, girar las muñecas puede forzar la punta de su arma hacia el suelo.
+* **Desplazamiento con el borde del escudo:** En lugar de absorber golpes pasivamente, impacta el brazo armado del oponente en pleno balanceo con el umbo del escudo para anular la velocidad de su ataque antes del contacto.
+* **Esquiva retrasando el pie:** Retira el pie adelantado justo cuando un corte entra en su fase terminal. La hoja pasará inofensivamente por el aire vacío, arrastrando al atacante y haciéndole perder el equilibrio.
+* **Estocada estática de intercepción:** Contra enemigos que cargan, mantén tu arma fija en postura de estocada. La propia velocidad de avance del oponente se suma a la ecuación de impacto de tu arma.
+
+### Matriz de mecánicas defensivas
+
+| Técnica defensiva | Mecanismo físico | Coste de resistencia | Ventana de vulnerabilidad |
+| :--- | :--- | :--- | :--- |
+| **Bloqueo estático** | Absorción directa de fuerza | Alto | Propenso a aturdimiento por rotura de guardia |
+| **Parada deflectiva** | Redirección de vector angular | Bajo | Alto si el timing es incorrecto |
+| **Traba de hoja** | Bloqueo por fricción en el fuerte | Moderado | Susceptible a golpes de pomo con la mano secundaria |
+| **Evasión con paso atrás** | Esquiva espacial / Desperdicio de impulso | Bajo | Vulnerable a estocadas en carrera |
+
+La experiencia de los jugadores confirma consistentemente que ejecutar una parada deflectiva requiere anticipar la trayectoria a tiempo; intentar desviar cuando la hoja ya ha alcanzado la velocidad máxima a menudo atravesará directamente tu guardia.
+
+---
+
+## Modding, experimentos de la comunidad y límites del motor
+
+Dado que la simulación central opera bajo reglas cinéticas modulares, la comunidad de modders ha probado activamente los límites de los sistemas del juego. Desde desbloqueadores de rotación de cadera hasta pesos personalizados de armas, los jugadores han descubierto varios comportamientos interesantes dentro del código base.
+
+Los experimentos impulsados por la comunidad revelan que ajustar la rigidez de las articulaciones puede generar comportamientos de ragdoll caóticos o posturas de esgrima histórica de respuesta hiperrápida. Las partidas personalizadas modificadas con salas de jugadores más grandes demuestran cómo la capa de red equilibra la resolución de colisiones en tiempo real entre múltiples luchadores simultáneos.
+
+Tanto si compites en salas clasificatorias estándar como si luchas en partidas sandbox modificadas, mantener un profundo respeto por la simulación de la **física de Gladio Mori** sigue siendo tu camino principal hacia la victoria constante en el coliseo.
+
+---
+
+## Preguntas frecuentes
+
+### ¿Cómo afecta el peso del arma a la velocidad de golpeo en la física de Gladio Mori?
+El peso del arma determina directamente la aceleración angular. Las armas más pesadas, como mandobles o armas de asta, requieren más fotogramas físicos para alcanzar la velocidad máxima, lo que significa que su fase inicial de preparación causa un daño de impacto mínimo. Sin embargo, una vez alcanzado el impulso completo, generan una fuerza cinética masiva capaz de desestabilizar a oponentes que intenten bloquear.
+
+### ¿Puede la armadura anular por completo el daño de una hoja?
+Sí. Si un corte entrante no genera suficiente presión cinética para penetrar o deformar el material de la armadura, el golpe se registra como un roce o un desvío superficial. No obstante, el traumatismo por fuerza contundente se sigue transmitiendo a través del acolchado, lo que puede agotar tu resistencia o provocar un aturdimiento leve por conmoción.
+
+### ¿Por qué los ataques a veces causan un daño insignificante incluso con impactos directos?
+El daño se calcula utilizando la velocidad de contacto y la alineación específica del filo cortante del arma. Si tu ataque conecta durante la fase de inicio (antes de que la hoja adquiera velocidad) o golpea con el plano en lugar del filo, el sistema de **física de Gladio Mori** clasifica la colisión como un impacto desalineado o de baja velocidad, lo que resulta en un trauma insignificante.
+
+### ¿La velocidad de movimiento del jugador amplifica el poder del ataque?
+Sí. La velocidad de movimiento hacia adelante se suma a la velocidad de impacto del arma en el momento preciso del contacto. Cortar mientras corres o te abalanzas hacia adelante aumenta la energía cinética total transmitida al objetivo, mientras que retroceder reduce la fuerza relativa de los ataques entrantes.

@@ -1,0 +1,130 @@
+export const metadata = {
+  title: "Gladio Mori Split-Screen-Guide: Lokales Multiplayer-Setup und Modi",
+  description: "Erfahre, wie Gladio Mori Split-Screen und lokaler Multiplayer funktionieren. Entdecke Hardware-Setups, Combo-Tipps und Details zu Couch- vs. Online-Matchmaking.",
+  category: "modes",
+  date: "2026-09-18",
+}
+
+Das Meistern physikbasierter Schwertkämpfe ist unendlich lohnender, wenn der Gegner direkt neben dir auf der Couch sitzt. Der Einstieg in den **gladiomori split screen** bietet dir eine direkte Arena ohne spürbare Latenz, um deine individuellen Angriffsanimationen gegen Freunde auf die Probe zu stellen. Egal, ob du taktische Paraden üben oder ein Wohnzimmer-Turnier veranstalten möchtest: Die korrekte Konfiguration des **gladiomori split screen** sorgt für flüssige Bildraten, fehlerfreie Controller-Belegungen und faire Duelle.
+
+In diesem ausführlichen Leitfaden erklären wir alles Wissenswerte über lokale Versus-Gefechte, Leistungsoptimierung, Controller-Fehlerbehebung und die von den Entwicklern bestätigten Einschränkungen zwischen Offline- und Online-Lobbys.
+
+---
+
+## Wie lokaler Multiplayer und Split-Screen in Gladio Mori funktionieren
+
+*Gladio Mori* hebt sich von traditionellen Fighting Games durch seinen tiefgehenden modularen Moveset-Editor und die anatomisch modellierte Ragdoll-Physik ab. Da die Treffererkennung auf tatsächlichem Waffenkontakt, Klingengeschwindigkeit und Knochenaufprall basiert, bietet das lokale Spielen die reinste kompetitive Umgebung überhaupt. Es gibt kein Netzwerk-Jitter, keine Rollback-Artefakte und keine Client-Desynchronisation.
+
+Der lokale Mehrspielermodus teilt den Bildausschnitt dynamisch oder nutzt eine feste Kameraführung, um beiden Kämpfern jederzeit den vollen Überblick über Haltung und Distanz (Spacing) zu garantieren. Wenn du eine Couch-Session vorbereitest, bewahrt dich das richtige Verständnis deiner Anzeige- und Eingabeeinstellungen vor ärgerlichen Steuerungsausfällen mitten im Gefecht.
+
+### Übersicht: Lokales Versus
+
+| Feature | Lokales Couch-Spiel | Online-Lobbys |
+| :--- | :--- | :--- |
+| **Eingabelatenz** | Sub-Millisekunde (direkt über Hardware) | Variabel (Netzwerk-Ping + Puffer) |
+| **Gleichzeitige lokale Spieler** | Bis zu 2 Kämpfer (Standard-Duell) | 1 pro Client-PC |
+| **Unterstützung eigener Movesets** | Ja (aus lokalen Spielständen geladen) | Ja (verifizierte Moveset-Synchronisation) |
+| **Hardware-Beanspruchung** | Moderat (Rendern zweier Kameraperspektiven) | Gering bis moderat (einzelner Viewport) |
+| **Ausrüstungswechsel** | Erfordert Lobby- oder Runden-Reset | Wird pro Match-Neustart gehandhabt |
+
+Die neuesten Balance-Patches, Entwickler-Logs und verifizierten Client-Versionen findest du im [Gladio Mori Steam Community Hub](https://steamcommunity.com/app/2689120), um dein lokales Spiel stets aktuell zu halten.
+
+---
+
+## Gladio Mori Split-Screen vs. Online-Multiplayer: Was wird unterstützt?
+
+Eine häufige Frage unter Spielern ist, ob sich ein lokales Duo an einem einzelnen PC zusammentun und gemeinsam öffentlichen Matchmaking-Servern beitreten kann. Community-Diskussionen in den offiziellen Foren haben hierzu für Klarheit gesorgt.
+
+Laut Berichten aus der Community und bestätigten Aussagen des Spieleentwicklers RedDuelist behandelt der Titel lokale und Online-Umgebungen als vollkommen getrennte Systeme. Genauer gesagt kannst du den **gladiomori split screen** nicht innerhalb einer aktiven Online-Matchmaking-Lobby nutzen. Der lokale Mehrspielermodus ist strikt offline gehalten, um die Integrität der Synchronisation zu gewährleisten.
+
+### Modi-Vergleichsmatrix
+
+| Multiplayer-Funktion | Unterstützungsstatus | Entwicklerhinweise / Community-Kontext |
+| :--- | :--- | :--- |
+| **Reiner lokaler Split-Screen** | Vollständig unterstützt | Plug-and-Play-Controller für 1v1-Couch-Duelle |
+| **Hybrid Lokal + Online (Kombi)** | Nicht unterstützt | Entwickler RedDuelist bestätigte: Online ist Single-Client |
+| **Steam Remote Play Together** | Funktionierender Workaround | Streamt deinen lokalen Bildschirm an einen Online-Freund |
+| **Waffenwechsel mitten im Match** | Eingeschränkt | Erfordert derzeit den Neustart der Match-Instanz |
+| **Gemeinsames Zuschauen am Bildschirm** | Unterstützt | Nicht genutzte Gamepads können zwischen Runden weitergegeben werden |
+
+Obwohl sich einige Spieler eine kombinierte Lokal-/Online-Integration gewünscht haben, stellt die physikgetriebene Engine extrem hohe Anforderungen an die Simulations-Tickrate. Wenn du gegen einen entfernt wohnenden Freund antreten möchtest, ohne ihn ins Wohnzimmer einzuladen, bietet Steams „Remote Play Together“ eine solide Brücke, indem es deinen lokalen Bildschirm direkt auf dessen Display überträgt.
+
+---
+
+## Schritt-für-Schritt-Anleitung für das lokale Split-Screen-Spiel
+
+Das Einrichten deines Spiels für ein direktes Duell dauert nur wenige Minuten. Konfigurierst du deine Eingabegeräte jedoch im Vorfeld richtig, vermeidest du lästige Gerätekonflikte. Folge diesem Ablauf, um deine Session zu starten.
+
+### Checkliste für die Konfiguration
+
+1. **Haupt-Gamepads verbinden**: Schließe zwei XInput-kompatible Controller (wie Xbox Series X/S- oder DualSense-Gamepads) an, bevor du den Spiel-Client startest.
+2. **Steam Input konfigurieren**: Öffne die Steam-Einstellungen, navigiere zum Reiter „Controller“ und stelle sicher, dass Standard-Desktop-Konfigurationen deaktiviert sind, um überschneidende Tastenbefehle zu verhindern.
+3. **Spiel starten**: Begib dich ins Hauptmenü und wähle den lokalen Duell-/Versus-Modus.
+4. **Profile zuweisen**: Weise Spieler 1 und Spieler 2 die jeweiligen Eingabeprofile und individuellen Animations-Loadouts zu.
+5. **Auflösungsskalierung anpassen**: Sollte deine Hardware bei geteiltem Bildschirm unter 60 Bilder pro Sekunde fallen, reduziere die Schattendetails und die Ragdoll-Verweildauer.
+
+### Empfohlene Systemkonfigurationen für flüssigen Split-Screen
+
+Das gleichzeitige Rendern zweier Blickwinkel in einem physiklastigen Titel erfordert deutlich mehr GPU- und CPU-Draw-Calls als Einzelspielermodi. Die folgenden Hardware-Profile gewährleisten ein durchgehend flüssiges Erlebnis mit 60+ FPS bei intensiven Schlagabtauschen.
+
+| Hardware-Stufe | Zielauflösung | Empfohlene GPU | Empfohlene CPU | Erwartete Leistung |
+| :--- | :--- | :--- | :--- | :--- |
+| **Minimum Couch-Setup** | 1080p @ 60 FPS | GTX 1660 Super / RX 5600 XT | Ryzen 5 3600 / Core i5-10400 | Stabile 60 FPS, niedrige Schatten |
+| **Optimale Esports-Spezifikation** | 1440p @ 120 FPS | RTX 3070 / RX 6700 XT | Ryzen 7 5800X / Core i5-12600K | Feste 120 FPS, maximale Ragdolls |
+| **4K-Wohnzimmer-TV** | 4K (2160p) @ 60 FPS | RTX 4070 / RX 7800 XT | Ryzen 7 7800X3D / Core i7-13700K | Filmreife 60 FPS auf großen Bildschirmen |
+
+---
+
+## Eigene Movesets für Couch-Duelle optimieren
+
+Die größte Stärke des Spiels liegt in seinem Animations-Editor, mit dem Spieler Schläge, Finten, Stöße und Paraden manuell entwerfen können. Wenn du in den **gladiomori split screen** startest, steigert ein optimal zusammengestelltes Toolkit deine Siegchancen gegen einen Kontrahenten, der jede deiner Bewegungen genau im Auge hat, drastisch.
+
+In einem Split-Screen-Match kann dein Gegner deine Startup-Frames über die Bildschirmtrennung hinweg visuell erahnen. Da das „Screen-Peeking“ eine unvermeidbare Realität bei Couch-Kämpfen ist, musst du Movesets entwickeln, die auf schnellen Erholungszeiten (Recovery) und irreführenden Frame-Daten basieren – statt auf langen, vorhersehbaren Ausholbewegungen.
+
+### Wesentliche Angriffs-Archetypen für das lokale Spiel
+
+| Angriffs-Archetyp | Idealer Klingentyp | Startup-Geschwindigkeit | Erholungsrisiko | Strategischer Zweck |
+| :--- | :--- | :--- | :--- | :--- |
+| **Schneller Schnappstoß** | Rapier / Kurzschwert | Sehr schnell (10-15 Frames) | Gering | Bestrafen weiter Fehlschläge durch die Mitte |
+| **Überkopf-Spaltung** | Langschwert / Claymore | Moderat (25-35 Frames) | Hoch | Durchbrechen tiefer Blocks und Niederschlagen |
+| **Tiefe fegende Finte** | Krummsäbel | Schnell abbrechbar | Mittel | Erzwingen von Paraden vor dem Richtungswechsel |
+| **Defensive Chamber-Parade** | Jeder Schild / jede Klinge | Sofortiges aktives Fenster | Extrem bei Fehlschlag | Kontern von Angreifern mit hohem Angriffstempo |
+
+### Strategische Tipps für Couch-Duelle
+
+- **Verschleiere deine Haltung**: Wechsle deine Beinarbeit unvorhersehbar. Da dein Mitspieler deine Eingaben und deine Haltung sehen kann, verhindert das ständige Wechseln zwischen hoher und tiefer Deckung vorzeitige Paraden.
+- **Setze auf Rüstungsdurchdringung**: Erlauben eure lokalen Regeln schwere Rüstungsplatten, führen wuchtige Hiebe oder präzise Stöße durch Visierschlitze zu direkten One-Hit-Knockouts.
+- **Haushalte mit der Ausdauer**: Wer sich mit schweren Schwüngen verausgabt, steht schnell erschöpft da – eine Einladung für den aufmerksamen Kontrahenten zum sofortigen Gnadenstoß.
+
+---
+
+## Fehlerbehebung bei typischen Split-Screen-Problemen
+
+Selbst auf leistungsstarken PCs kann der Betrieb zweier Gamepads an einer geteilten Bildschirmoberfläche gelegentlich zu Gerätekonflikten oder Treiberproblemen führen. Nutze diese Diagnosetabelle, um Störungen schnell zu beheben.
+
+### Diagnose- & Reparatur-Leitfaden
+
+| Symptom | Ursache | Sofortige Lösung |
+| :--- | :--- | :--- |
+| **Beide Gamepads steuern Spieler 1** | Doppelte XInput-/DirectInput-Zuweisung | Deaktiviere die generische Controller-Unterstützung in Steam; aktiviere nur die Xbox-Konfigurationsunterstützung. |
+| **Unruhiges Frame-Pacing oder Mikroruckler** | GPU-Engpässe durch zweifaches Rendern | Verringere die dynamische Schattenauflösung und limitiere die Bildwiederholrate in der Nvidia Systemsteuerung oder AMD Adrenalin. |
+| **Zweiter Spieler kann keine Custom Moves wählen** | Fehlende Leserechte für den Animationsordner | Stelle sicher, dass die Animationsdateien im freigegebenen Verzeichnis liegen, auf das alle lokalen Spieler-Slots zugreifen können. |
+| **Ein Controller trennt sich mitten in der Runde** | USB-Energiesparmodus schaltet Ports ab | Öffne den Windows Geräte-Manager -> USB-Controller -> Eigenschaften -> Deaktiviere „Computer kann das Gerät ausschalten, um Energie zu sparen“. |
+
+Mit diesen schnellen Handgriffen bleiben deine **gladiomori split screen**-Kämpfe reaktionsschnell, fair und frei von störenden Eingabeabbrüchen.
+
+---
+
+## Häufig gestellte Fragen (FAQ)
+
+### Kann man Gladio Mori im Split-Screen online mit zufälligen Gegnern spielen?
+Nein. Wie durch Community-Berichte und Entwickler-Statements bestätigt wurde, ist das lokale Spiel rein auf den Offline-Betrieb ausgelegt. Du kannst nicht im Split-Screen spielen und gleichzeitig einem Online-Matchmaking-Server beitreten. Möchtest du mit einem entfernten Freund spielen, musst du auf Steam Remote Play Together zurückgreifen.
+
+### Wie viele Spieler können Gladio Mori an einem Bildschirm spielen?
+Derzeit sind standardmäßige lokale Matches auf 1v1-Duelle ausgelegt. Der Bildschirm teilt oder fokussiert sich so, dass beide Spieler die volle räumliche Übersicht behalten, um Waffenabstand und Timing perfekt zu steuern.
+
+### Funktionieren eigene Movesets im Gladio Mori Split-Screen ordnungsgemäß?
+Ja. Beide Kämpfer können vor Rundenbeginn im Charakterauswahl-Bildschirm ihre maßgeschneiderten Angriffsketten und Verteidigungshaltungen wählen, vorausgesetzt, die entsprechenden Dateien sind auf dem Host-PC gespeichert.
+
+### Warum wird mein Controller für Spieler 2 nicht erkannt?
+Dies liegt meist an Konflikten mit Steam Input. Vergewissere dich, dass beide Controller eingeschaltet und von Windows erkannt wurden, bevor du das Spiel startest. Werden die Eingaben von Spieler 2 als Spieler 1 interpretiert, überprüfe deine Steam-Controller-Einstellungen und deaktiviere Drittanbieter-Mapping-Tools, die virtuelle Geräte auf einen einzelnen Slot legen könnten. Führst du deine **gladiomori split screen**-Session mit nativen XInput-Gamepads aus, ist eine reibungslose Erkennung garantiert.

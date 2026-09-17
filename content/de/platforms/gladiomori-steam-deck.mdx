@@ -1,0 +1,137 @@
+export const metadata = {
+  title: "Gladio Mori Steam Deck Performance-Guide: Beste Einstellungen & Kompatibilität",
+  description: "Meistern Sie Gladio Mori auf dem Steam Deck mit unserem ultimativen Setup-Guide. Entdecken Sie offizielle Kompatibilität, Performance-Tweaks, Steuerung und Akku-Tipps.",
+  category: "platforms",
+  date: "2026-09-18",
+}
+
+Wenn Sie schon immer Arterien durchtrennen und tödliche, maßgeschneiderte Movesets erstellen wollten, während Sie entspannt auf der Couch liegen, macht das Ausführen von **Gladio Mori Steam Deck**-Setups diesen brutalen Traum zur tragbaren Realität. Der physikbasierte Gladiatoren-Simulator von Plebeian Studio begeistert Kampffans mit seinem trefferzonenbasierten Kampfsystem ohne Lebensbalken, bei dem gezielt Organe anvisiert werden. Um Ihre Arenakämpfe mit der **gladiomori steam deck**-Konfiguration unterwegs zu bestreiten, müssen Sie verstehen, wie Valve das Spiel bewertet und wie Sie Ihre Handheld-Hardware für maximale Framerate-Stabilität optimieren.
+
+Tragbare Gladiatorenkämpfe bringen einzigartige Herausforderungen mit sich – von der Verfolgung schneller Abtrennungen von Gliedmaßen bis hin zur Verwaltung detaillierter Angriffsanimationen. Handheld-Enthusiasten müssen die perfekte Balance zwischen flüssigen 60-FPS-Physikberechnungen und einer nachhaltigen Akkulaufzeit finden. Dieser umfassende Leitfaden deckt alles ab: vom offiziellen Verifizierungsstatus und empfohlenen Einstellungen bis hin zu benutzerdefinierten Trackpad-Konfigurationen und Mod-Support auf Valves Handheld.
+
+---
+
+## Valve-Kompatibilitätsbewertung und Handheld-Status
+
+Bevor Sie einen Indie-Brawler auf Valves tragbarem System installieren, sollten Sie unbedingt dessen offizielles Abzeichen überprüfen. Valve bewertet Titel basierend auf Eingabeverarbeitung, Lesbarkeit von Bildschirminhalten, standardmäßigen Leistungskonfigurationen und der Betriebssystem-Übersetzung über Proton.
+
+| Funktionsbereich | Steam Deck Status | Details zur Bewertung |
+| :--- | :--- | :--- |
+| **Kompatibilitätskategorie** | **Spielbar** | Funktionales Gameplay ab Werk mit kleineren manuellen Eingabe-/Anzeige-Eigenheiten |
+| **Eingabeerkennung** | Gut | Erkennt automatisch die bordeigenen Deck-Gamepad-Layouts und Sticks |
+| **Textlesbarkeit** | Zufriedenstellend | Die meisten UI-Menüs skalieren gut; Text im In-Game-Editor kann klein wirken |
+| **Standardanzeige** | 1280x800 Nativ | Läuft im nativen Deck-Seitenverhältnis ohne störende schwarze Balken |
+| **Ersteinrichtung** | Nahtlos | Keine obligatorischen Drittanbieter-Launcher zum Starten erforderlich |
+
+Wie auf der offiziellen [Gladio Mori Steam Store-Seite](https://store.steampowered.com/app/2689120/Gladio_Mori/) angegeben, besitzt das Spiel die offizielle Einstufung **Spielbar**. Ein "Spielbar"-Abzeichen bedeutet in der Regel, dass Sie das Spiel sofort starten und Matches bestreiten können, bestimmte Aufgaben – wie die Verwendung des benutzerdefinierten Move-Animators oder der Text-Chat in Multiplayer-Lobbys – jedoch das Aufrufen der virtuellen Bildschirmtastatur (`Steam + X`) oder die Anpassung des Trackpad-Verhaltens erfordern können.
+
+---
+
+## Hardwarespezifikationen im Vergleich zur Steam Deck APU
+
+Das Verständnis der Hardwareanforderungen hilft Ihnen, realistische Erwartungen an Ihre mobilen Spielesitzungen zu stellen. *Gladio Mori* ist hinsichtlich des Speicherbedarfs mit etwa 1 GB Festplattenspeicher äußerst kompakt, doch seine dynamischen Ragdoll-Berechnungen und die Treffererfassung von Organen verlangen eine solide CPU-Leistung.
+
+| Hardware-Metrik | Mindestanforderungen Desktop | Steam Deck Custom APU (Van Gogh) | Reale Auswirkungen auf das Deck |
+| :--- | :--- | :--- | :--- |
+| **Betriebssystem** | Windows 10 (64-Bit) | SteamOS 3.x (Arch-basiertes Linux via Proton) | Exzellente Übersetzung ohne spürbaren API-Overhead |
+| **Prozessor** | 3.5 GHz Multi-Core | 4 Kerne / 8 Threads Zen 2 (bis zu 3.5 GHz) | Bewältigt 1v1- und 4-Spieler-Physikkollisionen mühelos |
+| **Arbeitsspeicher** | 4 GB RAM | 16 GB LPDDR5 Unified RAM | Übertrifft das Minimum deutlich; verhindert RAM-Engpässe |
+| **Grafikkarte** | NVIDIA GTX 1070 | 8 RDNA 2 CUs (1.0–1.6 GHz) | Bietet solide Desktop-Mittelklasse-Grafik bei 720p/800p |
+| **Speicherplatz** | 1 GB verfügbarer Speicherplatz | eMMC, NVMe SSD oder MicroSD | Winzige Installationsgröße; lädt blitzschnell auf allen Medien |
+
+Da das Spiel mit einer klaren, stilisierten Grafik entwickelt wurde, die den Fokus auf physikalische Präzision statt auf dichte Raytracing-Umgebungen legt, meistert die maßgeschneiderte APU des Decks die Basisanforderungen problemlos.
+
+---
+
+## Optimale In-Game-Einstellungen und SteamOS-Konfigurationen
+
+Um ein flüssiges Gameplay zu gewährleisten und gleichzeitig den Akku bei längeren Spielsitzungen zu schonen, empfiehlt sich die Feinabstimmung der In-Game-Parameter und der Schnellzugriff-Einstellungen von SteamOS. Bei der Konfiguration der **gladiomori steam deck**-Leistung stehen Ihnen im Wesentlichen zwei Zielprofile zur Verfügung: ein wettbewerbsorientiertes 60-FPS-Profil für blitzschnelle Paraden oder ein ausgewogenes 40/45-Hz-Profil zur Maximierung der Akkulaufzeit.
+
+### Vergleich der Leistungsprofile
+
+| Einstellungsparameter | 60 FPS Präzisions-Arena (Am Stromnetz / Gedockt) | 40/45 FPS Effizienz (Portabler Akkusparmodus) |
+| :--- | :--- | :--- |
+| **Bildschirmauflösung** | 1280 x 800 (Nativ 16:10) | 1280 x 800 (Nativ 16:10) |
+| **Framerate-Begrenzung** | 60 FPS / 60 Hz | 40 FPS / 40 Hz (oder 45 FPS / 90 Hz OLED) |
+| **TDP-Limit (Watt)** | Deaktiviert (Volle 15W Zuweisung) | 9 Watt – 10 Watt |
+| **Schattenqualität** | Mittel | Niedrig bis Mittel |
+| **Physik- / Ragdoll-Details** | Hoch | Hoch (Entscheidend für die Treffererfassung) |
+| **Kantenglättung (Anti-Aliasing)** | FXAA oder TAA Mittel | FXAA / Niedriges TAA |
+| **Geschätzte Akkulaufzeit** | ~2,0 bis 2,5 Stunden (LCD) / ~3 Stunden (OLED) | ~3,5 bis 4,5 Stunden (LCD) / ~5 Stunden (OLED) |
+
+### Schritt-für-Schritt-Optimierungsprozess
+
+1. Öffnen Sie das **Schnellzugriffsmenü** (die `...`-Taste auf der rechten Seite).
+2. Navigieren Sie zum Akku-/Leistungs-Tab.
+3. Aktivieren Sie **Spielspezifisches Profil verwenden**, damit Ihre Änderungen nur beim Start dieses Titels wirksam werden.
+4. Stellen Sie das **Bildfrequenz-Limit** je nach Vorliebe auf 40 oder 60 ein.
+5. Stellen Sie im Grafikmenü des Spiels sicher, dass die Auflösung auf 1280x800 eingestellt ist, anstatt 1080p zu erzwingen, was die Handheld-APU unnötig belasten würde.
+6. Belassen Sie die Physiksimulationen auf hoher Priorität; ein Herabsetzen der Physikgenauigkeit kann die Präzisionswinkel für Schwerthiebe und Wuchtwaffen beeinträchtigen.
+
+Spielererfahrungen und Community-Berichte zeigen, dass das Sperren der Bildwiederholfrequenz auf 40 Hz oder 45 Hz eine außergewöhnlich konstante Frame-Time bietet, ohne die Reaktionsfähigkeit auf plötzliche Schwertstöße zu beeinträchtigen.
+
+---
+
+## Controller-Layouts, Move-Editor und Trackpad-Belegung
+
+Die Kampfmechanik in *Gladio Mori* basiert auf anatomischem Zielen: Durchstechen lebenswichtiger Organe, Schlagen auf Gliedmaßen und Treffen ungeschützter Hautstellen zwischen Rüstungsteilen. Die standardmäßige Controller-Erkennung für Xbox und PlayStation funktioniert ab Werk gut, das Anpassen Ihres Steuerungsschemas kann den Kampffluss jedoch spürbar verbessern.
+
+| Taste / Eingabe | Standardaktion | Empfohlene benutzerdefinierte Steam Deck-Belegung |
+| :--- | :--- | :--- |
+| **Linker Joystick** | Charakterbewegung | Bewegung + Klick (L3) für Sprinten/Ausweichen |
+| **Rechter Joystick** | Kameradrehung | Kameradrehung |
+| **Aktionstasten (A/B/X/Y)** | Standardangriffe & Ausweichen | Standard-Layout oder auf Rücktasten (L4/R4) gelegt |
+| **Rechtes Trackpad** | Mausnavigation | Als Maus (Unerlässlich für Posen-Anpassungen im Move-Editor) |
+| **Linkes Trackpad** | Nicht zugewiesen / D-Pad-Duplikat | Radialmenü für schnelle Kampfhaltungswechsel |
+| **Rücktasten (L4/R4/L5/R5)**| Nicht zugewiesen | Springen, Ducken/Fallenlassen, Zielerfassung, schneller Haltungswechsel |
+
+### Bedienung des Move- und Skin-Editors im Handheld-Modus
+
+Ein herausragendes Merkmal des Spiels ist das Frame-by-Frame-Move-Studio sowie der integrierte Charakter-Skin-Editor. Das Erstellen einzigartiger Angriffe auf einem Handheld-Bildschirm kann sich jedoch etwas eng anfühlen, wenn man sich rein auf die Analogsticks verlässt.
+
+* **Nutzen Sie die Desktop-Trackpads:** Weisen Sie dem rechten Trackpad **Maus-Emulation** zu, mit einem sanften Klick als linke Maustaste. Dadurch können Sie Gliedmaßen positionieren und Animations-Keyframes mit desktop-ähnlicher Präzision anpassen.
+* **Virtuelle Tastatur aufrufen:** Wenn Sie Animationen benennen oder im Mod-Browser nach von der Community erstellten Movesets suchen, drücken Sie `Steam + X`, um die Bildschirmtastatur manuell zu öffnen.
+* **Touchscreen-Malen:** Der kapazitive Touchscreen des Decks kann verwendet werden, um grundlegende Farbflächen direkt auf die Hauttextur Ihres Gladiators zu zeichnen.
+
+---
+
+## Multiplayer, Crossplay und Community-Inhalte auf Handhelds
+
+*Gladio Mori* bietet plattformübergreifenden Multiplayer über Steam, PlayStation 5 und Xbox Series X|S hinweg und unterstützt Online-Arenen für bis zu vier Kämpfer sowie lokale Duelle im Split-Screen.
+
+| Multiplayer-Modus | Auswirkung auf die Deck-Leistung | Handheld-Strategie & Empfehlungen |
+| :--- | :--- | :--- |
+| **1v1 Online-Duell** | Minimal | Bestes Multiplayer-Format auf dem Deck; minimale Netzwerk- und Physikbelastung. |
+| **4-Spieler-Jeder-gegen-Jeden** | Moderat | Mehrere gleichzeitige Ragdolls können minimale Frame-Drops verursachen; auf 40/45 FPS begrenzen. |
+| **Lokaler Split-Screen** | Hoch (Gedockt) | Erfordert den Anschluss externer Controller; stellen Sie die Auflösung gedockt auf 720p/1080p ein. |
+| **Community-Mod-Galerie** | Zu vernachlässigen | Der In-Game-Mod-Browser ermöglicht das Herunterladen von Community-Moves und Skins direkt auf dem Deck. |
+
+Wenn Sie Handheld-Crossplay-Lobbys betreten, ist eine stabile WLAN-Verbindung unerlässlich. Da Treffer von physikalischer Kollisionserkennung anstelle von herkömmlichen Hitboxen abhängen, kann Netzwerklatenz zu verspäteten Abtrennungen von Gliedmaßen oder verzögerten Parade-Frames führen. Es wird empfohlen, bevorzugt 5-GHz-WLAN-Netzwerke zu nutzen, wenn Sie in Ranglisten- oder Freundschaftsspielen antreten.
+
+---
+
+## Fehlerbehebung bei typischen Handheld-Problemen
+
+Sollten beim Spielen von **gladiomori steam deck**-Matches Probleme auftreten, lassen sich diese meist durch gezielte Proton-Anpassungen beheben:
+
+1. **Mikro-Ruckler bei Kämpfen mit mehreren Gladiatoren:** Wenn 4-Spieler-Lobbys Frames verlieren, wechseln Sie das Kompatibilitätswerkzeug. Gehen Sie in SteamOS zu den Spieleigenschaften, wählen Sie **Kompatibilität**, aktivieren Sie **Die Verwendung eines bestimmten Kompatibilitätswerkzeugs für Steam Play erzwingen** und wählen Sie **Proton Experimental** oder den neuesten stabilen GE-Proton-Build.
+2. **Textskalierung in Mod-Menüs:** Falls Beschreibungen in der Mod-Galerie auf dem 7-Zoll- bzw. 7,4-Zoll-Display zu klein dargestellt werden, nutzen Sie die systemweite Lupe von Valve, indem Sie `Steam + L1` gedrückt halten.
+3. **Save-Sync mit Desktop-PCs:** Steam Cloud ist vollständig integriert. Wenn Ihre benutzerdefinierten Movesets nicht sofort zwischen Ihrem Desktop-PC und Ihrem Deck synchronisiert werden, stellen Sie sicher, dass der Cloud-Synchronisierungsstatus ein grünes Häkchen anzeigt, bevor Sie das Gerät ausschalten.
+
+Indem Sie Ihre Leistungsgrenzen anpassen, die Trackpad-Belegungen von Steam Input nutzen und Ihre Bildwiederholraten optimieren, bietet das Spielen von **gladiomori steam deck**-Kämpfen ein fesselndes und reaktionsschnelles Gladiatorenerlebnis für unterwegs.
+
+---
+
+## Häufig gestellte Fragen (FAQ)
+
+### Kann ich Gladio Mori auf dem Steam Deck mit festen 60 FPS spielen?
+Ja. Dank des stilisierten Grafikdesigns und der moderaten Mindestanforderungen (GTX 1070 als Richtwert) kann die APU des Steam Decks in standardmäßigen 1v1-Duellen stabile 60 FPS halten. Für größere 4-Spieler-Gefechte sorgt eine Begrenzung auf 40 Hz oder 45 Hz für eine gleichmäßigere Bildausgabe und verlängert die Akkulaufzeit.
+
+### Funktioniert der In-Game-Move-Editor auf dem Steam Deck?
+Ja, aber die Navigation im Move-Editor ausschließlich über Analogsticks kann mühsam sein. Die beste Methode ist es, das rechte Trackpad als Maus mit Trackpad-Klick als Linksklick zu konfigurieren. Dies ermöglicht es Ihnen, Gelenke, Haltungs-Timings und Animationsknoten deutlich präziser anzupassen.
+
+### Sind Community-Movesets und Mods auf dem Steam Deck verfügbar?
+Ja. Die integrierte Mod-Galerie funktioniert unter Linux über Proton uneingeschränkt. Sie können von der Community erstellte Movesets, benutzerdefinierte Rüstungen, Arenen und Kämpfer-Skins direkt über die SteamOS-Oberfläche durchsuchen, herunterladen und ausrüsten, ohne in den Desktop-Modus wechseln zu müssen.
+
+### Unterstützt Gladio Mori lokalen Split-Screen im Docking-Modus?
+Ja. *Gladio Mori* unterstützt gemeinsamen Bildschirm und Split-Screen für den lokalen Mehrspielermodus. Wenn Sie Ihr Deck über ein Dock an einen Fernseher oder Monitor anschließen, verbinden Sie einfach mehrere Bluetooth- oder USB-Controller (wie Xbox, DualSense oder Dritthersteller-Gamepads), und das Spiel erkennt die Eingaben für lokale Arenakämpfe problemlos.

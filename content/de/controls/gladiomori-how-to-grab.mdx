@@ -1,0 +1,172 @@
+export const metadata = {
+  title: "Gladio Mori Greifen erklärt: Vollständiger Guide zu Waffengriffen und Animations-Setup",
+  description: "Meistern Sie Waffenhandhabung und Grappling-Mechaniken. Erfahren Sie, wie Sie in Gladio Mori Waffen mit beiden Händen greifen, Griff-Bugs beheben und Movesets erstellen.",
+  category: "controls",
+  date: "2026-09-18",
+}
+
+Die Beherrschung des physischen Nahkampfs in einem physikbasierten Arena-Brawler erfordert präzise Kontrolle über die Gliedmaßen, die Körperhaltung und die Waffenführung Ihres Kämpfers. Wenn Ihr Krieger seine Klinge fallen lässt oder keinen beidhändigen Griff hinbekommt, ist das Erlernen von **gladiomori how to grab** die wichtigste Fähigkeit zu Beginn. Viele neue Gladiatoren betreten die Arena und stellen fest, dass ihre Nebenhand hilflos herabhängt, weil sie die animationsbasierten Griffmechaniken noch nicht verstehen. Zu lernen, wie man in Gladio Mori richtig greift, verbessert sofort Ihre Hebelwirkung im Angriff, verhindert versehentliche Entwaffnungen und ermöglicht es Ihnen, massive Zweihandwaffen mit verheerender Wucht zu führen.
+
+---
+
+## Das Griff- und Physiksystem von Gladio Mori verstehen
+
+Im Gegensatz zu herkömmlichen Fighting Games, bei denen das Greifen auf einen universellen Tastendruck gelegt ist (wie `R1` oder leichter Schlag plus leichter Tritt), basiert *Gladio Mori* vollständig auf einer physikbasierten, Keyframe-gesteuerten Animations-Engine. In diesem Spiel greift Ihr Charaktermodell nicht auf vorgefertigte Lock-on-Animationen zurück, um Ausrüstung zu halten oder mit Gegnern zu interagieren. Jedes Gliedmaß verhält sich entsprechend seinem zugewiesenen physikalischen Zustand, den Gelenkbeschränkungen und den Griffeinstellungen, die im Move-Editor oder in den Standard-Charakterhaltungen konfiguriert sind.
+
+Wenn Spieler nach dem Greifen fragen, meinen sie typischerweise zwei unterschiedliche Aktionen:
+1. **Waffengriff (Halten):** Einstellen von Haupthand und Nebenhand, damit sie fest an Heft, Schaft oder Knauf einer Waffe anliegen.
+2. **Dynamisches Grappling / Handkontakt:** Nutzen offener oder geschlossener Hände, um den Körper des Gegners zu manipulieren, Gliedmaßen abzufangen oder im Nahkampf zu ringen.
+
+Da jeder Angriff in *Gladio Mori* im Wesentlichen eine Abfolge physikalischer Posen auf einer internen Zeitleiste ist, greifen Ihre Hände nur dann nach Objekten, wenn ihr Zustand für diesen Zeitabschnitt explizit als aktives Greifen definiert ist. Ein Blick in den [Gladio Mori Steam Community Hub](https://steamcommunity.com/app/2689120) zeigt, dass Griffprobleme zu den häufigsten Hürden für Neulinge beim Erstellen eigener Animationen gehören.
+
+| Grifftyp | Mechanik-Übersicht | Primärer Einsatzzweck | Risikofaktor |
+| :--- | :--- | :--- | :--- |
+| **Primär einhändig** | Standardhand an Waffen-Griff-Node fixiert | Schnelle Stöße, Kurzschwerter, Rapier | Höhere Wahrscheinlichkeit einer Entwaffnung bei schweren Treffern |
+| **Zweihändig (Dual Grip)** | Beide Hände aktiv Waffenknoten zugewiesen | Großschwerter, Stangenwaffen, schwere Hinrichtungsschläge | Geringere Reichweite bei zu stark angewinkelten Ellbogen |
+| **Dynamischer Clinch / Grapple** | Kollision der offenen Hand mit Ragdoll-Gelenken des Gegners | Entwaffnen, Destabilisieren, Würfe auf kurze Distanz | Hohe Anfälligkeit für Konter während der Ausholbewegung |
+| **Halbschwert-Griff (Half-Swording)** | Dominante Hand am Heft, Nebenhand greift die Klinge | Rüstungsdurchdringung, hochpräzise Kontrolle | Schränkt Schwungradius und reine Schnittwucht ein |
+
+---
+
+## Gladio Mori Greifen: Schritt-für-Schritt-Konfiguration der Kampfhaltung
+
+Der Hauptgrund, warum Spieler beim Führen von Zweihandwaffen ungewollt einhändig zuschlagen, liegt in der Konfiguration der Haltung. Wenn Sie Ihrer Nebenhand in der standardmäßigen Idle-Pose nicht zuweisen, die Waffe zu halten, spawnt Ihr Krieger mit einer Klinge in nur einer Hand.
+
+Um dies zu beheben, müssen Sie Ihre neutrale Haltung (Idle) und die grundlegende Bewegungsschleife im Move-Editor konfigurieren. Folgen Sie dieser Schrittfolge, um Ihren Griff einzustellen:
+
+```
+[Hauptmenü] -> [Move-Editor / Haltungs-Manager] -> [Waffenprofil auswählen]
+   │
+   ├──> [Haltung auswählen: Idle / Neutral]
+   │       │
+   │       ├──> Linkes Handgelenk wählen -> Zustand auf "Halten / Greifen" setzen
+   │       └──> Rechtes Handgelenk wählen -> Zustand auf "Halten / Greifen" setzen
+   │
+   └──> [Nebenhand an Waffenschaft / Griffpunkt anheften] -> [Haltung speichern]
+```
+
+### 1. Öffnen Sie die Haltungs-Konfiguration des Charakters
+Öffnen Sie Ihren benutzerdefinierten Kämpfer oder den Moveset-Editor. Laden Sie das spezifische Waffen-Preset, das Sie verwenden möchten (wie das Langschwert, die Mordaxt oder das Katana).
+
+### 2. Handzustände der Neutralen Haltung (Idle) konfigurieren
+Navigieren Sie zu Ihrer **Idle-Pose** (der Grundhaltung, die Ihr Gladiator einnimmt, wenn er keinen aktiven Angriff ausführt). Überprüfen Sie die Hand-Nodes der dominanten und nicht-dominanten Hand. Berichten aus den Steam-Foren zufolge vergessen viele Spieler, dass beide Hände in der Idle-Haltung individuell auf "Halten" gestellt werden müssen. Steht die Nebenhand auf "Frei" oder "Ragdoll", baumelt sie wirkungslos an Ihrer Seite.
+
+### 3. Hände an den Waffen-Bones verankern
+Rasten Sie den IK-Zielpunkt (Inverse Kinematik) der Zielhand direkt auf dem vorgesehenen Waffengriff-Slot ein. Stellen Sie sicher, dass der Griff-Kollisionsradius das Waffenmodell sauber überlappt.
+
+| Konfigurationsschritt | Einstellungsziel | Empfohlene Einstellung | Häufiger Fehler |
+| :--- | :--- | :--- | :--- |
+| **Schritt 1: Haltungszustand** | Handgriff-Eigenschaft | `Halten` / `An Objekt fixieren` | Nebenhand auf `Entspannt` belassen |
+| **Schritt 2: IK-Snapping** | Handpositions-Bone | An Waffenschaft-Bone einrasten | Hand frei im Raum ohne Bone-Snapping platzieren |
+| **Schritt 3: Timeline-Check** | Übergang bei Keyframe 0 | Griff über Animationsschleife beibehalten | Griff schaltet sich während der Schleife ab |
+| **Schritt 4: Muskelspannung** | Steifigkeit Handgelenk/Ellbogen | Mittel-Hoch (65–85%) | Auf Null gesetzt, führt zu schlaffen Handgelenken |
+
+---
+
+## Keyframes für Zweihandwaffen einrichten
+
+Sobald Ihre Idle-Haltung die Waffe korrekt mit beiden Händen greift, müssen Sie diese Verbindung über alle Kampf-Keyframes hinweg beibehalten. Um das Greifen über einen gesamten Schlag hinweg zu meistern, ist das Verständnis der Timeline-Vererbung entscheidend.
+
+Geht eine Angriffsanimation von einer Grundhaltung in die Ausholbewegung über, liest das Animationssystem jeden Keyframe auf Grifffortdauer ab. Fehlt in einem Keyframe das Griff-Flag für die Nebenhand, lässt diese sofort los – Ihr Großschwerthieb wird zu einem kraftlosen, unpräzisen einhändigen Schwung.
+
+| Keyframe-Phase | Zustand linke Hand | Zustand rechte Hand | Kinetischer Zweck |
+| :--- | :--- | :--- | :--- |
+| **Keyframe 0 (Neutral)** | Fixiert (Halten) | Fixiert (Halten) | Stabilisiert Balance und Ausrichtung der Waffe |
+| **Keyframe 1 (Ausholen)** | Fixiert (Halten) | Fixiert (Halten) | Baut Drehmoment über Schultern und Rumpf auf |
+| **Keyframe 2 (Höhepunkt / Spannen)** | Fixiert (Halten) | Fixiert (Halten) | Maximales Hebelarm-Potenzial |
+| **Keyframe 3 (Einschlag)** | Fixiert (Halten) | Fixiert (Halten) | Überträgt Masse über starre Kollisionsbox |
+| **Keyframe 4 (Durchschwung)** | Fixiert oder Lösen* | Fixiert (Halten) | Optionales Lösen für größere Reichweite mit einer Hand |
+
+*\*Hinweis: Community-Erfahrungen zeigen, dass das gezielte Lösen der Nebenhand in der späten Durchschwungphase (Keyframe 4) die Waffenreichweite um bis zu 15 % erhöhen kann, auch wenn dies die Erholungszeit kurzzeitig verlängert.*
+
+### Griffstabilität unter physikalischem Drehmoment aufrechterhalten
+In *Gladio Mori* übertragen harte Waffenkollisionen ein Rotationsdrehmoment zurück in die Gelenke Ihres Charakters. Weist das Griff-Constraint Ihrer Hand eine zu geringe Steifigkeit auf, reißen Klingenparaden bei hoher Geschwindigkeit die Waffe direkt aus den Fingern.
+
+Im Editor:
+- Stellen Sie die **Griffstärke** (Grip Strength) für Primärwaffen auf das Maximum.
+- Setzen Sie die **Gelenksteifigkeit** (Joint Rigidity) an den Unterarmen auf mindestens 70 %, um zu verhindern, dass sich die Nebenhand beim Parieren löst.
+- Achten Sie stets darauf, dass Ihre Keyframe-Interpolationskurven die Hände nicht weiter auseinanderziehen, als es die natürliche Spannweite Ihres Charakters erlaubt, da die Physik-Engine die Hand sonst gewaltsam trennt.
+
+---
+
+## Ringen im Kampf und dynamisches Greifen
+
+Neben dem Halten von Waffen suchen Spieler häufig nach Möglichkeiten, Gegner zu greifen, um sie zu entwaffnen, aus dem Gleichgewicht zu bringen oder am Boden zu fixieren. Dynamisches Grappling ist eine der anspruchsvollsten Mechaniken im Spiel, da es auf aktiver Ragdoll-Kollisionsphysik statt auf vordefinierten Wurf-Cinematics basiert.
+
+```
+Annäherungswinkel (Diagonal) ──> Waffenreichweite unterlaufen ──> Offene Hand (IK) ausstrecken
+                                                                        │
+Waffe entwaffnen <── Hand-Node an gegnerischem Handgelenk / Schlüsselbein fixieren <┘
+```
+
+So führen Sie einen effektiven Griff oder Clinch im laufenden Gefecht aus:
+
+1. **Erstellen Sie eine waffenlose oder Freihand-Haltung:** Sie können den Körper eines Gegners nicht mit einer Hand greifen, die fest an einem Zweihand-Waffengriff verankert ist. Sie müssen eine Haltung oder Aktion entwerfen, bei der eine Hand frei bleibt (z. B. mit einem einhändigen Schwert, Dolch oder mit bloßen Fäusten).
+2. **Stellen Sie die Handkollision auf den Greifmodus:** Konfigurieren Sie in Ihrer benutzerdefinierten Bewegung einen Keyframe mit offener Handfläche, bei dem die Hand bei Kollision mit einem gegnerischen Gliedmaß aktiv zupackt.
+3. **Zielen Sie auf Zonen mit hoher Hebelwirkung:** Die besten Angriffsziele sind das Handgelenk der gegnerischen Waffenhand, Hals/Kragen und die Taille. Das Handgelenk des Gegners zu greifen stoppt dessen Schwungimpuls und eröffnet Ihnen Kontermöglichkeiten per Knaufschlag oder Dolchstich.
+
+| Clinch-Technik | Zielgelenk | Taktisches Ziel | Konterstrategie |
+| :--- | :--- | :--- | :--- |
+| **Handgelenkkontrolle** | Waffenführendes Handgelenk | Entwaffnet den Gegner oder stoppt Vorwärtsschläge | Schneller Ausfallschritt zurück oder Knaufstoß |
+| **Schlüsselbeinzug** | Oberer Brustkorb / Hals | Bringt das Gleichgewicht ins Wanken, leitet Sweep ein | Schwerer Ellbogenschlag nach unten |
+| **Hüfttackle** | Becken / Untere Wirbelsäule | Bringt den Gegner für einen Pin zu Boden | Sprawl nach hinten und Kniestoss nach oben |
+| **Klingengriff (Riskant)** | Schaft der gegnerischen Waffe | Nimmt Stangenwaffen sofort den Hebel | Waffe zurückreißen, Schnitt an den Fingern |
+
+---
+
+## Fehlerbehebung bei häufigen Greif-Bugs und Glitches
+
+Da *Gladio Mori* Animations-Timelines mit Soft-Body-Ragdoll-Physik kombiniert, können einige Konfigurationsfehler die Hand-Interaktionen stören. So diagnostizieren und beheben Sie die häufigsten Probleme.
+
+### Der Fehler: Nur die Starthand hält die Waffe
+Spieler berichten häufig davon, dass ein Gladiator mit nur einer Hand an der Waffe spawnt und der sekundäre Griff ignoriert wird.
+
+* **Ursache:** Die Nebenhand wurde im Editor zwar optisch an die Waffe angepasst, der "Halten"-Schalter in der Grundhaltung blieb jedoch deaktiviert oder die Hand-IK wurde an den Raum statt an den Waffen-Bone gekoppelt.
+* **Lösung:** Öffnen Sie erneut den Move-Editor, wählen Sie Ihre Idle-Haltung, klicken Sie auf das Gelenk der Nebenhand und vergewissern Sie sich, dass das Ziel direkt dem sekundären Griff-Bone der Waffe untergeordnet ist.
+
+### Waffe fliegt bei Schlagbeginn weg
+Gelegentlich setzt ein Kämpfer zu einem Angriff an, und die Waffe fliegt sofort aus seinen Händen, noch bevor ein Treffer erfolgt.
+
+* **Ursache:** Der Handabstand überschreitet über die Keyframes hinweg die Armreichweite des Charakters. Zieht Keyframe 1 die Hände weiter auseinander, als die Anatomie zulässt, interpretiert die Physik-Engine die Dehnung als unmöglichen Gelenkzusammenhang und löst den Griff.
+* **Lösung:** Überprüfen Sie den Abstand zwischen den Händen Ihres Charakters im 3D-Viewport über alle Frames hinweg. Halten Sie die Distanz zwischen beiden Handgelenken während des Schwungs konstant.
+
+| Symptom | Ursache | Lösung |
+| :--- | :--- | :--- |
+| Nebenhand lässt Waffe sofort fallen | Haltungs-Griff-Flag nicht aktiv | Nebenhand auf Frame 0 der Idle-Haltung auf `Halten` setzen |
+| Waffe vibriert und fliegt unkontrolliert weg | Inverse Kinematik überstreckt | Reichweite verkürzen; Ellbogen näher an den Rumpf ziehen |
+| Nebenhand verfehlt Gegner im Clinch | Greiftrajektorie zu eng gefasst | Kollisionsbox an der Handfläche im Streck-Keyframe vergrößern |
+| Klinge dreht sich unkontrolliert in der Hand | Griffsteifigkeit zu gering | Rotationsreibung des Handgelenks in den Haltungseigenschaften erhöhen |
+
+---
+
+## Fortgeschrittene Griffanpassung: Einhändig vs. Zweihändig
+
+Die Wahl des Waffengriffs verändert Ihr Kampfprofil grundlegend. Der Wechsel zwischen Griffarten innerhalb Ihres Movesets erlaubt es Ihnen, sich blitzschnell an gerüstete oder ungerüstete Gegner anzupassen.
+
+Beachten Sie bei der Planung die taktischen Vor- und Nachteile von reinen Einhand-, dynamischen Zweihand- und Hybridhaltungen:
+
+| Eigenschaft | Einhändiger Griff | Zweihändiger Doppelgriff | Halbschwert-Griff |
+| :--- | :--- | :--- | :--- |
+| **Effektive Reichweite** | Hoch (100% Armstreckung) | Mittel (65–80% Streckung) | Gering (40–55% Streckung) |
+| **Kinetische Aufprallenergie** | Moderat | Sehr hoch | Konzentrierter Stoß |
+| **Parier- und Ablenkwiderstand** | Gering (Leicht parierbar) | Hoch (Hält Schwungbahn) | Maximal (Starrer Hebel) |
+| **Entwaffnungsanfälligkeit** | 35% bei schwerer Kollision | Unter 10% bei schwerer Kollision | Nahe 0% |
+| **Nutzen der freien Hand** | Erlaubt Ringen/Schlagen | Keiner (beide Hände gebunden) | Erlaubt Haken/Schild-Manipulation |
+
+Die richtige Handhabung von Griffen ist die Basis für erfolgreiches Moveset-Design. Indem Sie beide Hände in Ihrer Idle-Haltung konfigurieren, Keyframe-Zustände auf der Timeline sperren und saubere physische Reichweitenbögen einstellen, vermeiden Sie frustrierende Griff-Bugs und dominieren die Arena mit Präzision.
+
+---
+
+## Häufig gestellte Fragen (FAQ)
+
+### Wie greife ich in Gladio Mori eine Waffe mit beiden Händen, wenn sie nur von einer Hand gehalten wird?
+Öffnen Sie den Move-Editor und prüfen Sie Ihre standardmäßige **Idle-Haltung**. Klicken Sie auf den Hand-Node der Nebenhand Ihres Gladiators, setzen Sie das Verhalten auf **Halten** (Hold) und lassen Sie die Hand-IK direkt auf dem sekundären Griff-Bone der Waffe einrasten. Achten Sie darauf, dass dieses Halte-Flag auf Keyframe 0 aktiv ist, da das Spiel beim Spawnen sonst standardmäßig den Einhandmodus nutzt.
+
+### Kann man Gegner in Gladio Mori entwaffnen, indem man ihre Waffe greift?
+Ja. Wenn Sie eine Aktion mit einer freien, offenen Hand erstellen, die gezielt auf das Handgelenk der Waffenhand oder den Schaft zielt, kann die physikalische Kollision den Schwungimpuls stoppen. Ein Handgelenksgriff kombiniert mit einem Ruck am Oberkörper oder einem Beinfeger erzeugt genug Drehmoment, um dem Gegner die Waffe aus der Hand zu reißen.
+
+### Warum lässt mein Charakter die Waffe fallen, sobald ich schlage?
+Das passiert meistens, wenn die Keyframes in Ihrer Schlaganimation die Arme Ihres Charakters über ihre physikalische Maximallänge hinaus dehnen. Übersteigt der Abstand zwischen den Händen die anatomischen Grenzen des 3D-Modells, löst die Physik-Engine den Griff zwangsweise, um Skelettverzerrungen zu verhindern. Schieben Sie die Hand-Keyframes näher zusammen, um das Problem zu lösen.
+
+### Kann ich während des Kampfes von einem zweihändigen zu einem einhändigen Griff wechseln?
+Ja. Sie können unterschiedliche Schlagabfolgen in Ihrem Moveset-Profil programmieren. So lässt sich eine Angriffssequenz erstellen, die mit einem zweihändigen Überkopfschlag beginnt, die Nebenhand während des Durchschwung-Keyframes löst und für maximale Reichweite in einen einhändigen Stoß übergeht.

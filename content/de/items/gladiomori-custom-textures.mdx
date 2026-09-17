@@ -1,0 +1,136 @@
+export const metadata = {
+  title: "GladioMori Custom Textures Guide: Waffen, Rüstungen und Arenen neu gestalten",
+  description: "Erfahre, wie du GladioMori Custom Textures installierst, erstellst und optimierst. Verpasse Rüstungen, Klingen und Arenen mit Community-Skins einen neuen Look.",
+  category: "items",
+  date: "2026-09-18",
+};
+
+Präzise Schwertkämpfe, Enthauptungen in Zeitlupe und physikbasierte Gefechte machen jedes Duell unvergesslich – doch erst das Beherrschen von **gladiomori custom textures** ermöglicht es dir, deine eigene visuelle Identität in der Arena zu prägen. Ganz gleich, ob dein Gladiator in geschwärzten Stahl, kunstvolle Goldfiligran-Verzierungen oder leuchtende Arenafarben gekleidet sein soll: Die Arbeit mit **gladiomori custom textures** gibt dir die volle Kontrolle darüber, wie dein Krieger und deine Ausrüstung im Kampf zur Geltung kommen. Statt bei den standardmäßigen Grautönen und einfachen Metallplatten zu verweilen, wertet das Anpassen der visuellen Assets jedes Replay, jeden Screenshot und jedes Duell spürbar auf.
+
+Da die Modding-Community rund um das Spiel auf Plattformen wie mod.io stetig wächst, finden Spieler kontinuierlich neue Wege, um ihre visuellen Ausrüstungen grundlegend zu überarbeiten. Egal, ob du von der Community erstellte Reskins herunterladen oder eigene Textur-Maps von Grund auf neu erstellen möchtest – dieser umfassende Leitfaden deckt alles Wissenswerte ab.
+
+---
+
+## Warum Custom Textures in Gladio Mori wichtig sind
+
+Gladio Mori setzt stark auf präzise Hitboxen und anatomisches Zielen. Während sich das eigentliche Gameplay um Muskelschäden und Waffentrajektorien dreht, ist visuelle Klarheit mindestens genauso entscheidend. Durch den Einsatz benutzerdefinierter Texturen können Kämpfer Rüstungsnähte klarer erkennen, die Reichweite modifizierter Waffen besser einschätzen und Waffen aus Community-Mods personalisieren.
+
+Über die reine Ästhetik hinaus erfüllt das Texturieren auch eine funktionale Aufgabe in hektischen Multiplayer-Duellen. Gut unterscheidbare Farbpaletten erleichtern es, die Körperausrichtung eines Gegners auf dunklen Karten oder in unübersichtlichen Multiplayer-Schlachten mit bis zu 16 Kämpfern auf einen Blick zu erfassen.
+
+### Übersicht der Texturkategorien
+
+| Asset-Typ | Texturauflösung | Primäre Map-Kanäle | Visueller Einfluss | Performance-Kosten |
+| :--- | :--- | :--- | :--- | :--- |
+| **Gladiatoren-Rüstung** | 2048 x 2048 | Diffuse, Normal, Roughness | Hoch (Charakterfokus) | Gering |
+| **Klingen & Waffen** | 1024 x 2048 | Albedo, Metallic, Normal | Kritisch (Kampffokus) | Vernachlässigbar |
+| **Arena-Umgebung** | 2048 x 2048 / 4096 x 4096 | Base Color, Normal, Height | Moderat (Immersion) | Mittel |
+| **Gore & Decals** | 1024 x 1024 | Opacity, Specular, Diffuse | Hoch (Kampf-Feedback) | Gering |
+
+---
+
+## So installierst du GladioMori Custom Textures
+
+Das Installieren von benutzerdefinierten Skin-Paketen und Textur-Modifikationen hängt davon ab, ob du direkte Dateiüberschreibungen nutzt oder Mods über Mod-Hosting-Plattformen verwaltest. Viele Spieler nutzen den offiziellen [Gladio Mori mod.io Hub](https://mod.io/g/gladio-mori), um gebrauchsfertige Waffen, Karten und Textur-Sets anderer Creator zu durchstöbern.
+
+### Schritt-für-Schritt-Installationsanleitung
+
+Befolge diese praktischen Schritte, um angepasste Skins und Ersatzdateien in dein Spielverzeichnis zu importieren:
+
+1. **Finde dein Spiel-Hauptverzeichnis**: Navigiere zu deinem Installationsordner, der sich typischerweise unter `SteamLibrary/steamapps/common/Gladio Mori/` befindet.
+2. **Original-Dateien sichern**: Erstelle immer eine Sicherheitskopie deiner originalen Vanilla-Spieldateien, bevor du Texturpakete austauschst oder veränderst.
+3. **Texturpakete herunterladen**: Lade `.png`-, `.tga`- oder gepackte `.pak`/Mod-Dateien von verifizierten Community-Plattformen herunter.
+4. **Assets einfügen**: Platziere die Textur-Skins gemäß den Anweisungen des Autors im vorgesehenen Ordner `Mods` oder `Content/Textures`.
+5. **Grafikeinstellungen anpassen**: Stelle die Texturqualität im Grafikmenü des Spiels auf **Hoch** oder **Ultra**, um zu verhindern, dass herunterskaliertes Mipmapping deine neuen Designs unscharf darstellt.
+
+### Vergleich der Mod-Formate
+
+| Distributionsformat | Installationsmethode | Benutzerfreundlichkeit | Unkomplizierter Rollback |
+| :--- | :--- | :--- | :--- |
+| **Lose Texturdateien (.png/.dds)** | Manuelles Ablegen im Ordner | Moderat | Erfordert manuelles Backup |
+| **Paks / Paket-Archive** | Einfügen in den Mod-Ordner | Einfach | Paket löschen oder deaktivieren |
+| **Mod-Manager-Abonnements** | Auto-Sync über mod.io | Sehr einfach | Ein-Klick-Deabonnieren |
+
+---
+
+## Eigene Custom Textures erstellen: Tools und Formate
+
+Wenn du maßgeschneiderte Rüstungsplatten, individuelle Heraldik oder verwitterte Breitschwerter gestalten möchtest, brauchst du dafür kein professionelles Studio-Setup. Standard-Bildbearbeitungsprogramme und Texture-Baking-Software funktionieren sowohl mit Low-Poly- als auch mit hochdetaillierten Modellen hervorragend.
+
+### Wichtigste Software-Tools
+
+- **Photoshop oder GIMP**: Ideal für das Malen von Basisfarben, Team-Decals und feinen Linienakzenten.
+- **Substance 3D Painter / ArmorPaint**: Perfekt, um direkt auf den UV-Shells des Gladiators in 3D zu malen und präzise PBR-Maps zu generieren.
+- **Krita**: Hervorragendes Open-Source-Tool für handgezeichnete, stilisierte Details.
+
+### Unterstützte Textur-Maps
+
+Damit **gladiomori custom textures** korrekt auf die Szenenbeleuchtung reagieren, musst du mehrere Texturdurchläufe berücksichtigen, anstatt dich nur auf ein einfaches Diffuse-Bild zu verlassen.
+
+| Textur-Map | Format | Farbtiefe | Funktion in Gladio Mori |
+| :--- | :--- | :--- | :--- |
+| **Albedo / Base Color** | PNG / DDS (BC7) | 8-Bit / 24-Bit | Definiert Oberflächenpigmente ohne fest eingebrannte Schatten |
+| **Normal Map** | PNG / DDS (BC5) | 16-Bit (DirectX/OpenGL) | Simuliert Dellen, Kratzer und Kanten auf Metalloberflächen |
+| **Roughness Map** | Graustufen-PNG | 8-Bit | Bestimmt Glanzgrad, Lichtreflexionen und matte Oberflächen |
+| **Metallic Map** | Graustufen-PNG | 8-Bit | Trennt leitfähige Metalle (Schwerter, Helme) von Stoffgeweben |
+| **Ambient Occlusion (AO)** | Graustufen-PNG | 8-Bit | Verstärkt Kontaktschatten in Vertiefungen und Gelenkbereichen |
+
+---
+
+## Optimierung von Custom Skins für den kompetitiven Multiplayer
+
+Berichte aus der Community zeigen, dass das Laden unkomprimierter 4K-Texturen über mehrere Gladiatorenmodelle hinweg zu plötzlichen Rucklern bei Berechnungen von Abtrennungen und Treffern führen kann. Da Gladio Mori Physik, Wucht und Körpertraumata in Echtzeit berechnet, haben stabile 60+ FPS Vorrang vor übertrieben hoher Oberflächenauflösung.
+
+### Richtlinien für Texturauflösungen nach Anwendungsbereich
+
+| Asset-Ziel | Empfohlene Auflösung | Zieldateigröße | Kompressionstyp | Empfohlener Einsatz |
+| :--- | :--- | :--- | :--- | :--- |
+| **Duellwaffen** | 1024 x 1024 | ~1,5 MB | DXT1 / BC1 | 1v1-Ranglistenduelle |
+| **Gladiator-Körper/Rüstung** | 2048 x 2048 | ~4,0 MB | BC7 | Standard-Matches |
+| **Arena-Objekte** | 1024 x 1024 | ~2,0 MB | DXT5 / BC3 | Groß angelegte Free-for-Alls |
+| **Showcase- / Replay-Sets**| 4096 x 4096 | ~16,0 MB | Unkomprimiertes PNG | Cinematics & Screenshots |
+
+### Praktische Optimierungstipps
+
+- **Zweierpotenzen**: Achte stets darauf, dass deine benutzerdefinierten Texturen Abmessungen in Zweierpotenzen nutzen (z. B. 512x512, 1024x1024, 2048x2048). Ungerade Abmessungen verhindern, dass die Engine saubere Mipmaps erzeugen kann.
+- **Roughness/Metallic Packing**: Kombiniere Roughness, Metallic und AO in die einzelnen RGB-Kanäle einer einzigen Bilddatei, um Grafikspeicher-Bandbreite zu sparen.
+- **Überschärfung vermeiden**: Hochfrequente Normal Maps können auf dem Arenasand zu störenden Flimmer-Artefakten führen, wenn die Anti-Aliasing-Einstellungen niedrig sind.
+
+---
+
+## Rüstungen, Waffen und Karten anpassen
+
+Die Erfahrung aktiver Spieler zeigt: Das lohnendste Element bei der Erstellung von **gladiomori custom textures** ist das Designen kompletter thematischer Sets. Anstatt nur eine einzelne Klinge zu verändern, bündeln Creator häufig Rüstungsskins, passende Schwertscheiden und Arena-Blut-Decals zu stimmigen Gesamtpaketen.
+
+### Beliebte Themenstile der Community
+
+1. **Damaststahl & kunstvolle Einlegearbeiten**: Markante Wellenmuster auf Klingenstählen kombiniert mit polierten Messinggriffen.
+2. **Gladiatoren-Kampfspuren**: Stark zerkratzte Rüstungsplatten mit eingetrocknetem Blut und Schlammspritzern.
+3. **Minimalistische High-Visibility-Skins**: Saubere, einfarbige Rüstungssets, die speziell für Turniere und Streaming auf maximale Übersicht ausgelegt sind.
+4. **Zeremonielle & vergoldete Prachtrüstungen**: Tiefrote Tunikastoffe gepaart mit hochglanzpolierten goldenen Beinschienen und Helmen.
+
+### Häufige Texturfehler und Lösungen
+
+| Symptom | Ursache | Lösung |
+| :--- | :--- | :--- |
+| **Invertierte Beleuchtung / Seltsame Glanzlichter** | Invertierter Grün-Kanal in der Normal Map | Grün-Kanal umkehren (DirectX- vs. OpenGL-Standard) |
+| **Waffe erscheint komplett schwarz** | Fehlender oder genullter Albedo-/Metallic-Kanal | Sicherstellen, dass der Alphakanal nicht das Basis-RGB überschreibt |
+| **Starke Texturunschärfe auf Distanz**| Fehlende oder beschädigte Mipmaps | DDS-Textur mit automatisch generierten Mipmaps neu exportieren |
+| **Unsichtbare Rüstungsteile** | Falsche Opazitäts-/Alpha-Cutout-Zuweisungen | Blend-Mode-Einstellungen im Material-Editor überprüfen |
+
+Wenn du deine **gladiomori custom textures** teilst oder packst, teste deine Materialien unbedingt unter verschiedenen Beleuchtungswinkeln in der Arena. Schatten und direktes Sonnenlicht können das Aussehen metallischer Elemente mitten im Schlag dramatisch verändern.
+
+---
+
+## Häufig gestellte Fragen (FAQ)
+
+### Kann ich gladiomori custom textures im Online-Multiplayer nutzen?
+Ja, clientseitige benutzerdefinierte Texturen werden während Online-Duellen auf deinem Bildschirm angezeigt, ohne das Match zu desynchronisieren. Andere Spieler sehen deine Custom Textures jedoch nur dann, wenn sie exakt dieselbe Mod bzw. dasselbe Texturpaket ebenfalls lokal installiert haben.
+
+### Werden Errungenschaften (Achievements) durch Custom-Textur-Packs deaktiviert?
+Rein kosmetische Änderungen wie das Bearbeiten von Waffentexturen oder Rüstungsfarben verändern weder Physikparameter noch Lebenspunkte-Variablen. Erfahrungsgemäß verhindern Standard-Textur-Overrides das Freischalten von Kampferfolgen nicht.
+
+### Was ist das ideale Dateiformat für gladiomori custom textures?
+Für die beste Balance aus Performance und Bildqualität empfiehlt sich das `.dds`-Format mit BC7-Kompression für Farb- und Normal-Maps. Wenn du lediglich einfache Umfärbungen vornimmst und Mods über lose Ordnerstrukturen nutzt, lassen sich verlustfreie 8-Bit-`.png`-Dateien am leichtesten bearbeiten und überprüfen.
+
+### Wie setze ich die Texturen wieder auf die Standardwerte zurück?
+Wenn du einen Mod-Manager oder die mod.io-Integration genutzt hast, deabonniere oder deaktiviere die Mod einfach. Falls du Spieldateien manuell überschrieben hast, lösche die veränderten Assets und wähle in deiner Steam-Bibliothek die Option „Dateien auf Fehler überprüfen“, um saubere Originaldateien automatisch wiederherzustellen.

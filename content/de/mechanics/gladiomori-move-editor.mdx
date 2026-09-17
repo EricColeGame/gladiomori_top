@@ -1,0 +1,127 @@
+export const metadata = {
+  title: "GladioMori Move-Editor Guide: Eigene Combos und Movesets erstellen",
+  description: "Meistere den GladioMori Move-Editor, um eigene Animationen, mächtige Haltungen und tödliche Combos mit unserem Schritt-für-Schritt-Mechanik-Guide zu erstellen.",
+  category: "mechanics",
+  date: "2026-09-18",
+}
+
+Um die physischen Kämpfe in *Gladio Mori* zu meistern, braucht es mehr als nur schnelle Reflexe – es erfordert die totale Kontrolle über die Biomechanik deines Kämpfers. Mithilfe des integrierten **GladioMori Move-Editors** können Spieler personalisierte Kampfanimationen erstellen, aggressive Schläge ausbalancieren und unberechenbare Verteidigungshaltungen einnehmen. Egal, ob du eine vernichtende Zweihänder-Haltung oder eine blitzschnelle Rapier-Finte entwerfen möchtest: Wenn du den **GladioMori Move-Editor** verstehst, kannst du die Regeln jedes Duells neu schreiben.
+
+In diesem tiefgehenden Guide analysieren wir die Kernsysteme hinter der Erstellung eigener Movesets – von der Knochenmanipulation und dem Setzen von Keyframes bis hin zu Kampfbalance, Hitbox-Timing und der Integration von Community-Mods.
+
+## Die Kernmechaniken des GladioMori Move-Editors verstehen
+
+Die Animations-Suite in *Gladio Mori* fungiert als zugänglicher, physikbasierter Keyframe-Editor. Anstatt sich auf vorgefertigte, statische Animationsclips traditioneller Kampfspiele zu verlassen, interagiert jeder von dir erstellte Angriff direkt mit dem simulierten Impuls, dem Waffengewicht und der Ragdoll-Masse des Spiels.
+
+Sobald du das Tool startest, steuerst du ein interaktives Skelett-Rig. Das Bewegen einzelner Gelenke verändert den Massenschwerpunkt, was wiederum beeinflusst, wie schnell dein Gladiator ausholt, sich erholt und gegnerische Treffereinwirkungen absorbiert.
+
+### Animations-Zeitleiste und Keyframe-Setup
+
+Um einen effektiven Angriff zu kreieren, muss das Pacing über bestimmte Phasen hinweg genau abgestimmt werden: Ausholbewegung (Windup), aktive Trefferphase (Release), Durchschwung (Follow-Through) und neutrale Erholungsphase (Recovery). Der Editor unterteilt deine Aktionen auf einer intuitiven Zeitleiste, die in Frames oder Sekundenbruchteilen gemessen wird.
+
+| Animationsphase | Typische Dauer (Frames @ 60 FPS) | Primärer Zweck | Risikofaktor |
+| :--- | :--- | :--- | :--- |
+| **Windup (Telegraphieren)** | 12–24 | Baut Rotationsimpuls auf und bestimmt den Angriffswinkel | Hoch (Anfällig für Konter-Jabs) |
+| **Aktive Hitbox** | 4–10 | Zeitfenster, in dem die Waffe tödlichen Kollisionsschaden verursacht | Neutral (Legt Bewegung fest) |
+| **Follow-Through** | 8–16 | Waffe vollendet ihren Bogen; Körper verteilt das Gewicht um | Moderat (Überdrehen entblößt den Rücken) |
+| **Recovery** | 10–20 | Rig kehrt in die gewählte Wachhaltung zurück | Kritisch (Anfällig für Whiff-Punishes) |
+
+Die Balance dieser vier Phasen ist das Fundament eines gelungenen Moveset-Designs. Ein Schlag ohne Ausholphase mag auf dem Papier unschlagbar wirken, aber Community-Tests zeigen: Ohne ausreichenden kinetischen Aufbau fehlt den Angriffen die nötige Geschwindigkeit, um schwere Rüstungen zu spalten oder hohe Deckungen zu durchbrechen.
+
+## Schritt für Schritt: Deinen ersten eigenen Angriff erstellen
+
+Um mit dem **GladioMori Move-Editor** einen funktionellen, tödlichen Angriff zu erschaffen, musst du die oberen und unteren Körpergelenke deines Gladiators koordinieren, damit der Kämpfer auch bei schnellen Hieben stabil auf den Beinen bleibt.
+
+```
+Neutrale Haltung ➔ Torsorotation (Spannen) ➔ Ausfallschritt & Hüftstreckung ➔ Aktiver Klingenschlag ➔ Haltungs-Reset
+```
+
+Befolge diesen grundlegenden Ablauf, um einen zuverlässigen horizontalen Hieb zu erstellen:
+
+1. **Ausgangshaltung festlegen**: Platziere deinen Gladiator in einer ausbalancierten Pose – schulterbreiter Stand, leicht gebeugte Knie.
+2. **Ausholbewegung als Keyframe setzen**: Drehe die Wirbelsäule um 30 Grad vom Ziel weg. Verlagere das Gewicht auf den hinteren Fuß, während du den Waffenarm anhebst.
+3. **Schwung über das Becken einleiten**: Erstelle einen Zwischen-Keyframe, bei dem die Hüfte vor den Schultern nach vorne rotiert. Der Schwung muss sich vom Boden nach oben aufbauen.
+4. **Den Schlag vollenden**: Führe Schultern, Arme und Handgelenke ruckartig nach vorne durch die Trefferebene.
+5. **Abbremsen und Zurückkehren**: Lass den Schwung der Waffe natürlich ausklingen und führe das Rig kontrolliert in deine bevorzugte Verteidigungshaltung zurück.
+
+| Schritt | Ziel-Gelenkgruppe | Empfohlene Anpassung | Häufiger Fehler |
+| :--- | :--- | :--- | :--- |
+| **1. Stand-Fundament** | Füße & Becken | Massenschwerpunkt um 5–10 % absenken | Füße auf einer schmalen, instabilen Linie platzieren |
+| **2. Spannen** | Brustwirbelsäule & Nacken | 25°–35° Drehung vom Ziel weg | Wirbelsäule über anatomische Grenzen hinaus überdrehen |
+| **3. Kinetischer Antrieb** | Becken & Knie | 70 % des Gewichts auf den vorderen Fuß verlagern | Gewicht hinten lassen, was die Schlagkraft minimiert |
+| **4. Treffpunkt (Apex)** | Schultern, Ellbogen, Handgelenke | Führungssarm im Treffmoment voll durchstrecken | Zu frühes Abknicken des Handgelenks schneidet Hitboxen ab |
+| **5. Schwungdämpfung** | Rumpf & Schultern | Sanfte Dämpfungskurve zurück zur Mitte | Abruptes Zurückschnappen, das den Charakter ins Stolpern bringt |
+
+## Fortgeschrittene Haltungsstrukturen und abgeleitete Combos
+
+Erfahrene Creator belassen es selten bei isolierten Einzelschlägen. Indem du mehrere Keyframe-Sequenzen miteinander verkettest, kannst du vollwertige Kampfbäume mit Finten, abgeleiteten Folgeangriffen und taktischen Haltungswechseln entwerfen.
+
+Berichten aus der Community auf Plattformen wie dem [Gladio Mori-Hub auf mod.io](https://mod.io/g/gladio-mori) zufolge integrieren eigene Movesets häufig alternative Haltungen – wie bodennahes Kriechen, hohe Offensivpositionen oder spezialisierte Nahkampf-Deckungen –, die sich in völlig unterschiedliche Kampfstile auffächern.
+
+### Einzelhaltungs- vs. Mehrhaltungs-Profile
+
+Die Funktionsweise deines Movesets bestimmt, wie flexibel du dich in der Arena anpassen kannst.
+
+| Moveset-Profil | Stärken | Schwächen | Am besten geeignet für |
+| :--- | :--- | :--- | :--- |
+| **Klassische Einzelhaltung** | Vorhersehbare Erholung; schnelles Muskelgedächtnis; zuverlässiges Spacing | Von erfahrenen Gegnern leicht zu durchschauen | Langschwerter, Speere, Hellebarden |
+| **Zwei-Haltungs-Flow** | Zugriff auf schnelle leichte Schläge und wuchtige schwere Hiebe | Erfordert eigene Tastenbelegungen zum Umschalten | Großschwerter, Schwert & Schild |
+| **Mehrfach verzweigter Kampfstil (MMA)** | Enormes Mixup-Potenzial; Duckgänge; Finten-Abzweigungen | Schwierige Ausführung; hohes Erholungsrisiko | Waffenlos, Dolche, hybride Brawler |
+
+Achte beim Erstellen von Verzweigungen im **GladioMori Move-Editor** darauf, dass die Übergänge zwischen verschiedenen Deckungen weiche Übergangs-Keyframes nutzen. Dauert der Wechsel zwischen hoher und tiefer Deckung länger als 15 Frames, können flinke Gegner deinen Charakter mitten im Haltungswechsel abfangen.
+
+## Physik-Optimierung und Anpassung des Waffengewichts
+
+*Gladio Mori* behandelt nicht jede Waffe gleich. Eine benutzerdefinierte Animation, die für einen leichten Gladius entwickelt wurde, führt bei einem gewaltigen Zweihänder zu fehlerhaften Ragdoll-Zuckungen oder trägen, unsauberen Schwüngen. Ein grundlegendes Verständnis der physischen Gewichtsverteilung stellt sicher, dass deine Animationen auch im realen Gefecht einwandfrei funktionieren.
+
+### Bewegungskurven an Waffen-Archetypen anpassen
+
+| Waffenklasse | Gewichtswert | Ideale Ausholdauer | Beschleunigungskurven-Typ | Primärer Schlagfokus |
+| :--- | :--- | :--- | :--- | :--- |
+| **Dolche & Messer** | Sehr niedrig | 6–10 Frames | Linearer Ruck (Snap) | Sehr schnelle Schwachstellen-Treffer & Stiche |
+| **Einhandschwerter** | Mittel | 12–16 Frames | Exponentielles Ease-In | Weite Hiebe & schnelle Parade-Erholung |
+| **Stangenwaffen & Speere** | Mittel–Hoch | 16–22 Frames | Schweres Ease-In / Ease-Out | Lineare Reichweite & Distanzkontrolle (Zoning) |
+| **Zweihänder & Keulen** | Schwer | 24–36 Frames | Steiler exponentieller Anstieg | Rüstungsdurchdringung & Zerschlagen von Schilden |
+
+Um schwere Waffen im **GladioMori Move-Editor** zu optimieren, solltest du die Waffenträgheit kompensieren, indem du den Oberkörper deines Kämpfers entgegen der Ausholrichtung lehnst. Dieses Ausbalancieren verhindert, dass der Charakter umkippt, noch bevor die aktiven Schadens-Frames überhaupt beginnen.
+
+## Fehlerbehebung bei typischen Animations-Glitches
+
+Beim Erstellen komplexer Manöver treten häufig Physik-Bugs und Balance-Probleme auf. In der Modding-Community für eigene Movesets werden regelmäßig Ragdoll-Clipping, mangelnde Schlagkraft und versehentlicher Selbstschaden diskutiert.
+
+| Problem | Symptom | Ursache | Schnelle Lösung im Move-Editor |
+| :--- | :--- | :--- | :--- |
+| **Geister-Fehlschläge** | Die Klinge gleitet durch den Gegner, ohne Schaden zu registrieren | Die Klingengeschwindigkeit ist beim Treffer zu gering | Die Beschleunigung des Hüftschwungs 2 Frames vor dem Treffer erhöhen |
+| **Selbstschaden-Glitch** | Der Kämpfer köpft oder stolpert über sich selbst | Die Flugbahn der Waffe schneidet die eigene Hitbox | Schulter beim Ausholen weiter nach außen anheben |
+| **Unkontrolliertes Ragdolling** | Der Gladiator bricht sofort auf dem Boden zusammen | Die Fußplatzierung kollidiert fehlerhaft mit dem Boden | Sicherstellen, dass der Root-Bone innerhalb der Höhenlimits bleibt |
+| **Block-Blockade** | Das Rig friert beim Versuch zu blocken ein | Der Block-Frame teilt sich dieselbe Priorität mit der Recovery | Explizite Unterbrechungs-Priorität für defensive Frames festlegen |
+
+Das Bild-für-Bild-Überprüfen deiner Moves mit aktivierter Hitbox-Visualisierung ist der schnellste Weg, solche strukturellen Schwachstellen vor der Veröffentlichung zu beseitigen.
+
+## Movesets testen, verfeinern und modden
+
+Sobald du ein Animationsprofil fertiggestellt hast, ist gründliches Testen Pflicht. In den offiziellen Trainingsarenen kannst du deine Kreationen an stationären Zielen, Sparring-Dummys und aktiven KI-Gegnern erproben.
+
+### Wichtige Checkliste vor dem Exportieren deines Movesets
+
+- [ ] **Standsicherheit**: Behält der Gladiator auch auf unebenem Arenaboden das Gleichgewicht?
+- [ ] **Schadenswirkung**: Erzeugt der aktive Schwungbogen genug Geschwindigkeit, um Trainings-Dummys zu durchdringen?
+- [ ] **Reaktionszeit der Eingabe**: Kann der Angriff innerhalb der ersten 8 Frames angetäuscht oder abgebrochen werden?
+- [ ] **Wandkollision**: Führt das Schwingen der Waffe auf engem Raum zu extremen Abprallern?
+- [ ] **Multiplayer-Synchronisation**: Funktioniert die Animation auf dedizierten Servern ohne Desync-Probleme?
+
+Die Vielseitigkeit des **GladioMori Move-Editors** hat eine lebendige Modding-Szene hervorgebracht. Spieler kombinieren kreative Movesets oft mit physikanpassenden Community-Mods, um einzigartige Kampfturniere auszutragen. Das Meistern dieses kreativen Werkzeugs ist letztlich genauso befriedigend wie ein Sieg im Kolosseum selbst.
+
+## Häufig gestellte Fragen (FAQ)
+
+### Was ist der GladioMori Move-Editor?
+Der **GladioMori Move-Editor** ist ein spielinternes Tool zur Animations- und Kampfanpassung. Spieler können damit Ragdoll-Skelette posieren, Keyframes anpassen und maßgeschneiderte Angriffe, Haltungen sowie Combo-Bäume erstellen, die direkt mit der Physik-Engine des Spiels interagieren.
+
+### Kann ich eigene Movesets in Multiplayer-Matches von Gladio Mori nutzen?
+Ja, vorausgesetzt, der Server-Host erlaubt client- oder serverseitige Moveset-Mods. Viele öffentliche Community-Server gestatten eigene Movesets, während kompetitive Ranglisten-Arenen meist Standard-Animationen vorschreiben, um Chancengleichheit zu gewährleisten.
+
+### Warum verursachen meine Angriffe kaum Schaden, obwohl sie sauber treffen?
+In *Gladio Mori* wird Schaden über kinetische Energie berechnet, die von der Treffergeschwindigkeit der Waffe und dem Aufprallwinkel abhängt. Fehlt deinem Schlag die nötige Körperrotation oder eine ausreichende Beschleunigungsphase vor dem Treffmoment, berührt die Waffe den Gegner nur leicht, anstatt zu schneiden oder zu zerschmettern.
+
+### Wie kann ich Movesets teilen, die ich im GladioMori Move-Editor erstellt habe?
+Du kannst deine fertige Moveset-Datei direkt aus dem Editor-Verzeichnis exportieren und auf Plattformen wie mod.io oder im Steam Workshop hochladen. So können andere Spieler deine individuellen Kampfstile herunterladen, testen und sich damit duellieren.

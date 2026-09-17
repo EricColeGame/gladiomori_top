@@ -1,0 +1,120 @@
+export const metadata = {
+  title: "Guía de movimientos de Gladio Mori: Dominar el editor de animaciones y las mecánicas de combate",
+  description: "Domina los movimientos de Gladio Mori con nuestra guía completa sobre fotogramas de animación personalizados, mecánicas de combate, apuntado a órganos e integración de repertorios comunitarios.",
+  category: "mechanics",
+  date: "2026-09-18",
+}
+
+Dominar la línea de tiempo de tus animaciones de combate es el factor más determinante entre alcanzar la gloria o sufrir una decapitación dentro de la arena. En este brutal simulador de gladiadores basado en físicas, comprender cómo funcionan los **gladiomori moves** determina si tu hoja atravesará una arteria vital del adversario o rebotará inofensivamente contra su armadura. A diferencia de los juegos de lucha convencionales que te atan a cadenas de ataque rígidas y pre-renderizadas, los **gladiomori moves** personalizados que diseñes dictan de forma directa el impulso, el centro de gravedad y la letalidad de tu guerrero.
+
+Creado por el desarrollador independiente finlandés Plebeian Studio, este título revoluciona los tropos tradicionales del género de lucha. Aquí no encontrarás barras de vida resplandecientes ni cifras genéricas de daño; en su lugar, el combate gira en torno a traumatismos anatómicos realistas, límites de resistencia y la energía cinética generada por el jugador. Ya sea que desees forjar a mano una estocada de esgrima poco ortodoxa o descargar rutinas de combate probadas por la comunidad, este desglose abarca todos los elementos fundamentales necesarios para dominar la arena.
+
+## Entendiendo el sistema de combate basado en físicas
+
+Antes de sumergirte de lleno en la creación de fotogramas clave (keyframes), debes asimilar cómo el juego traduce las acciones del usuario en letalidad física. Cada tajo, parada o esquiva se rige por colisiones dinámicas, palancas esqueléticas y el peso del arma.
+
+En lugar de recurrir a los clásicos fotogramas de invencibilidad (i-frames), la defensa depende por completo de la obstrucción física real. Si el filo de un hacha danesa o la cabeza de un hacha de armas impacta contra una garganta expuesta durante la recuperación de tu golpe, morirás al instante. Por esta razón, los repertorios de movimientos eficaces equilibran el alcance agresivo con la exposición defensiva.
+
+| Componente de combate | Función principal | Impacto en el diseño del movimiento |
+| :--- | :--- | :--- |
+| **Apuntado a órganos** | Determina el traumatismo letal (corazón, cerebro, pulmones, arterias) | Los ataques deben alinear los filos con zonas vitales desprotegidas. |
+| **Estructura esquelética** | Registra la alineación ósea, rotación articular y equilibrio | Las posturas abiertas mejoran el equilibrio, pero ralentizan la recuperación direccional. |
+| **Consumo de resistencia** | Limita las ráfagas ofensivas continuas | Movimientos excesivamente complejos agotan rápido al luchador, provocando golpes lentos. |
+| **Alineación del filo** | Calcula la profundidad del corte frente a la fuerza contundente | Los tajos deben impactar en el ángulo adecuado para seccionar carne o arterias. |
+| **Velocidad de impacto** | Determina la penetración de armadura y el derribo | Preparaciones más largas generan mayor fuerza cinética a costa de quedar vulnerable. |
+
+La experiencia demuestra que muchos principiantes diseñan florituras giratorias vistosas que parecen intimidantes sobre el papel, pero fracasan estrepitosamente en partidas multijugador. Un combatiente que realiza un giro de 360 grados expone su espalda, cuello y columna vertebral durante varios fotogramas críticos, invitando a una contraestocada inmediata por parte de oponentes experimentados.
+
+## El editor de movimientos en el juego: Desglose paso a paso
+
+El editor de movimientos es el núcleo de la personalización de tu personaje. En este apartado manipulas un maniquí virtual a lo largo de una línea de tiempo lineal de fotogramas clave, ajustando la rotación de las articulaciones, la extensión de las extremidades y la distribución del peso.
+
+```
+Flujo de la línea de tiempo de fotogramas clave:
+[Fase de preparación] -> [Fase de aceleración] -> [Hitbox activo / Liberación] -> [Inercia final] -> [Reinicio de guardia]
+```
+
+Al crear tus propios **gladiomori moves**, el objetivo principal consiste en maximizar la velocidad durante la fase activa de impacto, minimizando al mismo tiempo los tiempos de preparación y de recuperación.
+
+| Fase | Duración recomendada (Ticks/Fotogramas) | Enfoque clave | Error común |
+| :--- | :--- | :--- | :--- |
+| **Preparación (Windup)** | 4 – 8 Fotogramas | Desplazar el centro de masa; generar palanca | Telegrafiar la trayectoria demasiado pronto |
+| **Aceleración** | 3 – 5 Fotogramas | Impulsar con caderas y torso para lograr rotación | Mover extremidades sin implicar el torso |
+| **Hitbox activo** | 2 – 4 Fotogramas | Alineación precisa del filo; apuntar a zonas vitales | Dejar que la punta del arma quede rezagada tras las muñecas |
+| **Inercia final (Follow-through)** | 4 – 6 Fotogramas | Absorber la fuerza cinética; recuperar el balance | Rotar en exceso más allá de la línea del objetivo |
+| **Reinicio** | 5 – 10 Fotogramas | Transición de vuelta a la guardia defensiva | Dejar desprotegidos la cabeza o los costados |
+
+Para crear un ataque confiable, comienza posicionando los pies y la cadera del luchador. La potencia rotacional se origina en el tren inferior; si los pies permanecen estáticos al blandir un arma a dos manos, el golpe carecerá de fuerza contundente. Inclina ligeramente el torso hacia adelante durante un tajo descendente para transferir el propio peso corporal al impacto.
+
+Los informes de la comunidad destacan el valor de las animaciones de transición cortas y repetibles. Si tu ataque concluye en una postura forzada o con hiper-extensión, el motor forzará una fase de recuperación lenta, dejando a tu gladiador indefenso ante cualquier contraataque.
+
+## Mecánicas de daño a órganos y priorización de hitboxes
+
+A diferencia de los títulos regidos por barras de salud convencionales, la victoria en la arena depende enteramente de la destrucción estructural y anatómica. Comprender la biología interna influye directamente en la forma de programar tus **gladiomori moves**.
+
+Acertar en el bíceps o el antebrazo de un enemigo cercena el tejido muscular, impidiéndole levantar la guardia o empuñar armas pesadas a dos manos. Atravesar la arteria carótida o la vena yugular provoca una rápida pérdida de sangre, causando la pérdida del conocimiento en cuestión de segundos. Un impacto contundente directo en el cráneo provoca el colapso motor instantáneo.
+
+| Zona de impacto | Consecuencia anatómica principal | Arquetipo de arma ideal para aprovecharla | Valor estratégico |
+| :--- | :--- | :--- | :--- |
+| **Craneoencefálica / Cuello** | Inconsciencia inmediata, desangrado rápido, decapitación | Hachas a dos manos, armas de asta pesadas, espadas de estocada | Alto riesgo, letalidad fulminante instantánea |
+| **Tórax / Corazón** | Pérdida severa de resistencia, muerte rápida por colapso pulmonar | Hojas cónicas de estocada, lanzas de punta estrecha | Ideal para contraatacar frente a golpes amplios |
+| **Antebrazos / Manos** | Desarme, incapacidad para bloquear o mantener guardia | Espadas de una mano rápidas, dagas | Desgaste seguro con mínimo riesgo propio |
+| **Femoral / Rodillas** | Pérdida de movilidad, incapacidad para esquivar o avanzar | Barridos bajos, alabardas o hachas de ángulo descendente | Neutraliza estilos agresivos de presión frontal |
+
+Al configurar tus **gladiomori moves**, orienta la punta del arma hacia zonas con alto porcentaje de letalidad. Los tajos verticales descendentes deben trazar una línea recta por el eje central para fracturar el cráneo o descender desde la clavícula hacia la cavidad torácica. Por su parte, los cortes horizontales resultan más devastadores cuando se nivelan exactamente a la altura del cuello.
+
+## Modding y repertorios comunitarios a través de Mod.io
+
+Con las últimas actualizaciones, Plebeian Studio ha integrado la plataforma mod.io directamente en la interfaz del juego. Este sistema permite a los jugadores de PC (y futuras versiones de consola) descargar, probar y compartir equipamiento, arenas y repertorios de movimientos personalizados sin necesidad de editar archivos a mano. Puedes seguir las creaciones activas de la comunidad y las notas de parches directamente en el [punto de encuentro de la comunidad de Steam de Gladio Mori](https://store.steampowered.com/app/2689790/Gladio_Mori/).
+
+La actualización de modding expandió enormemente la variedad de armamento, introduciendo armas como el hacha de armas (pollaxe) junto a piezas de armadura modulares como brazales de protección. El hacha de armas adopta con eficacia las mecánicas versátiles de manejo del hacha danesa, sumando una fuerza contundente devastadora y la capacidad de enganchar al rival.
+
+| Estilo de repertorio comunitario | Fortalezas principales | Debilidades inherentes | Combinaciones de armas sugeridas |
+| :--- | :--- | :--- | :--- |
+| **Guardia HEMA histórica** | Recuperación rápida, sólida protección del eje central | Menor alcance, menor retroceso cinético | Espada larga, espada de combate, estoque |
+| **Impulso Berserker** | Impacto contundente descomunal, rompe paradas con facilidad | Preparación prolongada, expuesto a estocadas rápidas | Hacha danesa, hacha de armas, maza pesada |
+| **Barrido bajo asimétrico** | Ataca extremidades inferiores por debajo de escudos | Vulnerable a tajos verticales descendentes | Lanzas cortas, bracamartes, picos de guerra |
+| **Rutina de finta a estocada** | Incita al oponente a intentar paradas prematuras | Gran consumo de resistencia en ataques fallidos | Estoque, spada da lato, pica |
+
+Los repertorios de movimientos descargados a través de la plataforma se sincronizan automáticamente al unirse a servidores multijugador, asegurando la equidad competitiva. Es muy habitual que los usuarios aíslen cadenas de animación exitosas, pulan sus fotogramas de inercia para optimizar la resistencia y vuelvan a compartir versiones mejoradas.
+
+## Tácticas avanzadas de combate: Fintas, juego de pies y resistencia
+
+Crear animaciones sobresalientes es solo una parte del desafío; saber ejecutar tus **gladiomori moves** personalizados contra oponentes reales en medio del combate es lo que diferencia a los supervivientes de los cadáveres.
+
+### Manejo del pivote cinético
+
+Nunca dependas exclusivamente de las teclas de dirección predeterminadas para orientar tus ataques. Cuando la animación de golpe inicie su fase de aceleración, gira manualmente la cámara para proyectar la cabeza del arma a través del objetivo. Esta técnica —conocida entre los veteranos como aceleración o "dragging"— te permite eludir los hitboxes de parada o impactar en extremidades desprotegidas antes de lo anticipado.
+
+### Estructuración de un conjunto equilibrado
+
+Tu repertorio jamás debería estar compuesto únicamente de tajos descendentes lentos y pesados. Una configuración equilibrada requiere tres arquetipos tácticos fundamentales:
+
+1. **El interruptor:** Una estocada lineal ultrarrápida pensada para cortar el avance de oponentes agresivos durante sus fotogramas de preparación.
+2. **El despejador de zona:** Un tajo horizontal amplio que cubre un arco extenso para castigar el juego de pies lateral y los giros de esquiva.
+3. **El rompearmaduras:** Un golpe contundente y pesado con inercia hacia adelante, concebido para quebrar defensas firmes, drenar la resistencia enemiga y causar traumatismos craneales.
+
+```
+Árbol de decisiones en combate:
+El enemigo carga de frente -> Ejecutar Interruptor (Estocada) -> Aturdir al rival
+El enemigo mantiene guardia alta -> Ejecutar Barrido bajo -> Cortar femoral/tendones
+El enemigo falla un golpe pesado -> Ejecutar Rompearmaduras -> Aplastar el cráneo expuesto
+```
+
+### Economía de la resistencia
+
+Cualquier ajuste en los fotogramas clave acarrea consecuencias físicas. Incrementar la velocidad y la trayectoria de un arma pesada dispara su coste de estamina. Si un intercambio vacía tu barra por completo, los golpes de tu guerrero se volverán visiblemente lentos, dejando tu guardia a merced de contraataques sencillos. Mantén secuencias de animación limpias, deliberadas y libres de adornos innecesarios.
+
+## Preguntas frecuentes
+
+### ¿Puedo compartir mis gladiomori moves personalizados con otros jugadores en línea?
+Sí. Gracias a la integración nativa de mod.io, puedes exportar y publicar tus conjuntos de animaciones directamente desde el menú del juego. Al unirte a una sala multijugador, el resto de participantes descargará y reproducirá automáticamente tus secuencias activas, garantizando combates sincronizados y fluidos.
+
+### ¿Por qué mis gladiomori moves personalizados se sienten lentos y débiles en combate?
+Los golpes sin fuerza suelen deberse a una cadena cinética mal planteada en el editor. Si tu animación solo mueve los brazos del gladiador sin rotar las caderas y el torso, el arma carecerá de velocidad de impacto. Asegúrate de que los fotogramas de preparación incorporen rotación del torso y traslados de peso hacia adelante para maximizar la potencia.
+
+### ¿Cuál es la mejor arma para principiantes que están aprendiendo los gladiomori moves?
+El hacha danesa o la espada larga estándar a dos manos ofrecen el equilibrio más noble entre alcance, cobertura defensiva y eficacia de corte. Sus plantillas de manejo versátiles te permitirán experimentar tanto con tajos amplios como con estocadas precisas mientras te familiarizas con la línea de tiempo del editor.
+
+### ¿Los movimientos personalizados consumen cantidades diferentes de resistencia?
+Sí. El motor calcula el coste de estamina de manera dinámica según la masa total desplazada, la velocidad de extensión de las extremidades y el peso del equipo seleccionado. Las rotaciones de cuerpo completo rápidas y agresivas drenan la resistencia con mucha mayor rapidez que las estocadas compactas y controladas.

@@ -1,0 +1,121 @@
+export const metadata = {
+  title: "Combate desarmado en Gladio Mori: Guía completa de lucha a puños y mods",
+  description: "Domina el combate desarmado en Gladio Mori con nuestra guía completa. Aprende a configurar movimientos cuerpo a cuerpo, instalar el mod hip unlocker y ganar duelos a puñetazos.",
+  category: "combat",
+  date: "2026-09-18",
+}
+
+Dominar los duelos basados en físicas en Gladio Mori suele significar blandir acero afilado como una cuchilla, pero entrar a la arena con las manos desnudas ofrece una emoción completamente distinta. Sumergirse en el **gladiomori unarmed combat** transforma este juego de lucha indie de alta intensidad: pasa de ser un tenso enfrentamiento de espadas a una brutal pelea cuerpo a cuerpo sin tregua. Ya sea que quieras aporrear a oponentes con armadura o practicar agarres a puño limpio, aprender las mecánicas detrás del **gladiomori unarmed combat** abre una creatividad ilimitada dentro del editor de animaciones.
+
+Aunque las espadas y las armas de asta dominan el emparejamiento estándar, la comunidad ha llevado el motor de físicas del juego al límite para dar cabida a peleas callejeras, barridos y golpes de artes marciales. Lograr que estas técnicas se sientan fluidas y responsivas requiere comprender los fotogramas de animación, los modelos de físicas ragdoll y las modificaciones clave de la comunidad. Esta guía completa te muestra paso a paso cómo configurar, animar y dominar la arena con las manos vacías.
+
+## Los fundamentos de la lucha cuerpo a cuerpo en Gladio Mori
+
+En su núcleo, Gladio Mori calcula el daño en función de la velocidad, el punto de impacto y el momento físico. Cuando prescindes de las armas, los puños, antebrazos, codos, rodillas y pies de tu personaje se convierten en las principales superficies de impacto. Dado que las extremidades tienen un alcance más corto y menor masa que los mandobles de acero, la sincronización de tus movimientos debe ser excepcionalmente precisa para registrar nocauts o fracturas óseas.
+
+En las partidas estándar, los golpes sin armas a menudo se sienten lentos o toscos si se crean con las restricciones predeterminadas del editor. Como la anatomía humana en el juego base está equilibrada en torno al peso de las armas, lanzar un puñetazo auténtico exige ajustar las curvas de rotación y las transferencias de peso.
+
+| Factor de combate | Combate armado (Espadas/Hachas) | Combate desarmado (Puños/Patadas) |
+| :--- | :--- | :--- |
+| **Alcance efectivo** | Alto (1.2 m – 2.5 m) | Bajo (0.4 m – 0.9 m) |
+| **Ventana de letalidad** | Cortes con filo en un solo fotograma | Transferencias sostenidas de velocidad contundente |
+| **Coste de resistencia** | Dependiente del momento del balanceo | Recuperación rápida, mayor frecuencia de acción |
+| **Opciones defensivas** | Desvíos con hoja, bloqueos cruzados | Esquivas, deslizamientos, redirección de extremidades |
+| **Peligro de colisión** | Alto daño propio / choque de armas | Bajo riesgo de autolesión |
+
+Para profundizar en las físicas base y la dinámica de las partidas, consulta el [Punto de encuentro de la comunidad de Gladio Mori en Steam](https://steamcommunity.com/app/2689120/) oficial para ver las notas de los parches y las actualizaciones de los desarrolladores.
+
+## Configuración del editor de animaciones para movimientos cuerpo a cuerpo
+
+El editor de movimientos integrado es el lugar donde cobra vida tu arsenal de lucha. Muchos jugadores tienen dificultades al principio al intentar marcar fotogramas clave para ganchos, jabs o patadas, ya que las restricciones pélvicas predeterminadas mantienen rígido el movimiento del personaje.
+
+Según los informes de la comunidad en los foros de discusión del juego y en Discord, la clave para desbloquear animaciones de artes marciales auténticas radica en modificar la libertad de rotación de los huesos. Específicamente, los jugadores suelen destacar modificaciones de utilidad como el mod "hip unlocker" para otorgar a los modelos la movilidad rotacional necesaria para generar una torsión realista.
+
+```
+Keyframe 1: Postura neutral -> Peso desplazado hacia atrás un 15%
+Keyframe 2: Preparación de cadera -> Comienza la rotación del torso (Hip Unlocker activo)
+Keyframe 3: Paso de impulso -> El impulso hacia adelante aumenta la velocidad de la extremidad
+Keyframe 4: Fotograma de impacto -> Extensión máxima en las coordenadas del golpe
+Keyframe 5: Reinicio / Guardia -> Retorno a la postura defensiva
+```
+
+Al crear movimientos para el **gladiomori unarmed combat**, generar energía cinética a lo largo de toda la cadena corporal es fundamental. Si solo se extiende el brazo, el impacto transmitirá una fuerza contundente insignificante.
+
+| Propiedad de animación | Ajuste predeterminado del modelo | Ajuste optimizado para combate desarmado | Efecto deseado en el juego |
+| :--- | :--- | :--- | :--- |
+| **Rotación de cadera (Eje Y)** | Limitada (±25°) | Libre / Desbloqueada (±90°) | Genera torsión para directos y ganchos |
+| **Curvatura de la columna** | Semirrígida | Inclinación dinámica (±35°) | Permite esquivar golpes y agacharse |
+| **Fijación de los pies** | Bloqueo estricto al suelo | Deslizamiento dinámico | Permite pasos pivotantes y patadas circulares |
+| **Velocidad en el fotograma de impacto**| Moderada | Aceleración brusca | Garantiza un cálculo suficiente de trauma contundente |
+
+## Movimientos cuerpo a cuerpo básicos y arquetipos
+
+Crear un repertorio de movimientos eficaz requiere una combinación de golpes para medir la distancia, impactos pesados y reposicionamiento evasivo. En el **gladiomori unarmed combat**, depender de un único golpe devastador te dejará vulnerable a contraataques o a que rivales armados aprovechen tu tiempo de preparación.
+
+### 1. El jab cinético y el directo
+El jab actúa como un golpe de interrupción. Aunque rara vez causa una lesión definitiva, su propósito principal es romper la guardia del oponente o desviar el ángulo de su ataque. El directo, lanzado inmediatamente después, utiliza la rotación de cadera para descargar una gran fuerza contundente directa a la mandíbula o al pectoral del objetivo.
+
+### 2. Barridos bajos y patadas frontales (teep)
+Las patadas aportan el alcance del que carecen los puños. Una patada frontal rápida de empuje (teep) crea distancia cuando un jugador armado carga hacia adelante. Los barridos bajos apuntan a las espinillas o tobillos del enemigo, aprovechando el equilibrio de las físicas para provocar caídas en estado de ragdoll.
+
+### 3. Manipulación del clinch y redirecciones
+Dado que Gladio Mori cuenta con colisiones activas entre extremidades, entrar dentro del alcance de un oponente te permite anular el arco de ataque de sus armas. Los luchadores de la comunidad suelen crear movimientos de clinch que interceptan el brazo entrante, utilizando la masa de la parte superior del cuerpo para desestabilizar al adversario.
+
+| Nombre del movimiento | Hitbox principal | Alcance ideal | Utilidad en combate | Riesgo de ejecución |
+| :--- | :--- | :--- | :--- | :--- |
+| **Jab rápido adelantado** | Puño izquierdo / Nudillos | 0.5 m | Interrupción por aturdimiento, inicia combos | Mínimo |
+| **Overhand de derecha** | Puño derecho | 0.6 m | Alto potencial de nocaut contra cabeza sin armadura | Alto (Recuperación lenta) |
+| **Patada teep de empuje** | Planta del pie | 1.1 m | Control de espacio, restablece la distancia neutral | Medio |
+| **Barrido de pierna** | Espinilla / Empeine | 0.8 m | Provoca tropiezo inmediato por físicas | Alto (Expone la parte superior del cuerpo) |
+| **Gancho corto al hígado** | Antebrazo izquierdo / Puño | 0.4 m | Gran drenaje de resistencia y equilibrio | Medio |
+
+## Mods esenciales y soluciones de la comunidad
+
+El combate cuerpo a cuerpo puro aún está evolucionando dentro del juego. La experiencia compartida por los jugadores en los foros de la comunidad indica que depender únicamente de las herramientas predeterminadas del editor puede resultar frustrante para estilos de golpeo complejos.
+
+### El mod Hip Unlocker
+Como se detalla en los hilos de asistencia de la comunidad, los modelos de personajes estándar restringen la rotación completa de la pelvis y la cadera. El mod Hip Unlocker, desarrollado por la comunidad, elimina estos límites estrictos. Sin él, las patadas altas y los puñetazos con rotación acaban viéndose rígidos y carecen del impacto físico necesario.
+
+### Paquetes de animaciones personalizadas
+Si no quieres diseñar cada golpe fotograma a fotograma de forma manual, los jugadores comparten habitualmente archivos preestablecidos de animación (archivos `.json` o exportaciones de posturas personalizadas) en el Discord oficial. Importar estos ajustes predefinidos proporciona una base instantánea de animaciones de muay thai, boxeo y judo que puedes retocar para adaptarlas al peso de tu personaje.
+
+| Mod / Herramienta | Función principal | Requisito de la comunidad | Complejidad de instalación |
+| :--- | :--- | :--- | :--- |
+| **Hip Unlocker** | Elimina los bloqueos de rotación en la pelvis | Esencial para patadas y puñetazos dinámicos | Baja (Archivo directo o gestor de mods) |
+| **Custom Pose Loader** | Permite importar packs de movimientos comunitarios | Recomendado para configuraciones rápidas | Baja |
+| **Hitbox Visualizer** | Muestra cajas de colisión y vectores de fuerza | Recomendado para ajustar umbrales de daño | Media |
+| **Ragdoll Weight Tuner**| Modifica la densidad de masa física de las extremidades | Opcional para builds experimentales de agarre | Alta |
+
+## Tácticas: Cómo derrotar a enemigos armados con las manos vacías
+
+Entrar a un duelo sin armas es la máxima demostración de habilidad en Gladio Mori. Al enfrentarte a espadas, lanzas o mazas, tu enfoque táctico debe pasar del intercambio directo de golpes a la evasión de zonas de peligro.
+
+### Provocar ataques a distancia y castigar fallos (whiff punishing)
+Los oponentes armados suelen contar con un alcance superior. Acércate justo al límite de su zona de peligro y retrocede o deslízate lateralmente de inmediato para forzar un golpe al aire. En cuanto su arma supere sus fotogramas activos de daño, acorta la distancia al instante para asestar una combinación de puñetazos múltiples.
+
+### Anular el arco de ataque del arma
+Las armas necesitan espacio e impulso para infligir daño cortante o contundente letal. Si reduces la distancia hasta quedar pecho contra pecho, un adversario que balancee un espadón a menudo solo te rozará con la empuñadura o el asta, causando un impacto insignificante. Dentro de esta distancia tan cerrada, tus ganchos compactos y cabezazos dominarán el intercambio.
+
+```
+Paso 1: Provoca el tajo vertical a una distancia de 2.0 m.
+Paso 2: Da un micropaso lateral para que la hoja golpee el suelo vacío.
+Paso 3: Esprinta hacia el interior de su guardia a 0.4 m antes de que el rival se recupere.
+Paso 4: Ejecuta un golpe al hígado con alta torsión seguido de un directo ascendente a la barbilla.
+Paso 5: Desengánchate en diagonal antes de que el enemigo recupere el equilibrio.
+```
+
+Utilizar estas mecánicas espaciales convierte el **gladiomori unarmed combat** en un estilo de juego letal e impredecible que toma a los duelistas dependientes de las armas completamente por sorpresa.
+
+## Preguntas frecuentes
+
+### ¿Se puede jugar a Gladio Mori desarmado sin instalar mods?
+Sí, puedes configurar movimientos desarmados directamente en el editor de movimientos predeterminado. Sin embargo, la experiencia de los jugadores demuestra que instalar utilidades de la comunidad como el mod hip unlocker mejora drásticamente la rotación de las extremidades, la fluidez del golpeo y la generación de daño.
+
+### ¿Cómo funciona el cálculo de daño para los puños en Gladio Mori?
+El daño viene determinado por la velocidad y la masa de la extremidad atacante en el momento del impacto. Los golpes rápidos con rotación que involucran todo el torso del personaje infligen considerablemente más daño contundente que las simples extensiones lineales del brazo.
+
+### ¿Dónde puedo encontrar repertorios de movimientos para gladiomori unarmed combat?
+La mayoría de repertorios de movimientos personalizados y plantillas de animación se comparten a través del Discord oficial de la comunidad del juego y los foros de Steam. Busca en los canales de intercambio de movimientos y modding para descargar archivos de golpes predefinidos.
+
+### ¿Es viable el combate desarmado en duelos multijugador competitivos?
+Contra jugadores experimentados con armas, luchar sin ellas supone un desafío notable debido a la desventaja de alcance. No obstante, quienes dominan el agacharse, provocar ataques en falso y pelear en distancias muy cortas pueden desorientar y noquear con fiabilidad a duelistas armados.

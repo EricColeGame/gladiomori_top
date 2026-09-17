@@ -1,0 +1,139 @@
+export const metadata = {
+  title: "Gladio Mori Physik-Guide: Wie die realistische Kampf-Engine funktioniert",
+  description: "Meistern Sie die hochmoderne Gladio Mori Physik-Engine. Erfahren Sie, wie Impuls, Klingenkollisionen, Muskelkinetik und Hitboxen jedes Duell bestimmen.",
+  category: "mechanics",
+  date: "2026-09-18",
+}
+
+Jedes Duell im modernen Nahkampf-Gaming hängt von Präzision ab, doch nur wenige Titel verlangen so viel biomechanisches Verständnis wie dieser historische Fighter. Das Verstehen der **Gladio Mori Physik** ist buchstäblich die Trennlinie zwischen einer chirurgisch präzisen Enthauptung und dem völligen Verlust des eigenen Gleichgewichts. Anstatt sich auf vorgefertigte Animationsframes oder statische Hitboxen zu verlassen, berechnet das Spiel jeden Hieb, Block und Straucheln in Echtzeit. Wer die Arena auf Steam, PlayStation 5 und Xbox Series X/S dominieren will, muss die Kernprinzipien des **Gladio Mori Physik**-Systems zwingend beherrschen.
+
+---
+
+## Die Kernprinzipien der Gladio Mori Physik
+
+Die meisten Kampfspiele stützen sich auf „Active Frames“ – unsichtbare Schadensboxen, die an vordefinierte Keyframe-Animationen gebunden sind. Im Gegensatz dazu basiert die hiesige Simulation auf kontinuierlichen physikalischen Interaktionen. Die Schläge Ihres Gladiators besitzen tatsächliche Masse, Geschwindigkeit und Hebelwirkung, die aus Fußstellung, Torsorotation und Handgelenksartikulation berechnet werden.
+
+Sobald Ihre Waffe Kontakt herstellt, ermittelt das Spiel den Einfallswinkel, die Relativgeschwindigkeit und den Trefferpunkt entlang der Klinge. Ein Treffer nahe der Klingenspitze liefert eine höhere lineare Geschwindigkeit, während ein Treffer näher an der Parierstange mehr Drehmoment erzeugt, um die gegnerische Verteidigung wegzudrücken.
+
+```
+Linearer Schwungimpuls = Waffenmasse × Winkelgeschwindigkeit am Treffpunkt
+```
+
+Aufgrund dieser aktiven Simulation interagiert jede physische Oberfläche dynamisch:
+
+* **Klinge-auf-Klinge-Reibung:** Wenn sich Schwerter kreuzen, gleiten sie aneinander ab, verhaken sich (Bind) oder prallen ab – abhängig von Winkel und angewendeter Kraft.
+* **Impulsübertragung:** Schwere Schläge, die ihr Ziel verfehlen, ziehen Ihren Gladiator nach vorne und legen ungeschützte Flanken frei.
+* **Anatomischer Widerstand:** Das Schneiden durch weiches Fleisch bietet kaum Widerstand, während Treffer auf Knochen oder Stahl Stoßwellen direkt in die Handgelenke Ihres Kämpfers zurückwerfen.
+
+Um diese Interaktionen aus erster Hand zu erleben, können Sie den Titel direkt über die [offizielle Gladio Mori Steam-Shopseite](https://store.steampowered.com/app/2689190/Gladio_Mori/) erwerben, wo Community-Updates regelmäßig Details zu Engine-Anpassungen liefern.
+
+---
+
+## Anatomie eines Angriffs: Geschwindigkeit, Masse und Waffenradien
+
+In traditionellen Hack-and-Slash-Spielen verursachen größere Waffen schlicht höhere feste Schadenswerte. Hier hängt der zugefügte Schaden jedoch vollständig davon ab, wie viel kinetische Energie Sie beim Kontakt übertragen. Das Verständnis der zugrunde liegenden **Gladio Mori Physik** hinter Ihren Hieben stellt sicher, dass Sie keine Ausdauer für schwache, abgleitende Treffer verschwenden.
+
+### Vergleich der kinetischen Energie von Waffen
+
+| Waffentyp | Basismasse (kg) | Idealer Treffpunkt | Multiplikator kinetischer Energie | Erholungs-Trägheitsfaktor |
+| :--- | :--- | :--- | :--- | :--- |
+| **Gladius** | 0,85 | Oberes Drittel | 1,1x | Niedrig (Schneller Reset) |
+| **Langschwert** | 1,45 | Reales Schwingungszentrum (Center of Percussion) | 1,6x | Moderat |
+| **Falx** | 1,80 | Gekrümmte innere Spitze | 2,1x | Hoch (Gefahr der Überstreckung) |
+| **Speer / Hastam** | 1,20 | Spitze / Stoßachse | 1,8x | Moderat (Richtungsspezifisch) |
+| **Scutum (Schild)**| 4,20 | Schildbuckel / Rand | 1,4x (Stumpf) | Sehr hoch |
+
+Ein Schnitt, der ein Ziel bereits in der frühen Ausholphase streift, transportiert nahezu keine kinetische Kraft. Ein Treffer auf dem Höhepunkt der Hüftdrehung maximiert hingegen die Schneidengeschwindigkeit. Erfahrungswerte von Spielern zeigen regelmäßig, dass ein zu weites Ausholen mit gekrümmten Waffen wie der Falx den Schwerpunkt über den vorderen Fuß hinaus schleudert – was Sie anfällig für sofortige Konterstöße macht.
+
+---
+
+## Kollisionserkennung und das dynamische Schadensmodell
+
+Anstelle herkömmlicher Lebenspunkte (Hitpoints) wird der Schaden durch Gewebepenetration, strukturelle Knochenbrüche und arterielle Blutungen bestimmt. Die **Gladio Mori Physik**-Engine verarbeitet Treffer über verschiedene Kollisionsebenen und gleicht das getroffene Material mit der auftreffenden Klingenschneide ab.
+
+```
+Aufprallkraft = (Masse × Geschwindigkeit) / Kontaktfläche
+```
+
+Eine feine Spitze bündelt immensen Druck auf eine winzige Fläche, was Stöße extrem verheerend gegen Kettenrüstungen macht, während breitflächige Einschläge die Wucht über Plattenpanzerungen verteilen.
+
+### Trefferzonen und Verletzungsarten
+
+| Körperzone | Ergebnis Schnitttreffer | Ergebnis Stichtreffer | Folge stumpfer Kollisionen |
+| :--- | :--- | :--- | :--- |
+| **Schädeldach** | Sofortige Betäubung / Kopfhautriss | Sofortiger Tod (Zerebral) | Schwerer Gehirnerschütterungs-Knockdown |
+| **Hals / Kehle** | Schnell tödliche Blutung | Tödlicher Atemwegskollaps | Luftröhrentrauma / Desorientierung |
+| **Schulter / Torso** | Tiefe Muskeldurchtrennung / Entwaffnung | Organpunktion (Pneumothorax) | Rippenfraktur / Ausdauerentzug |
+| **Unterarme / Hände**| Waffenverlust / Durchtrennte Sehnen | Einstich / Verlust der Griffkraft | Handgelenksverstauchung / Abwehren der Deckung |
+| **Beine / Knie** | Kniesehnendurchtrennung / Mobilitätsverlust | Einstich / Straucheln | Kniescheibenluxation / Sturz zu Boden |
+
+Berichte aus der Community verdeutlichen, dass Streiftreffer an schweren Eisenhelmen oft harmlos auf die Schulterpolster abgleiten – wodurch eine scheinbar tödliche Attacke zu einer unbedeutenden Kollision wird.
+
+---
+
+## Standfestigkeit, Balance und Umgebungsreibung
+
+Schwerter gewinnen Duelle nicht isoliert; der Unterkörper bestimmt alles. Die Simulation berechnet Bodenreibung und Schwerpunkt fortlaufend. Das Treten auf weichen Sand, feuchte Erde oder blutverschmierte Steine verändert unmittelbar die Bodenhaftung Ihres Gladiators.
+
+Wenn Sie einen wuchtigen Spalthieb ausführen, verlagert sich Ihr Schwerpunkt nach vorne. Wenn ein Gegner in Ihre Reichweite tritt und Sie stößt, verstärkt der bestehende Vorwärtsimpuls dessen Stoß, was Ihren Kämpfer ins Straucheln bringt oder direkt in einen Ragdoll-Zustand versetzt.
+
+### Bodenhaftungswerte verschiedener Oberflächen
+
+| Arena-Oberfläche | Reibungskoeffizient | Dreh-Stabilität | Erholungs-Malus | Rutschgefahr bei Drehung |
+| :--- | :--- | :--- | :--- | :--- |
+| **Trockener Arenasand** | 0,72 | Hoch | Basiswert (0%) | Niedrig |
+| **Glatter Steinboden** | 0,45 | Niedrig | +25% Erholungsverzögerung | Hoch |
+| **Blutverschmierter Boden** | 0,38 | Sehr niedrig | +40% Erholungsverzögerung | Extrem |
+| **Holzplanken** | 0,65 | Moderat | +10% Erholungsverzögerung | Moderat |
+
+Um das Gleichgewicht zu wahren, sollten Sie es vermeiden, sich während eines Überkopf-Schlags um 180 Grad zu drehen. Ein tiefer Stand stabilisiert Ihre Balanceschwelle und stellt sicher, dass Sie den Rückstoß von Paraden abfangen, ohne rücklings in Arenafallen zu stürzen.
+
+---
+
+## Fortgeschrittene Kampftaktiken dank In-Game-Physik
+
+Das Ausnutzen des detaillierten **Gladio Mori Physik**-Frameworks erlaubt es erfahrenen Kämpfern, schwer gepanzerte Gegner eher durch mechanische Hebelwirkung als durch rohe Gewalt zu besiegen. Durch geschickte Winkelmanipulation lassen sich gefährliche Waffen neutralisieren, bevor sie tödliche Geschwindigkeiten erreichen.
+
+### Wichtige physikbasierte Taktiken
+
+* **Binden und Hebeln (The Bind and Lever):** Klemmen Sie die Klinge des Gegners nahe dem Heft an Ihrer Parierstange ein. Dank des überlegenen mechanischen Hebels können Sie durch Drehen der Handgelenke die gegnerische Waffenspitze zu Boden zwingen.
+* **Schildrand-Verdrängung:** Anstatt Schläge passiv zu blockieren, stoßen Sie mit dem Schildbuckel mitten im gegnerischen Schwung gegen den Waffenarm, um die Schlaggeschwindigkeit vor dem Treffer abzutöten.
+* **Hohlfuß-Ausweichen (Hollow-Foot Dodging):** Ziehen Sie den vorderen Fuß genau in dem Moment zurück, in dem ein Hieb seine Endphase erreicht. Die Klinge saust harmlos durch die Luft und zieht den Angreifer aus dem Gleichgewicht.
+* **Spitzen-Abfangen (Point Sniping):** Halten Sie Ihre Waffe gegen anstürmende Gegner stabil in einer Stoßhaltung. Die Vorwärtsgeschwindigkeit des Gegners wird direkt zur Einschlagsberechnung Ihrer Waffe addiert.
+
+### Matrix der Defensivmechaniken
+
+| Defensivtechnik | Physikalischer Mechanismus | Ausdauerkosten | Verwundbarkeitsfenster |
+| :--- | :--- | :--- | :--- |
+| **Statischer Block** | Direkte Kraftabsorption | Hoch | Anfällig für Betäubung durch Guard-Break |
+| **Ablenkende Parade** | Vektorielle Richtungsänderung | Niedrig | Hoch bei falschem Timing |
+| **Klingenbindung** | Reibungssperre an der Stärke (Forte) | Moderat | Anfällig für Knaufschläge der freien Hand |
+| **Rückschritt-Ausweichen**| Räumliche Vermeidung / Impulsverschwendung | Niedrig | Anfällig für Vorstoß-Stiche |
+
+Praxiserfahrungen bestätigen durchweg: Eine ablenkende Parade erfordert das frühzeitige Erkennen der Schlagbahn. Der Versuch zu parieren, wenn die Klinge bereits Maximalgeschwindigkeit erreicht hat, bricht oft ungebremst durch die eigene Deckung.
+
+---
+
+## Modding, Community-Experimente und Engine-Grenzen
+
+Da die Basissimulation auf modularen kinetischen Regeln beruht, hat die Modding-Community die Grenzen des Systems intensiv erforscht. Von Unlockern für die Hüftrotation bis hin zu individuellen Waffengewichten haben Spieler interessante Verhaltensweisen im zugrunde liegenden Code zutage gefördert.
+
+Community-Experimente zeigen, dass das Anpassen der Gelenksteifigkeit zu wilden Ragdoll-Effekten oder extrem reaktiven historischen Fechthaltungen führen kann. Gemoddete Matches mit größeren Spieler-Lobbys stellen unter Beweis, wie die Netzwerkschicht komplexe Echtzeit-Kollisionsberechnungen über mehrere Kämpfer gleichzeitig ausbalanciert.
+
+Egal, ob Sie in gewöhnlichen Ranglisten-Lobbys oder modifizierten Sandbox-Schlachten antreten: Ein tiefes Verständnis der **Gladio Mori Physik**-Simulation bleibt der wichtigste Schlüssel zum beständigen Triumph im Kolosseum.
+
+---
+
+## Häufig gestellte Fragen (FAQ)
+
+### Wie beeinflusst das Waffengewicht die Schwunggeschwindigkeit in der Gladio Mori Physik?
+Das Waffengewicht bestimmt direkt die Winkelbeschleunigung. Schwerere Waffen wie Großschwerter oder Stangenwaffen benötigen mehr physikalische Frames, um ihre Maximalgeschwindigkeit zu erreichen; ihre frühe Ausholphase richtet daher minimalen Schaden an. Sobald sie jedoch ihren vollen Schwung entfalten, erzeugen sie eine enorme kinetische Wucht, die blockende Kontrahenten leicht ins Wanken bringt.
+
+### Kann eine Rüstung Klingenschaden vollständig neutralisieren?
+Ja. Wenn ein eingehender Hieb nicht genügend kinetischen Druck erzeugt, um das Rüstungsmaterial zu durchdringen oder zu verformen, wird der Treffer als Abpraller oder oberflächliche Streifung gewertet. Stumpfes Gewebetrauma wird jedoch weiterhin durch die Polsterung übertragen, was Ausdauer kosten oder zu leichten Gehirnerschütterungen führen kann.
+
+### Warum verursachen direkte Treffer manchmal kaum Schaden?
+Der Schaden wird aus der Kontaktgeschwindigkeit und dem Schnittwinkel der Schneide berechnet. Trifft Ihr Angriff bereits während der Ausholphase (bevor die Klinge Tempo aufbaut) oder schlägt er mit der flachen Seite statt der Schärfe auf, stuft die **Gladio Mori Physik** dies als unsauberen oder langsamen Treffer ein – was zu vernachlässigbarem Schaden führt.
+
+### Verstärkt die eigene Laufgeschwindigkeit die Angriffskraft?
+Ja. Die Vorwärtsbewegung des Spielers wird im genauen Moment des Aufpralls zur Eigengeschwindigkeit der Waffe addiert. Ein Schlag aus dem Vollsprint oder Ausfallschritt erhöht die auf das Ziel übertragene kinetische Energie messbar, während das Zurückweichen die Wucht gegnerischer Treffer verringert.

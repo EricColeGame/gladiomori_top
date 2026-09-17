@@ -6,7 +6,15 @@
     "description": "Explore the Gladio Mori Wiki for weapons, armor, combat mechanics, movesets, PvP tips, multiplayer features, updates, and everything you need for the arena.",
     "legalNotice": "Non-official fan wiki. Made by players, for players."
   },
-  "nav": {},
+  "nav": {
+    "guide": "Guide",
+    "mechanics": "Mechanics",
+    "combat": "Combat",
+    "items": "Items",
+    "modes": "Modes",
+    "controls": "Controls",
+    "platforms": "Platforms"
+  },
   "home": {
     "meta": {
       "title": "Gladio Mori Wiki — Weapons, Armor, Combat & Movesets",
@@ -460,5 +468,33 @@
     "buildGuide": "Moveset Guide",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service"
+  },
+  "guide": {
+    "overviewTitle": "gladiomori Guide & Walkthroughs",
+    "overviewDescription": "Comprehensive Gladio Mori guides covering beginner tips, combat tactics, move editor tutorials, and strategies to dominate the arena."
+  },
+  "mechanics": {
+    "overviewTitle": "gladiomori Mechanics & Physics",
+    "overviewDescription": "Deep dive into Gladio Mori game mechanics, physics-driven ragdoll interactions, organ damage, equipment points, and animation editing."
+  },
+  "combat": {
+    "overviewTitle": "gladiomori Combat & Weapon Guides",
+    "overviewDescription": "Master physics-based gladiator combat in Gladio Mori with in-depth weapon breakdowns, moveset setups, unarmed fighting, and katana tactics."
+  },
+  "items": {
+    "overviewTitle": "gladiomori Items & Equipment",
+    "overviewDescription": "Explore all armor pieces, weapons list, custom skins, cosmetic textures, and gear loadouts in Gladio Mori."
+  },
+  "modes": {
+    "overviewTitle": "gladiomori Game Modes & Multiplayer",
+    "overviewDescription": "Discover all Gladio Mori gameplay modes including campaign missions, daily duels, local split-screen PvP, and online multiplayer arenas."
+  },
+  "controls": {
+    "overviewTitle": "gladiomori Controls & Keybindings",
+    "overviewDescription": "Full control schemes and keybindings for Gladio Mori on PC and Xbox controller, including grabbing, jumping, and weapon handling."
+  },
+  "platforms": {
+    "overviewTitle": "gladiomori Platforms & System Requirements",
+    "overviewDescription": "Information on Gladio Mori release platforms including Steam PC, Steam Deck optimization, Xbox, PS5 console versions, and specs."
   }
 }

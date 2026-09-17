@@ -1,0 +1,127 @@
+export const metadata = {
+  title: "GladioMori Move Editor Guide: Build Custom Combos and Movesets",
+  description: "Master the GladioMori move editor to design custom animations, powerful stances, and deadly combos with our step-by-step mechanics guide.",
+  category: "mechanics",
+  date: "2026-09-18",
+}
+
+Mastering the physical combat of *Gladio Mori* requires more than quick reflexes—it demands total control over your fighter's biomechanics. By tapping into the built-in **GladioMori move editor**, players can craft personalized fighting animations, balance aggressive strikes, and establish unpredictable defensive guards. Whether you want to design a crushing Zweihander stance or a lightning-fast rapier feint, understanding the **GladioMori move editor** lets you rewrite the rules of every duel you enter.
+
+In this deep dive, we break down the core systems behind custom moveset creation, from bone manipulation and keyframing to combat balance, hitbox timing, and community mod integration.
+
+## Understanding the GladioMori Move Editor Core Mechanics
+
+The animation suite in *Gladio Mori* functions as an accessible, physics-driven keyframe editor. Rather than relying on canned, static animation clips found in traditional fighting games, every attack you craft interacts directly with the title's simulated momentum, weapon mass, and ragdoll weight. 
+
+When you boot the tool, you control an interactive skeleton rig. Moving individual joints alters the center of mass, affecting how fast your gladiator swings, recovers, and absorbs incoming force.
+
+### Animation Timeline and Keyframe Setup
+
+Creating an effective attack requires pacing across specific phases: windup, active release, impact follow-through, and neutral recovery. The editor divides your actions across an intuitive timeline measured in frames or sub-second intervals.
+
+| Animation Phase | Typical Duration (Frames @ 60 FPS) | Primary Purpose | Risk Factor |
+| :--- | :--- | :--- | :--- |
+| **Windup (Telegraph)** | 12–24 | Builds rotational momentum and sets attack angle | High (Vulnerable to counter-jabs) |
+| **Active Hitbox** | 4–10 | Window where weapon deals lethal collision damage | Neutral (Commits movement) |
+| **Follow-Through** | 8–16 | Weapon completes arc; body redistributes weight | Moderate (Over-swing exposes back) |
+| **Recovery** | 10–20 | Rig returns to selected guard stance | Critical (Vulnerable to whiff punishes) |
+
+Balancing these four windows is the cornerstone of good moveset design. A strike with zero windup might seem unbeatable on paper, but community testing shows that without sufficient kinetic build-up, attacks lack the velocity required to cleave through heavy armor or penetrate high guards.
+
+## Step-by-Step: Creating Your First Custom Attack
+
+To produce a functional, lethal attack using the **GladioMori move editor**, you need to coordinate your gladiator's upper and lower body joints so the fighter remains upright during high-velocity swings.
+
+```
+Neutral Stance ➔ Torso Rotation (Coiling) ➔ Forward Step & Hip Extension ➔ Active Weapon Cleave ➔ Stance Reset
+```
+
+Follow this baseline sequence to forge a reliable horizontal slash:
+
+1. **Set the Starting Stance**: Establish your gladiator in a balanced posture with feet shoulder-width apart and knees slightly bent.
+2. **Keyframe the Windup**: Rotate the spine 30 degrees away from the target. Shift weight onto the rear foot while raising the weapon arm.
+3. **Drive Through the Pelvis**: Create a midpoint keyframe where the hips rotate forward ahead of the shoulders. Momentum must flow from the ground up.
+4. **Extend the Strike**: Snap the shoulders, arms, and wrists forward across the target plane.
+5. **Decelerate and Return**: Allow the weapon’s momentum to taper off naturally, guiding the rig back into your preferred defensive stance.
+
+| Step | Joint Group Targeted | Recommended Adjustment | Common Mistake to Avoid |
+| :--- | :--- | :--- | :--- |
+| **1. Stance Foundation** | Feet & Pelvis | Center of mass lowered by 5–10% | Placing feet in a narrow, unstable line |
+| **2. Coil** | Thoracic Spine & Neck | 25°–35° twist away from target | Over-twisting spine beyond anatomical limits |
+| **3. Kinematic Drive** | Pelvis & Knees | Shift 70% weight to lead foot | Leaving weight behind, cutting swing force |
+| **4. Apex Delivery** | Shoulders, Elbows, Wrists | Fully extend lead arm at impact point | Premature wrist bend clipping hitboxes early |
+| **5. Recoil Cushion** | Core & Shoulders | Gradual ease curve back to center | Abrupt snap-back causing character stumbling |
+
+## Advanced Stance Structuring and Derived Combos
+
+Advanced creators rarely stop at isolated strikes. By chaining multiple keyframe sequences together, you can design full combat trees featuring feints, derived branch attacks, and tactical stance swaps. 
+
+According to player experience reports on platforms like [mod.io's Gladio Mori hub](https://mod.io/g/gladio-mori), custom movesets often incorporate alternative stances—such as grounded crouch-walks, high offensive positions, or specialized martial arts guards—that branch into entirely distinct combat styles.
+
+### Single-Stance vs. Multi-Stance Profiles
+
+Choosing how your moveset operates determines how flexible you will be inside the arena.
+
+| Moveset Profile | Strengths | Weaknesses | Best Suited For |
+| :--- | :--- | :--- | :--- |
+| **Single-Guard Traditional** | Predictable recovery; fast muscle memory; reliable spacing | Easily read by veteran opponents | Longswords, Spears, Halberds |
+| **Dual-Stance Flow** | Access to fast light strikes and crushing heavy swings | Requires dedicated keybind toggles | Greatswords, Arming Sword & Shield |
+| **Multi-Branch Martial (MMA)** | Deep mixup potential; crouching duck-walks; feint branches | Difficult execution; high recovery risk | Unarmed, Daggers, Hybrid Brawlers |
+
+When engineering branches within the **GladioMori move editor**, ensure that transitions between different guards share smooth intermediate keyframes. If the transition between High Guard and Low Guard takes more than 15 frames, agile opponents can intercept your character midway through the stance change.
+
+## Physics Optimization and Weapon Mass Tuning
+
+*Gladio Mori* does not treat all weapons equally. A custom animation designed for a light gladius will cause erratic ragdoll spasms or sluggish, broken swings if assigned to an enormous Zweihander. Understanding physical weight distributions ensures your animations translate smoothly to active battles.
+
+### Tuning Motion Curves to Weapon Archetypes
+
+| Weapon Class | Mass Rating | Ideal Windup Duration | Acceleration Curve Type | Primary Strike Focus |
+| :--- | :--- | :--- | :--- | :--- |
+| **Daggers & Knives** | Very Low | 6–10 Frames | Linear Snap | High-speed weak points & thrusts |
+| **Arming Swords** | Medium | 12–16 Frames | Exponential Ease-In | Slashing arcs & quick parry recovery |
+| **Polearms & Spears** | Medium-High | 16–22 Frames | Heavy Ease-In / Ease-Out | Linear reach & push-back zoning |
+| **Zweihanders & Clubs** | Heavy | 24–36 Frames | Steep Exponential Ramp | Armor breaking & shield crushing |
+
+To optimize heavy weapons using the **GladioMori move editor**, compensate for weapon inertia by leaning your fighter's torso into the opposite direction of the backswing. This counter-balancing prevents the character from tipping over before the active frames even initiate.
+
+## Troubleshooting Common Moveset Animation Glitches
+
+When building complex maneuvers, physics bugs and balance issues frequently arise. Community members active in custom moveset creation frequently document ragdoll clipping, weak impact force, and accidental self-inflicted damage.
+
+| Issue | Symptom | Underlying Cause | Quick Fix in Move Editor |
+| :--- | :--- | :--- | :--- |
+| **Phantom Whiffs** | Blade passes through enemy without registering damage | Tip velocity is too low at point of collision | Increase hip snap acceleration 2 frames prior |
+| **Self-Harm Glitch** | Fighter decapitates or trips themselves | Weapon trajectory intersects player hitbox | Adjust shoulder elevation outward on windup |
+| **Spastic Ragdolling** | Gladiator collapses onto the floor immediately | Feet placement leaves polygon ground collision | Ensure root bone remains within height boundaries |
+| **Guard Jamming** | Rig locks up when attempting to block | Block frame shares identical priority with recovery | Set explicit interrupt priority on defensive frames |
+
+Reviewing your moves frame-by-frame with hitbox visualizations toggled on is the fastest way to weed out these structural quirks before publishing your work.
+
+## Testing, Refining, and Modding Your Movesets
+
+Once you finalize an animation profile, thorough testing is mandatory. The official practice arenas allow you to pit your creations against stationary targets, sparring dummies, and active AI opponents. 
+
+### Essential Checklist Before Exporting Your Moveset
+
+- [ ] **Footing Stability**: Does the gladiator maintain balance on uneven arena terrain?
+- [ ] **Damage Output**: Does the active arc generate enough velocity to slice through test dummies?
+- [ ] **Input Responsiveness**: Can the attack be feinted or canceled within the initial 8 frames?
+- [ ] **Wall Collision**: Does sweeping the weapon in tight quarters cause extreme bounce recoil?
+- [ ] **Multiplayer Sync**: Does the animation function without desyncing on dedicated game servers?
+
+The versatility of the **GladioMori move editor** has fueled an expansive modding scene. Players frequently combine creative movesets with physics-adjusting community mods to craft unique combat tournaments, proving that mastering this creative tool is just as rewarding as winning inside the Colosseum.
+
+## Frequently Asked Questions
+
+### What is the GladioMori move editor?
+The **GladioMori move editor** is an in-game animation and combat customization suite that allows players to pose ragdoll skeletons, adjust keyframes, and build original attacks, stances, and combo trees tailored to the game's physics engine.
+
+### Can I use custom movesets in Gladio Mori multiplayer matches?
+Yes, provided the server host enables client-side or server-side custom moveset mods. Many public community servers allow custom movesets, while competitive ranked arenas often enforce standard vanilla animations for tournament parity.
+
+### Why do my attacks deal very little damage despite connecting cleanly?
+In *Gladio Mori*, damage is calculated using kinetic force, which depends on weapon velocity and impact angle. If your attack lacks rotational body torque or sufficient acceleration keyframes leading into the hit, the weapon will merely tap the opponent instead of cutting or crushing them.
+
+### How do I share my movesets created with the GladioMori move editor?
+You can export your completed moveset data file directly from the editor directory and package it for upload to community hubs like mod.io or Steam Workshop, allowing other players to download, test, and duel against your unique combat styles.

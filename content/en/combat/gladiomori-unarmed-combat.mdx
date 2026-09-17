@@ -1,0 +1,121 @@
+export const metadata = {
+  title: "Gladio Mori Unarmed Combat: Complete Guide to Fist Fighting and Mods",
+  description: "Master Gladio Mori unarmed combat with our complete guide. Learn how to set up hand-to-hand moves, install hip unlocker mods, and win fist duels.",
+  category: "combat",
+  date: "2026-09-18",
+}
+
+Mastering the physics-based duels in Gladio Mori usually means swinging razor-sharp steel, but entering the arena bare-handed offers an entirely different thrill. Diving into **gladiomori unarmed combat** transforms the high-stakes indie fighter from a tense blade standoff into a brutal, close-quarters slugfest. Whether you want to pummel armored opponents or practice bare-knuckle grappling, learning the mechanics behind **gladiomori unarmed combat** opens up limitless creativity inside the animation editor.
+
+While swords and polearms dominate standard matchmaking, the community has pushed the game's physics engine to accommodate brawling, sweeps, and martial arts strikes. Getting these techniques to feel responsive requires understanding animation frames, physics ragdolls, and key community modifications. This complete guide walks you through setting up, animating, and dominating with empty hands in the arena.
+
+## The Foundations of Unarmed Brawling in Gladio Mori
+
+At its core, Gladio Mori calculates damage based on velocity, point of impact, and physical momentum. When you strip away weapons, your character's fists, forearms, elbows, knees, and feet become the primary striking surfaces. Because limbs have shorter reach and less mass than steel broadswords, your movement timings must be exceptionally precise to register knockouts or bone fractures.
+
+In standard play, unarmed strikes often feel sluggish or awkward when built with basic editor constraints. Because human anatomy in the base game is tuned around balancing weapon weight, throwing an authentic punch requires adjusting rotation curves and weight transfers.
+
+| Combat Factor | Armed Combat (Swords/Axes) | Unarmed Combat (Fists/Kicks) |
+| :--- | :--- | :--- |
+| **Effective Reach** | High (1.2m – 2.5m) | Low (0.4m – 0.9m) |
+| **Lethality Window** | Single frame sharp-edge cuts | Sustained blunt velocity transfers |
+| **Stamina Cost** | Dependent on swing momentum | Fast recovery, higher action frequency |
+| **Defensive Options** | Blade parries, cross-blocks | Dodges, slips, limb redirection |
+| **Collision Danger** | High self-damage / clashing | Low risk of self-injury |
+
+To dive deeper into the base physics and match dynamics, review the official [Gladio Mori Steam Community Hub](https://steamcommunity.com/app/2689120/) for current patch notes and developer updates.
+
+## Setting Up the Animation Editor for Hand-to-Hand Moves
+
+The built-in move editor is where your brawling toolkit comes to life. Many players initially struggle when trying to keyframe hooks, jabs, or kicks because the default pelvic constraints keep character movement rigid. 
+
+According to community reports from the game's discussion boards and Discord, the key to unlocking authentic martial arts animations lies in modifying bone rotation freedom. Specifically, players frequently highlight utility modifications like the "hip unlocker" mod to give rigs the rotational mobility needed for authentic torque generation.
+
+```
+Keyframe 1: Neutral Stance -> Weight shifted back 15%
+Keyframe 2: Hip Wind-Up -> Core rotation begins (Hip Unlocker active)
+Keyframe 3: Driving Step -> Forward momentum increases limb velocity
+Keyframe 4: Impact Frame -> Maximum extension at strike coordinates
+Keyframe 5: Reset / Guard -> Return to defensive posture
+```
+
+When building moves for **gladiomori unarmed combat**, generating kinetic energy across the entire kinetic chain is essential. If only the arm extends, the blow will deliver negligible blunt force.
+
+| Animation Property | Default Rig Setting | Unarmed Optimized Setting | Desired In-Game Effect |
+| :--- | :--- | :--- | :--- |
+| **Hip Rotation (Y-Axis)** | Clamped (±25°) | Free / Unlocked (±90°) | Generates torque for crosses and hooks |
+| **Spine Curvature** | Semi-Rigid | Dynamic Lean (±35°) | Allows slipping punches and ducking |
+| **Foot Plant Anchor** | Strict Ground Lock | Dynamic Slide | Enables pivot steps and roundhouse kicks |
+| **Strike Frame Velocity**| Moderate | Sharp Acceleration | Ensures sufficient blunt trauma calculation |
+
+## Core Unarmed Moves and Archetypes
+
+Creating an effective moveset requires a mix of range finders, heavy impact strikes, and evasive repositioning. In **gladiomori unarmed combat**, relying on a single haymaker will leave you vulnerable to counter-attacks or armed opponents exploiting your wind-up.
+
+### 1. The Kinetic Jab and Cross
+The jab acts as an interrupter. While it rarely inflicts a fight-ending injury, its primary purpose is breaking an opponent's guard or throwing off their attack angle. The cross, following immediately behind it, uses hip rotation to drive heavy blunt force directly into the target's jaw or chest plate.
+
+### 2. Low Sweeps and Front Teeps
+Kicks provide the reach that fists lack. A fast front push kick (teep) creates distance when an armed player rushes forward. Low sweeps target the enemy's shins or ankles, exploiting the physics balance to trigger ragdoll knockdown states.
+
+### 3. Clinch Manipulation and Redirects
+Because Gladio Mori features active limb collisions, moving inside an opponent's reach allows you to smother weapon swings. Community combatants often craft clinch moves that catch an incoming arm, using upper-body mass to push the opponent off-balance.
+
+| Move Name | Primary Hitbox | Ideal Range | Combat Utility | Execution Risk |
+| :--- | :--- | :--- | :--- | :--- |
+| **Lead Snap Jab** | Left Fist / Knuckles | 0.5m | Stun interrupt, sets up combos | Minimal |
+| **Overhand Right** | Right Fist | 0.6m | High knockout potential vs unarmored head | High (Long recovery) |
+| **Push Teep Kick** | Sole of Foot | 1.1m | Space control, resets neutral positioning | Medium |
+| **Leg Sweep** | Shin / Instep | 0.8m | Induces immediate physics trip | High (Exposes upper body) |
+| **Short Liver Hook** | Left Forearm / Fist | 0.4m | Heavy stamina and balance drain | Medium |
+
+## Essential Mods and Community Workarounds
+
+Pure hand-to-hand brawling is still evolving within the game. Player experience shared across community forums indicates that relying solely on vanilla editor tools can be frustrating for complex striking styles.
+
+### The Hip Unlocker Mod
+As noted in community troubleshooting threads, standard character models restrict full pelvic and hip rotation. The community-developed Hip Unlocker mod removes these hard caps. Without it, high kicks and rotational punches end up looking stiff and lacking physical punch force.
+
+### Custom Animation Packs
+If you do not want to hand-craft every punch frame-by-frame, players on the official Discord regularly share animation preset files (`.json` or custom pose exports). Importing these presets provides an instant foundation of muay thai, boxing, and judo animations that you can tweak to match your character's weight class.
+
+| Mod / Tool | Main Function | Community Requirement | Installation Complexity |
+| :--- | :--- | :--- | :--- |
+| **Hip Unlocker** | Eliminates rotational clamps on the pelvis | Essential for dynamic kicking/punching | Low (Drop-in file or mod loader) |
+| **Custom Pose Loader** | Allows instant import of community move packs | Recommended for quick brawling setups | Low |
+| **Hitbox Visualizer** | Displays collision boxes and force vectors | Recommended for tuning damage thresholds | Medium |
+| **Ragdoll Weight Tuner**| Modifies physical mass density of extremities | Optional for experimental grapple builds | High |
+
+## Tactics: Defeating Armed Foes with Empty Hands
+
+Entering a duel without a weapon is the ultimate display of skill in Gladio Mori. When facing swords, spears, or maces, your tactical approach must shift from trading blows to zone avoidance.
+
+### Distance Baiting and Whiff Punishing
+Armed opponents generally boast superior range. Walk just into their threat bubble, then immediately step back or slip sideways to trigger an empty swing. Once their weapon passes its active damage frames, collapse the distance instantly to deliver a multi-hit fist combination.
+
+### Smothering the Weapon Arc
+Weapons require room and momentum to deal fatal slicing or blunt damage. If you close the gap until you are chest-to-chest, an opponent swinging an executioner sword will often graze you with the hilt or haft for minor impact. Inside this close pocket, your compact hooks and headbutts reign supreme.
+
+```
+Step 1: Bait the overhead chop at 2.0m range.
+Step 2: Micro-step laterally to let the blade strike empty dirt.
+Step 3: Sprint inside the guard to 0.4m before the opponent resets.
+Step 4: Execute a high-torque liver blow followed by an upward chin cross.
+Step 5: Disengage diagonally before the enemy regains footing.
+```
+
+Utilizing these spatial mechanics turns **gladiomori unarmed combat** into a lethal, unpredictable playstyle that catches weapon-reliant duelists completely off guard.
+
+## Frequently Asked Questions
+
+### Can you play Gladio Mori unarmed without installing mods?
+Yes, you can configure unarmed moves directly in the default move editor. However, player experience demonstrates that installing community utilities like the hip unlocker mod dramatically improves limb rotation, striking fluidness, and damage generation.
+
+### How does damage calculation work for fists in Gladio Mori?
+Damage is dictated by the velocity and mass of the striking limb upon impact. Fast, rotational strikes that involve the character's full torso deal significantly more blunt damage than simple linear arm extensions.
+
+### Where can I find movesets for gladiomori unarmed combat?
+Most custom movesets and animation templates are shared through the game's official community Discord and Steam discussion boards. Look under the move-sharing and modding channels to download preset strike files.
+
+### Is unarmed combat viable in competitive multiplayer duels?
+Against experienced armed players, unarmed fighting is challenging due to the reach disadvantage. However, players who master ducking, baiting swings, and close-range pocket fighting can reliably disorient and knock out armed duelists.

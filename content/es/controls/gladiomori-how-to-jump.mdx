@@ -1,0 +1,145 @@
+export const metadata = {
+  title: "Cómo saltar en Gladio Mori: Guía completa de movimiento aéreo y mods",
+  description: "¿Te preguntas cómo saltar en Gladio Mori? Descubre las mecánicas físicas oficiales, trucos de animación personalizada y mods comunitarios para elevarte.",
+  category: "controls",
+  date: "2026-09-18",
+}
+
+Dominar el juego de pies y la distancia lo es todo en la esgrima histórica basada en físicas, pero muchos duelistas que entran a la arena se preguntan sobre **Gladio Mori cómo saltar** para evadir ataques bajos. Si has pasado tiempo probando cada tecla de tu teclado solo para encontrarte firmemente plantado en el suelo, aprender sobre **Gladio Mori cómo saltar** te aclarará si el movimiento vertical es una función básica o el resultado de ingeniosas modificaciones de la comunidad. Analicemos la verdad detrás de la movilidad vertical, los conjuntos de movimientos personalizados y cómo los jugadores simulan ataques con salto en este simulador de combate brutalmente realista.
+
+---
+
+## La realidad de saltar en la versión base de Gladio Mori
+
+Si inicias la versión estándar del juego en el [Punto de encuentro de la comunidad de Gladio Mori en Steam](https://store.steampowered.com/app/2689190/Gladio_Mori/), podrías esperar el clásico salto con la barra espaciadora común en los juegos de lucha tradicionales o de plataformas. Sin embargo, *Gladio Mori* está diseñado desde cero en torno a las artes marciales históricas europeas (HEMA) realistas y la física de cuerpos rígidos.
+
+En la versión oficial vanilla, **no existe un botón dedicado para saltar**. Los desarrolladores mantuvieron intencionalmente a los luchadores con los pies en la tierra para enfatizar el equilibrio, el centro de masa, el juego de pies realista y el impacto cinético de las armas.
+
+| Característica | Estado Vanilla | Estado con Mods / Animación personalizada |
+| :--- | :--- | :--- |
+| **Tecla de salto dedicada** | No disponible | Configurable mediante scripts |
+| **Elevación vertical en el aire** | Ninguna (Pies en el suelo) | Moderada a alta |
+| **Saltos basados en física** | Simulados mediante animaciones personalizadas | Pequeños saltos reales basados en físicas |
+| **Compatibilidad online** | Totalmente compatible | Requiere mods idénticos en los clientes |
+| **Nivel de realismo HEMA** | Estricta precisión histórica | Arcade / Experimental |
+
+Debido a que el juego base carece de un botón aéreo innato, los jugadores que buscan **gladiomori how to jump** con frecuencia están reaccionando a clips virales que circulan en redes sociales mostrando a gladiadores saltando por encima de espadas entrantes.
+
+---
+
+## Alternativas Vanilla: Simulación de saltos con animaciones personalizadas
+
+Aunque el motor vanilla no incluye una asignación de tecla aérea, *Gladio Mori* cuenta con un editor de animaciones integrado excepcionalmente profundo. Los jugadores pueden manipular los huesos, las articulaciones y la tensión muscular de su luchador fotograma a fotograma para generar impulso ascendente.
+
+Cuando los jugadores preguntan en **Gladio Mori cómo saltar** sin alterar los archivos del sistema, la respuesta radica en comprender cómo procesa el centro de masa el motor de físicas. Al desplazar rápidamente el hueso de la pelvis hacia arriba mientras se aplica una extensión explosiva de piernas, puedes forzar temporalmente al muñeco de trapo (ragdoll) a despegarse del suelo.
+
+### Paso a paso: Creación de un "ataque con salto" Vanilla
+
+1. **Entra al editor de animaciones**: Abre el menú de entrenamiento y selecciona el creador de movimientos personalizados.
+2. **Agáchate para almacenar energía potencial**: Baja las caderas y flexiona ambas rodillas durante los primeros 3 a 5 fotogramas.
+3. **Explota hacia arriba**: Arrastra la articulación de la pelvis bruscamente hacia arriba en el eje Y a lo largo de 2 a 4 fotogramas mientras estiras las rodillas de golpe.
+4. **Recoge las piernas**: Lleva los pies hacia el torso en pleno golpe para maximizar la separación del suelo.
+5. **Establece un aterrizaje amplio**: Separa los pies ligeramente más allá del ancho de los hombros en el descenso para absorber el impacto cinético y evitar caerte.
+
+| Ventana de fotogramas | Articulación objetivo | Movimiento previsto | Efecto físico |
+| :--- | :--- | :--- | :--- |
+| **Fotogramas 1–4** | Pelvis, rodillas | Comprimir hacia abajo | Reduce el centro de gravedad; acumula fuerza |
+| **Fotogramas 5–8** | Torso, caderas | Golpe seco hacia arriba + inclinación hacia adelante | Eleva las cápsulas de colisión del suelo |
+| **Fotogramas 9–14** | Mano principal, brazos | Trayectoria de tajo descendente | La aceleración descendente de los brazos añade una ligera elevación |
+| **Fotogramas 15–20** | Pies, tobillos | Retorno al suelo, ligera flexión | Amortigua el impulso para evitar el derribo |
+
+---
+
+## Mecánicas aéreas con mods: Desbloqueo del salto libre auténtico
+
+La sensación viral detrás del combate acrobático en la arena tiene su origen en modificaciones de terceros. Según la experiencia de los jugadores y los informes de la comunidad en plataformas como TikTok y Discord, los creadores han introducido scripts de salto dedicados en *Gladio Mori*.
+
+Estos mods de la comunidad se conectan directamente al motor de físicas, anulando las restricciones gravitacionales predeterminadas o aplicando fuerzas de impulso ascendente instantáneas al hueso raíz del jugador al presionar la barra espaciadora.
+
+```
+[Evento de impulso: Pulsar tecla (Espacio)]
+         │
+         ▼
+[Comprobar estado en suelo == True]
+         │
+         ├── True  ──> [Aplicar vector de impulso hacia arriba (0, +Fuerza, 0)]
+         │                  │
+         │                  ▼
+         │             [Activar estado aéreo y amortiguación física]
+         │
+         └── False ──> [Ignorar entrada / Cancelar doble salto]
+```
+
+### Comparación de tipos de salto modificados
+
+Los modders de la comunidad han experimentado con diferentes estilos de movilidad aérea. La siguiente tabla describe el comportamiento de estas modificaciones personalizadas:
+
+| Categoría del mod | Entrada de activación | Altura alcanzada | Ventaja táctica | Factor de riesgo |
+| :--- | :--- | :--- | :--- | :--- |
+| **Script de impulso** | Barra espaciadora | Baja a moderada | Esquiva barridos bajos a las piernas | Alto riesgo de tropiezo ragdoll al aterrizar |
+| **Sustitución de animación** | Combinación de ataque | Arco predecible | Tajos descendentes de alto impacto | Vulnerable a estocadas durante el ascenso |
+| **Ajustes de gravedad lunar** | Interruptor pasivo | Altura extrema | Tiempo de vuelo prolongado | Rompe por completo la física realista del combate |
+| **Modificador de bóveda** | Direccional + Esprint | Salto bajo hacia adelante | Cierra la distancia rápidamente | Exige una sincronización precisa contra armas de asta |
+
+Si decides instalar mods de cliente para descubrir en **Gladio Mori cómo saltar**, ten en cuenta que ejecutar scripts modificados en el emparejamiento estándar desincronizará tu partida o provocará comportamientos de ragdoll inesperados, a menos que tu oponente tenga configuraciones idénticas.
+
+---
+
+## Análisis táctico: Riesgo frente a recompensa del movimiento vertical
+
+En un juego donde un corte limpio en una arteria o una estocada penetrante en el cuello termina el duelo al instante, el combate aéreo es intrínsecamente volátil. Abandonar el suelo elimina tu capacidad de cambiar de dirección, convirtiéndote en un blanco fácil para oponentes disciplinados.
+
+Antes de invertir horas descubriendo en **gladiomori how to jump** para partidas competitivas, evalúa el equilibrio táctico:
+
+| Métrica de combate | Defensa en tierra | Maniobra aérea / con salto |
+| :--- | :--- | :--- |
+| **Agilidad direccional** | Alta (Giro y retirada instantáneos) | Nula (Bloqueado en trayectoria balística) |
+| **Exposición del área objetivo** | Baja (El escudo y la guardia cubren las zonas vitales) | Crítica (Expone la ingle, las piernas y la garganta) |
+| **Energía cinética del arma** | Constante y predecible | Extremadamente alta en tajos descendentes |
+| **Tiempo de recuperación** | Rápido (Contraestocada inmediata) | Lento (Fotogramas de desestabilización al aterrizar) |
+| **Vulnerabilidad a contraataques** | Fintas estándar | Castigos de estocada garantizados |
+
+### Casos de uso recomendados para ataques con salto
+
+* **Castigar barridos predecibles**: Si un oponente apunta rutinariamente a tus tobillos con golpes bajos a dos manos, un salto a tiempo evita la hoja por completo.
+* **Superar escudos altos**: Saltar ligeramente hacia adelante permite que un golpe descendente supere un scutum o broquel levantado.
+* **Crear caos visual**: El movimiento vertical errático confunde a los oponentes acostumbrados a la gestión de distancias horizontal estándar.
+
+---
+
+## Domina el juego de pies de la arena: 4 técnicas terrestres esenciales
+
+Dado que saltar conlleva riesgos extremos, los mejores duelistas del juego confían en un juego de pies depurado en tierra para evadir los ataques sin despegarse jamás de la arena. Si tienes problemas con **gladiomori how to jump**, dominar estas técnicas fundamentales mejorará drásticamente tu porcentaje de victorias sin depender de mods.
+
+1. **El vaivén de entrada y salida (In-and-Out Drift)**: Mantén a tu luchador en el límite exacto del alcance máximo del oponente. Pulsa suavemente las teclas de movimiento para provocar un ataque, retrocede un par de centímetros para que falle y luego avanza rápidamente para castigarlo.
+2. **Pivote fuera de línea**: En lugar de retroceder en línea recta, gira en círculos hacia el lado de la mano secundaria del oponente. La mayoría de las animaciones de tajo pierden efectividad de corte cuando se ven obligadas a seguir el movimiento cruzando el cuerpo.
+3. **Agacharse (Crouch Ducking)**: Puedes esquivar por completo tajos horizontales de decapitación manteniendo presionado el modificador de agacharse. Esto preserva tu base de equilibrio y mantiene tus pies plantados para una estocada inmediata.
+4. **Pasos cortados (Stutter Steps)**: Pulsa brevemente el movimiento direccional para apartar el torso de la línea de una estocada entrante mientras mantienes tu arma armada y lista para responder.
+
+---
+
+## Lista de verificación resumida para el movimiento vertical
+
+Antes de intentar cualquier estrategia aérea compleja, revisa estos puntos operativos clave:
+
+- [ ] Reconoce que la versión base de *Gladio Mori* no incluye una tecla de salto oficial y dedicada.
+- [ ] Comprende que los clips de saltos espectaculares en redes sociales dependen de mods comunitarios o scripts de animación especializados.
+- [ ] Experimenta con el editor de animaciones del juego para diseñar ataques con salto realistas elevando la pelvis.
+- [ ] Valora la grave vulnerabilidad de despegarte del suelo frente a jugadores hábiles equipados con armas de estocada.
+- [ ] Prioriza la gestión de distancia en tierra y el juego de pies fuera de línea para el juego clasificatorio y competitivo.
+
+---
+
+## Preguntas frecuentes
+
+### ¿Qué botón se presiona para saltar en Gladio Mori?
+No hay ningún botón predeterminado para saltar en la versión base del juego. Si ves a jugadores saltando libremente, están usando mods de física de terceros, scripts personalizados asignados a una tecla como la barra espaciadora o animaciones con fotogramas clave específicos creadas en el editor de movimientos.
+
+### ¿Te pueden banear por usar mods de salto en el multijugador?
+La mayoría de las salas personalizadas casuales permiten jugar con mods siempre que ambos clientes compartan los mismos archivos, pero usar scripts de movimiento que alteren los parámetros de física en el emparejamiento estándar puede causar desincronización con el servidor o problemas de estabilidad en el juego.
+
+### ¿Por qué los desarrolladores diseñaron Gladio Mori sin una mecánica de salto?
+Los desarrolladores priorizaron el realismo de las artes marciales históricas europeas (HEMA). Saltar durante un duelo con espada, con o sin armadura, compromete el equilibrio, impide que el luchador pueda desviar o parar ataques y expone órganos vitales a contraestocadas.
+
+### ¿Es útil aprender cómo saltar en Gladio Mori para jugadores principiantes?
+No. Los principiantes deben concentrarse en la distancia, el rango de agarre del arma, la recuperación del equilibrio y el dominio del editor de combate. Intentar saltar sobre los ataques generalmente termina en ser ensartado en el aire debido a trayectorias predecibles.

@@ -1,0 +1,121 @@
+export const metadata = {
+  title: "Gladio Mori Waffenloser Kampf: Vollständiger Guide zu Faustkämpfen und Mods",
+  description: "Meistere den waffenlosen Kampf in Gladio Mori mit unserem Guide. Lerne, wie du Nahkampf-Moves erstellst, Hip-Unlocker-Mods installierst und Faustduelle gewinnst.",
+  category: "combat",
+  date: "2026-09-18",
+}
+
+Das Meistern der physikbasierten Duelle in Gladio Mori bedeutet normalerweise das Schwingen von rasiermesserscharfem Stahl, doch die Arena mit bloßen Händen zu betreten, bietet einen völlig anderen Nervenkitzel. Das Eintauchen in **gladiomori unarmed combat** verwandelt den anspruchsvollen Indie-Fighter von einem nervenaufreibenden Klingengefecht in eine brutale Schlägerei auf engstem Raum. Egal, ob du gepanzerte Gegner verprügeln oder Bare-Knuckle-Grappling trainieren möchtest: Das Erlernen der Mechaniken hinter **gladiomori unarmed combat** eröffnet grenzenlose Kreativität im Animationseditor.
+
+Während Schwerter und Stangenwaffen das Standard-Matchmaking dominieren, hat die Community die Physik-Engine des Spiels ausgereizt, um Schläge, Sweeps und Kampfsporttechniken zu ermöglichen. Damit sich diese Techniken reaktionsschnell anfühlen, sind fundierte Kenntnisse über Animations-Frames, Physik-Ragdolls und wichtige Community-Modifikationen erforderlich. Dieser umfassende Guide führt dich durch das Einrichten, Animieren und Dominieren mit bloßen Händen in der Arena.
+
+## Die Grundlagen des waffenlosen Nahkampfs in Gladio Mori
+
+Im Kern berechnet Gladio Mori Schaden auf Basis von Geschwindigkeit, Trefferpunkt und physikalischem Impuls. Wenn du auf Waffen verzichtest, werden die Fäuste, Unterarme, Ellbogen, Knie und Füße deines Charakters zu den primären Schlagflächen. Da Gliedmaßen eine kürzere Reichweite und weniger Masse als breite Stahlschwerter haben, muss dein Timing beim Bewegen extrem präzise sein, um Knockouts oder Knochenbrüche zu erzielen.
+
+Im normalen Spiel fühlen sich waffenlose Angriffe oft träge oder ungeschickt an, wenn sie mit den Standard-Beschränkungen des Editors erstellt werden. Da die menschliche Anatomie im Basisspiel darauf ausgelegt ist, das Gewicht von Waffen auszubalancieren, erfordert das Ausführen eines authentischen Schlags das Anpassen von Rotationskurven und Gewichtsverlagerungen.
+
+| Kampffaktor | Bewaffneter Kampf (Schwerter/Äxte) | Waffenloser Kampf (Fäuste/Tritte) |
+| :--- | :--- | :--- |
+| **Effektive Reichweite** | Hoch (1,2 m – 2,5 m) | Niedrig (0,4 m – 0,9 m) |
+| **Tödlichkeitsfenster** | Scharfe Kantenschnitte im Einzelframe | Anhaltende Übertragung von Stumpfkraft-Geschwindigkeit |
+| **Ausdauerkosten** | Abhängig vom Schwungimpuls | Schnelle Erholung, höhere Aktionsfrequenz |
+| **Verteidigungsoptionen** | Klingenparaden, Cross-Blocks | Ausweichen, Slips, Umlenken von Gliedmaßen |
+| **Kollisionsgefahr** | Hoher Eigenschaden / Klingenclash | Geringes Risiko von Selbstverletzungen |
+
+Um tiefer in die grundlegende Physik und Match-Dynamik einzutauchen, besuche den offiziellen [Gladio Mori Steam Community Hub](https://steamcommunity.com/app/2689120/) für aktuelle Patchnotizen und Entwickler-Updates.
+
+## Einrichten des Animationseditors für Nahkampf-Moves
+
+Im integrierten Move-Editor erwacht dein Nahkampf-Arsenal zum Leben. Viele Spieler haben anfangs Schwierigkeiten beim Setzen von Keyframes für Haken, Jabs oder Tritte, da die standardmäßigen Beckenbeschränkungen die Bewegungen der Spielfigur steif halten.
+
+Laut Berichten aus den Diskussionsforen und dem Discord des Spiels liegt das Geheimnis authentischer Kampfsportanimationen in der Modifikation der Rotationsfreiheit einzelner Knochen. Insbesondere weisen Spieler regelmäßig auf Hilfsmodifikationen wie den „Hip Unlocker“-Mod hin, um dem Rig die nötige Rotationsbeweglichkeit für eine echte Drehmomenterzeugung zu verleihen.
+
+```
+Keyframe 1: Neutrale Haltung -> Gewicht zu 15 % nach hinten verlagert
+Keyframe 2: Hüftausholbewegung -> Rumpfrotation beginnt (Hip Unlocker aktiv)
+Keyframe 3: Antriebsschritt -> Vorwärtsimpuls erhöht die Gliedmaßengeschwindigkeit
+Keyframe 4: Treffer-Frame -> Maximale Streckung an den Trefferkoordinaten
+Keyframe 5: Reset / Deckung -> Rückkehr in die defensive Haltung
+```
+
+Beim Erstellen von Moves für **gladiomori unarmed combat** ist das Erzeugen kinetischer Energie über die gesamte Bewegungskette entscheidend. Wenn sich nur der Arm nach vorne streckt, entfaltet der Schlag kaum spürbare Stumpfkraft.
+
+| Animationseigenschaft | Standard-Rig-Einstellung | Für Waffenlos optimiert | Gewünschter In-Game-Effekt |
+| :--- | :--- | :--- | :--- |
+| **Hüftrotation (Y-Achse)** | Begrenzt (±25°) | Frei / Entsperrt (±90°) | Erzeugt Drehmoment für Crosses und Haken |
+| **Wirbelsäulenkrümmung** | Halbstarr | Dynamische Neigung (±35°) | Ermöglicht das Meiden von Schlägen und Ducken |
+| **Fußverankerung** | Strikte Bodenfixierung | Dynamisches Gleiten | Ermöglicht Drehungsschritte und Roundhouse-Kicks |
+| **Treffer-Frame-Geschwindigkeit**| Moderat | Starke Beschleunigung | Gewährleistet ausreichende Berechnung von Stumpftraumata |
+
+## Zentrale waffenlose Moves und Archetypen
+
+Ein effektives Moveset erfordert eine Mischung aus Distanzprüfern, wuchtigen Einschlägen und ausweichender Neupositionierung. Bei **gladiomori unarmed combat** macht dich das Verlassen auf einen einzelnen Schwinger anfällig für Konter oder bewaffnete Gegner, die deine Ausholbewegung ausnutzen.
+
+### 1. Der kinetische Jab und Cross
+Der Jab dient als Unterbrecher. Er führt zwar selten zu einer kampfentscheidenden Verletzung, doch sein Hauptzweck besteht darin, die gegnerische Deckung zu durchbrechen oder den gegnerischen Angriffswinkel zu stören. Der direkt folgende Cross nutzt die Hüftrotation, um schwere Stumpfkraft direkt in den Kiefer oder die Brustplatte des Ziels zu treiben.
+
+### 2. Tiefe Sweeps und Front-Teeps
+Tritte verschaffen die Reichweite, die Fäusten fehlt. Ein schneller Frontstoßtritt (Teep) schafft Distanz, wenn ein bewaffneter Spieler nach vorne stürmt. Tiefe Sweeps zielen auf die Schienbeine oder Knöchel des Gegners ab und nutzen die physikalische Balance, um Ragdoll-Knockdown-Zustände auszulösen.
+
+### 3. Clinch-Kontrolle und Umlenkungen
+Da Gladio Mori über aktive Gliedmaßenkollisionen verfügt, kannst du durch das Hineingehen in die gegnerische Reichweite Waffenschwünge ersticken. Erfahrene Kämpfer erstellen häufig Clinch-Moves, die einen herannahenden Arm abfangen und die Masse des Oberkörpers nutzen, um den Gegner aus dem Gleichgewicht zu bringen.
+
+| Move-Name | Primäre Hitbox | Ideale Distanz | Kampfnutzen | Ausführungsrisiko |
+| :--- | :--- | :--- | :--- | :--- |
+| **Lead Snap Jab** | Linke Faust / Knöchel | 0,5 m | Stun-Unterbrechung, Combo-Eröffnung | Minimal |
+| **Overhand Right** | Rechte Faust | 0,6 m | Hohes Knockout-Potenzial gegen ungeschützten Kopf | Hoch (Lange Erholung) |
+| **Push Teep Kick** | Fußsohle | 1,1 m | Raumkontrolle, setzt neutrale Position zurück | Mittel |
+| **Leg Sweep** | Schienbein / Spann | 0,8 m | Löst sofortigen physikalischen Sturz aus | Hoch (Entblößt Oberkörper) |
+| **Short Liver Hook** | Linker Unterarm / Faust | 0,4 m | Schwerer Ausdauer- und Balanceverlust | Mittel |
+
+## Wichtige Mods und Community-Lösungen
+
+Der reine Nahkampf entwickelt sich im Spiel stetig weiter. Die in Community-Foren geteilten Erfahrungen zeigen, dass das ausschließliche Verlassen auf Vanilla-Editor-Werkzeuge bei komplexen Schlagstilen frustrierend sein kann.
+
+### Der Hip-Unlocker-Mod
+Wie in Community-Fehlerbehebungs-Threads beschrieben, schränken die Standard-Charaktermodelle eine vollständige Becken- und Hüftrotation ein. Die von Spielern entwickelte Hip-Unlocker-Mod hebt diese harten Begrenzungen auf. Ohne sie wirken hohe Tritte und rotierende Schläge steif und besitzen zu wenig Durchschlagskraft.
+
+### Benutzerdefinierte Animations-Pakete
+Wenn du nicht jeden Schlag Frame für Frame manuell erstellen möchtest: Spieler auf dem offiziellen Discord teilen regelmäßig Preset-Dateien (`.json` oder benutzerdefinierte Pose-Exporte). Das Importieren dieser Voreinstellungen bietet eine sofortige Grundlage aus Muay-Thai-, Box- und Judo-Animationen, die du an die Gewichtsklasse deines Charakters anpassen kannst.
+
+| Mod / Werkzeug | Hauptfunktion | Community-Bedarf | Installationsaufwand |
+| :--- | :--- | :--- | :--- |
+| **Hip Unlocker** | Beseitigt Rotationsgrenzen am Becken | Essenziell für dynamisches Treten/Schlagen | Gering (Datei einfügen oder Mod-Loader) |
+| **Custom Pose Loader** | Ermöglicht Direktimport von Move-Paketen | Empfohlen für schnelle Faustkampf-Setups | Gering |
+| **Hitbox Visualizer** | Zeigt Kollisionsboxen und Kraftvektoren an | Empfohlen zur Feinabstimmung von Schadenswerten | Mittel |
+| **Ragdoll Weight Tuner**| Modifiziert die physische Massendichte der Gliedmaßen | Optional für experimentelle Grappling-Builds | Hoch |
+
+## Taktiken: Bewaffnete Gegner mit bloßen Händen besiegen
+
+Ein Duell ohne Waffe zu bestreiten, ist der ultimative Beweis für fahrerisches Können in Gladio Mori. Wenn du Schwertern, Speeren oder Streitkolben gegenüberstehst, muss sich dein taktischer Ansatz vom reinen Schlagabtausch hin zur Zonenvermeidung verlagern.
+
+### Distanz-Baiting und Whiff-Punishing
+Bewaffnete Gegner besitzen im Regelfall eine überlegene Reichweite. Gehe minimal in deren Gefahrenzone hinein und weiche sofort zurück oder zur Seite aus, um einen Leerschlag zu provozieren. Sobald die Waffe ihre aktiven Schadens-Frames durchlaufen hat, verringere die Distanz schlagartig, um eine Faustkombination mit mehreren Treffern anzubringen.
+
+### Ersticken des Waffenradius
+Waffen benötigen Raum und Schwung, um tödlichen Schnitt- oder Wuchtschaden anzurichten. Wenn du die Lücke so weit schließt, dass du Brust an Brust stehst, streift dich ein Gegner, der ein Richtschwert schwingt, oft nur mit dem Griff oder der Stange bei geringem Schaden. In dieser Nahdistanz dominieren deine kompakten Haken und Kopfstöße.
+
+```
+Schritt 1: Provozieren des Überkopfhiebs auf 2,0 m Distanz.
+Schritt 2: Seitlicher Mikroschritt, damit die Klinge ins Leere trifft.
+Schritt 3: Sprinten in die Nahdistanz auf 0,4 m, bevor der Gegner die Haltung zurücksetzt.
+Schritt 4: Ausführen eines drehmomentstarken Leberschlags, gefolgt von einem Aufwärts-Cross zum Kinn.
+Schritt 5: Diagonales Lösen vom Gegner, bevor dieser wieder festen Stand findet.
+```
+
+Die Nutzung dieser räumlichen Mechaniken macht **gladiomori unarmed combat** zu einem tödlichen, unberechenbaren Spielstil, der waffenabhängige Duellanten völlig unvorbereitet trifft.
+
+## Häufig gestellte Fragen
+
+### Kann man Gladio Mori ohne Mods waffenlos spielen?
+Ja, du kannst waffenlose Angriffe direkt im standardmäßigen Move-Editor konfigurieren. Die Erfahrung der Community zeigt jedoch, dass Community-Tools wie die Hip-Unlocker-Mod die Bewegungsfreiheit der Gliedmaßen, die Geschmeidigkeit der Schläge und die Schadensberechnung drastisch verbessern.
+
+### Wie funktioniert die Schadensberechnung für Fäuste in Gladio Mori?
+Der Schaden richtet sich nach der Geschwindigkeit und Masse der treffenden Gliedmaße beim Aufprall. Schnelle, rotierende Schläge, die den gesamten Torso des Charakters einbeziehen, verursachen deutlich mehr Stumpfschaden als einfache lineare Armstreckungen.
+
+### Wo finde ich Movesets für gladiomori unarmed combat?
+Die meisten benutzerdefinierten Movesets und Animationsvorlagen werden über den offiziellen Community-Discord und die Steam-Diskussionsforen des Spiels geteilt. Suche dort in den Channels für Move-Sharing und Modding nach vordefinierten Schlagdateien zum Herunterladen.
+
+### Ist der waffenlose Kampf in kompetitiven Multiplayer-Duellen konkurrenzfähig?
+Gegen erfahrene, bewaffnete Spieler ist der Faustkampf aufgrund des Reichweitennachteils anspruchsvoll. Spieler, die das Ducken, das Provozieren von Fehlschlägen und den Kampf in der Nahdistanz meistern, können bewaffnete Duellanten jedoch zuverlässig desorientieren und ausknocken.

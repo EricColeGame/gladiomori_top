@@ -1,0 +1,127 @@
+export const metadata = {
+  title: "Guía del editor de movimientos de GladioMori: Crea combos y sets de movimientos personalizados",
+  description: "Domina el editor de movimientos de GladioMori para diseñar animaciones personalizadas, posturas poderosas y combos letales con nuestra guía mecánica paso a paso.",
+  category: "mechanics",
+  date: "2026-09-18",
+}
+
+Dominar el combate físico de *Gladio Mori* requiere más que reflejos rápidos: exige un control absoluto sobre la biomecánica de tu luchador. Al aprovechar el **editor de movimientos de GladioMori** integrado, los jugadores pueden crear animaciones de combate personalizadas, equilibrar ataques agresivos y establecer guardias defensivas impredecibles. Ya sea que quieras diseñar una demoledora postura de Zweihander o una finta ultrarrápida con estoque, comprender el **editor de movimientos de GladioMori** te permite reescribir las reglas de cada duelo en el que participes.
+
+En este análisis en profundidad, desglosamos los sistemas clave detrás de la creación de sets de movimientos personalizados: desde la manipulación ósea y el uso de fotogramas clave (*keyframes*) hasta el equilibrio en combate, la sincronización de las áreas de impacto (*hitboxes*) y la integración de mods de la comunidad.
+
+## Comprensión de las mecánicas básicas del editor de movimientos de GladioMori
+
+La suite de animación en *Gladio Mori* funciona como un editor de fotogramas clave accesible e impulsado por físicas. En lugar de depender de secuencias de animación estáticas y predeterminadas como en los juegos de lucha tradicionales, cada ataque que diseñas interactúa directamente con el impulso simulado, la masa del arma y el peso *ragdoll* del título.
+
+Al abrir la herramienta, tomas el control de un esqueleto interactivo (*rig*). Mover articulaciones individuales altera el centro de masa, lo que afecta la rapidez con la que tu gladiador realiza el swing, se recupera y absorbe la fuerza recibida.
+
+### Línea de tiempo de animación y configuración de fotogramas clave
+
+Crear un ataque efectivo requiere gestionar el ritmo en fases específicas: preparación (*windup*), impacto activo, continuación del golpe (*follow-through*) y recuperación neutral. El editor divide tus acciones en una línea de tiempo intuitiva medida en fotogramas o intervalos de fracción de segundo.
+
+| Fase de la animación | Duración típica (fotogramas a 60 FPS) | Propósito principal | Factor de riesgo |
+| :--- | :--- | :--- | :--- |
+| **Preparación / Anticipación (Windup)** | 12–24 | Genera impulso rotacional y define el ángulo de ataque | Alto (Vulnerable a contragolpes rápidos) |
+| **Hitbox activa** | 4–10 | Ventana donde el arma inflige daño de colisión letal | Neutral (Compromete el movimiento) |
+| **Continuación (Follow-Through)** | 8–16 | El arma completa el arco; el cuerpo redistribuye el peso | Moderado (Un swing excesivo expone la espalda) |
+| **Recuperación** | 10–20 | El modelo vuelve a la postura de guardia seleccionada | Crítico (Vulnerable a castigos por fallo o *whiff punishes*) |
+
+Equilibrar estas cuatro ventanas es la piedra angular de un buen diseño de sets de movimientos. Un ataque sin preparación puede parecer invencible en papel, pero las pruebas de la comunidad demuestran que sin suficiente acumulación de energía cinética, los golpes carecen de la velocidad requerida para atravesar armaduras pesadas o penetrar guardias altas.
+
+## Paso a paso: Creación de tu primer ataque personalizado
+
+Para generar un ataque funcional y letal utilizando el **editor de movimientos de GladioMori**, debes coordinar las articulaciones del tren superior e inferior de tu gladiador para que se mantenga erguido durante giros a alta velocidad.
+
+```
+Postura neutral ➔ Rotación de torso (Torsión) ➔ Paso al frente y extensión de cadera ➔ Tajo de arma activo ➔ Restablecimiento de postura
+```
+
+Sigue esta secuencia básica para forjar un tajo horizontal confiable:
+
+1. **Establece la postura inicial**: Coloca a tu gladiador en una posición equilibrada, con los pies separados al ancho de los hombros y las rodillas ligeramente flexionadas.
+2. **Crea el fotograma clave de preparación**: Rota la columna 30 grados en dirección contraria al objetivo. Desplaza el peso hacia el pie trasero mientras levantas el brazo que sostiene el arma.
+3. **Impulsa desde la pelvis**: Crea un fotograma clave intermedio donde las caderas giren hacia adelante antes que los hombros. El impulso debe fluir desde el suelo hacia arriba.
+4. **Extiende el golpe**: Proyecta con rapidez los hombros, los brazos y las muñecas hacia adelante a través del plano del objetivo.
+5. **Desacelera y regresa**: Permite que el impulso del arma disminuya de forma natural, guiando el modelo de regreso a tu postura defensiva preferida.
+
+| Paso | Grupo articular objetivo | Ajuste recomendado | Error común a evitar |
+| :--- | :--- | :--- | :--- |
+| **1. Base de la postura** | Pies y pelvis | Centro de masa reducido entre un 5% y un 10% | Colocar los pies en una línea estrecha e inestable |
+| **2. Torsión** | Columna torácica y cuello | Giro de 25°–35° alejándose del objetivo | Girar la columna en exceso más allá de los límites anatómicos |
+| **3. Impulso cinemático** | Pelvis y rodillas | Trasladar el 70% del peso al pie adelantado | Dejar el peso atrás, reduciendo la fuerza del swing |
+| **4. Ejecución del ápice** | Hombros, codos y muñecas | Extender por completo el brazo adelantado en el punto de impacto | Doblar la muñeca antes de tiempo, recortando las hitboxes prematuramente |
+| **5. Amortiguación del retroceso** | Zona media (*core*) y hombros | Curva de suavizado gradual de regreso al centro | Retroceso brusco que hace tropezar al personaje |
+
+## Estructuración avanzada de posturas y combos derivados
+
+Los creadores avanzados rara vez se limitan a golpes aislados. Al encadenar múltiples secuencias de fotogramas clave, puedes diseñar árboles de combate completos con fintas, ataques derivados y cambios tácticos de postura.
+
+Según los informes y experiencias de los jugadores en plataformas como el [centro de Gladio Mori en mod.io](https://mod.io/g/gladio-mori), los sets de movimientos personalizados a menudo incorporan posturas alternativas —como desplazamientos agachados, posiciones ofensivas altas o guardias especializadas de artes marciales— que se ramifican en estilos de combate totalmente distintos.
+
+### Perfiles de postura única vs. posturas múltiples
+
+La forma en que estructures tu set de movimientos determinará tu grado de adaptabilidad dentro de la arena.
+
+| Perfil de moveset | Fortalezas | Debilidades | Ideal para |
+| :--- | :--- | :--- | :--- |
+| **Guardia única tradicional** | Recuperación predecible; memoria muscular rápida; control de distancia confiable | Fácil de anticipar por oponentes experimentados | Mandobles, lanzas, alabardas |
+| **Fluidez de doble guardia** | Acceso a golpes ligeros rápidos y ataques pesados demoledores | Requiere teclas de alternancia dedicadas | Espadones, espada de armar y escudo |
+| **Marcial multirramificado (MMA)** | Gran potencial de mixups; desplazamientos agachados; ramificaciones de fintas | Ejecución compleja; alto riesgo durante la recuperación | Combate desarmado, dagas, peleadores híbridos |
+
+Al diseñar ramificaciones dentro del **editor de movimientos de GladioMori**, asegúrate de que las transiciones entre diferentes guardias compartan fotogramas clave intermedios fluidos. Si pasar de Guardia Alta a Guardia Baja toma más de 15 fotogramas, un oponente ágil podrá interceptar a tu personaje a mitad del cambio de postura.
+
+## Optimización de físicas y ajuste de la masa del arma
+
+*Gladio Mori* no trata a todas las armas por igual. Una animación personalizada pensada para un gladius ligero causará espasmos erráticos en el *ragdoll* o ataques lentos y defectuosos si se asigna a una enorme Zweihander. Comprender la distribución física del peso garantiza que tus animaciones se trasladen con fluidez a los combates en tiempo real.
+
+### Ajuste de curvas de movimiento según el arquetipo de arma
+
+| Clase de arma | Índice de masa | Duración ideal de preparación | Tipo de curva de aceleración | Enfoque principal del golpe |
+| :--- | :--- | :--- | :--- | :--- |
+| **Dagas y cuchillos** | Muy bajo | 6–10 fotogramas | Instantánea lineal | Puntos débiles a alta velocidad y estocadas |
+| **Espadas de armar** | Medio | 12–16 fotogramas | Suavizado de entrada exponencial (*Ease-In*) | Arcos de tajo y rápida recuperación para paradas |
+| **Armas de asta y lanzas** | Medio-Alto | 16–22 fotogramas | Entrada/Salida pronunciada (*Ease-In / Ease-Out*) | Alcance lineal y control de zona mediante empuje |
+| **Zweihanders y mazas** | Pesado | 24–36 fotogramas | Rampa exponencial pronunciada | Ruptura de armaduras y destrucción de escudos |
+
+Para optimizar armas pesadas usando el **editor de movimientos de GladioMori**, compensa la inercia del arma inclinando el torso de tu luchador en la dirección opuesta al movimiento de preparación. Este contrapeso evita que el personaje pierda el equilibrio antes de que comiencen los fotogramas activos.
+
+## Solución de errores comunes en las animaciones de movimientos
+
+Al construir maniobras complejas, suelen surgir errores de físicas y desequilibrios. Los miembros de la comunidad dedicados a crear movesets personalizados documentan con frecuencia problemas de atravesamiento del *ragdoll* (*clipping*), fuerza de impacto insuficiente y daño accidental autoinfligido.
+
+| Problema | Síntoma | Causa subyacente | Solución rápida en el editor |
+| :--- | :--- | :--- | :--- |
+| **Golpes fantasma** | La hoja atraviesa al enemigo sin registrar daño | La velocidad de la punta es demasiado baja al momento del impacto | Aumenta la aceleración del golpe de cadera 2 fotogramas antes |
+| **Error de autolesión** | El gladiador se decapita o tropieza consigo mismo | La trayectoria del arma interseca la hitbox del propio jugador | Eleva el hombro hacia afuera durante la fase de preparación |
+| **Ragdoll descontrolado** | El gladiador se desploma de inmediato en el suelo | La posición de los pies pierde contacto de colisión con el suelo poligonal | Asegúrate de que el hueso raíz (*root bone*) permanezca dentro de los límites de altura |
+| **Bloqueo de guardia** | El personaje se traba al intentar bloquear | El fotograma de bloqueo comparte la misma prioridad que la recuperación | Configura una prioridad de interrupción explícita en los fotogramas defensivos |
+
+Revisar tus movimientos fotograma a fotograma con la visualización de hitboxes activada es la manera más rápida de pulir estos detalles estructurales antes de publicar tu trabajo.
+
+## Pruebas, refinamiento y modding de tus sets de movimientos
+
+Una vez finalizado un perfil de animación, las pruebas exhaustivas son obligatorias. Las arenas de práctica oficiales te permiten enfrentar tus creaciones contra objetivos fijos, maniquíes de entrenamiento y oponentes controlados por IA.
+
+### Lista de verificación esencial antes de exportar tu set de movimientos
+
+- [ ] **Estabilidad de pisada**: ¿El gladiador mantiene el equilibrio sobre el terreno irregular de la arena?
+- [ ] **Rendimiento de daño**: ¿El arco activo genera suficiente velocidad como para cortar a través de los maniquíes de prueba?
+- [ ] **Respuesta a los controles**: ¿Se puede cancelar o amagar el ataque durante los primeros 8 fotogramas?
+- [ ] **Colisión con paredes**: ¿Barrer con el arma en espacios cerrados provoca un rebote o retroceso extremo?
+- [ ] **Sincronización multijugador**: ¿La animación funciona sin desincronizarse en servidores dedicados?
+
+La versatilidad del **editor de movimientos de GladioMori** ha impulsado una amplia comunidad de modding. Con frecuencia, los jugadores combinan sets de movimientos creativos con mods comunitarios de ajuste físico para organizar torneos únicos, demostrando que dominar esta herramienta creativa es tan gratificante como salir victorioso del Coliseo.
+
+## Preguntas frecuentes
+
+### ¿Qué es el editor de movimientos de GladioMori?
+El **editor de movimientos de GladioMori** es una herramienta integrada de animación y personalización de combate que permite a los jugadores posicionar esqueletos *ragdoll*, ajustar fotogramas clave y construir ataques, posturas y árboles de combos originales adaptados al motor de físicas del juego.
+
+### ¿Puedo usar sets de movimientos personalizados en partidas multijugador de Gladio Mori?
+Sí, siempre que el anfitrión del servidor habilite los mods de sets de movimientos personalizados del lado del cliente o del servidor. Muchos servidores comunitarios públicos los permiten, mientras que las arenas clasificatorias competitivas a menudo exigen animaciones estándar del juego base para garantizar la paridad del torneo.
+
+### ¿Por qué mis ataques infligen muy poco daño a pesar de conectar con claridad?
+En *Gladio Mori*, el daño se calcula según la fuerza cinética, la cual depende de la velocidad del arma y del ángulo de impacto. Si tu ataque carece de rotación corporal o de suficientes fotogramas clave de aceleración previos al impacto, el arma simplemente rozará al oponente en lugar de cortarlo o aplastarlo.
+
+### ¿Cómo comparto los sets de movimientos creados con el editor de GladioMori?
+Puedes exportar el archivo de datos de tu moveset completado directamente desde la carpeta del editor y empaquetarlo para subirlo a plataformas comunitarias como mod.io o Steam Workshop, permitiendo que otros jugadores descarguen, prueben y luchen contra tus estilos de combate únicos.

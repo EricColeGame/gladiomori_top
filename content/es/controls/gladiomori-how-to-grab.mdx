@@ -1,0 +1,172 @@
+export const metadata = {
+  title: "Cómo agarrar en Gladio Mori: Guía completa de agarres de armas y configuración de animaciones",
+  description: "Domina el manejo de armas y las mecánicas de agarre. Aprende cómo agarrar armas a dos manos en Gladio Mori, soluciona errores de agarre y crea conjuntos de movimientos personalizados.",
+  category: "controls",
+  date: "2026-09-18",
+}
+
+Dominar el combate físico en un juego de lucha en arena basado en físicas requiere un control preciso sobre las extremidades, la postura y el manejo de las armas de tu luchador. Si tienes problemas porque tu guerrero suelta la espada o no logra afianzar un agarre a dos manos, dominar **cómo agarrar en Gladio Mori** es la habilidad más crítica que debes aprender desde el principio. Muchos gladiadores novatos entran a la arena solo para ver cómo su mano secundaria cuelga inútilmente debido a que no comprenden las mecánicas de agarre impulsadas por animaciones. Aprender **cómo agarrar en Gladio Mori** adecuadamente elevará al instante tu ventaja ofensiva, evitará desarmes accidentales y te permitirá empuñar enormes armas a dos manos con una fuerza devastadora.
+
+---
+
+## Comprensión del sistema de agarre y físicas de Gladio Mori
+
+A diferencia de los juegos de lucha convencionales donde el agarre se asigna a un solo botón universal (como `R1` o puñetazo flojo más patada floja), *Gladio Mori* funciona completamente sobre un motor de animación basado en físicas y fotogramas clave (keyframes). En este juego, el modelo de tu personaje no depende de animaciones predefinidas con fijación de objetivo para sostener el equipo o interactuar con los rivales. Cada extremidad se comporta según su estado físico asignado, restricciones de articulación y selectores de agarre configurados dentro del Editor de Movimientos o las posturas predeterminadas del personaje.
+
+Cuando los jugadores preguntan sobre cómo agarrar, normalmente se refieren a dos acciones distintas:
+1. **Agarre de armas (Sujeción):** Configurar la mano principal y la secundaria para fijarse a la empuñadura, astil o pomo de un arma.
+2. **Forcejeo dinámico / Contacto manual (Grappling):** Usar manos abiertas o cerradas para manipular el cuerpo del rival, atrapar sus extremidades o forcejear en distancias cortas.
+
+Dado que cada ataque en *Gladio Mori* es esencialmente una secuencia de poses físicas que transcurre a lo largo de una línea temporal interna, tus manos solo sujetarán objetos si su estado está definido explícitamente como agarre activo durante ese periodo. Una mirada al [Punto de encuentro de la comunidad de Gladio Mori en Steam](https://steamcommunity.com/app/2689120) revela que los problemas de agarre se encuentran entre los tropiezos más frecuentes de los recién llegados que diseñan animaciones personalizadas.
+
+| Tipo de agarre | Resumen de mecánicas | Caso de uso principal | Factor de riesgo |
+| :--- | :--- | :--- | :--- |
+| **Principal a una mano** | Mano predeterminada fijada al nodo de agarre del arma | Estocadas rápidas, espadas cortas, estoques | Mayor probabilidad de desarme ante impactos fuertes |
+| **A dos manos (Agarre doble)** | Ambas manos asignadas activamente a nodos del arma | Mandobles, armas de asta, golpes pesados de ejecución | Alcance reducido si los codos están demasiado flexionados |
+| **Clinch dinámico / Forcejeo** | Colisión de mano abierta con articulaciones del muñeco (ragdoll) rival | Desarmar, desequilibrar, derribos a corta distancia | Alta vulnerabilidad si recibes un contraataque a mitad de extensión |
+| **Agarre de media espada (Half-Swording)** | Mano dominante en empuñadura, mano secundaria agarrando la hoja | Perforación de armaduras, control de alta precisión | Limita el arco de balanceo y el momento puro de corte |
+
+---
+
+## Cómo agarrar en Gladio Mori: Configuración de postura paso a paso
+
+La razón principal por la que los jugadores experimentan balanceos a una mano cuando intentan usar armas a dos manos se reduce a la configuración de la postura. Si no asignas tu mano secundaria para que sujete el arma durante la postura de reposo (idle) predeterminada, tu guerrero aparecerá sosteniendo la hoja con una sola mano.
+
+Para solucionar esto, debes configurar tu postura de reposo y el bucle básico de movimiento dentro del Editor de Movimientos. Sigue esta secuencia detallada para arreglar tu agarre:
+
+```
+[Menú Principal] -> [Editor de Movimientos / Gestor de Posturas] -> [Seleccionar Perfil de Arma]
+   │
+   ├──> [Seleccionar Postura: Reposo / Neutral]
+   │       │
+   │       ├──> Seleccionar Articulación de Mano Izquierda -> Ajustar Estado a "Hold / Grab" (Sujetar/Agarrar)
+   │       └──> Seleccionar Articulación de Mano Derecha -> Ajustar Estado a "Hold / Grab" (Sujetar/Agarrar)
+   │
+   └──> [Ajustar Mano Secundaria al Astil / Punto de Agarre del Arma] -> [Guardar Postura]
+```
+
+### 1. Accede a la configuración de postura del personaje
+Abre el editor de luchador personalizado o de movimientos. Carga el preajuste de arma específico que planeas utilizar (como la espada larga, la alabarda o la katana).
+
+### 2. Configura los estados de las manos en la postura de reposo
+Navega hasta tu **Pose de reposo (Idle Pose)** (la pose base que mantiene tu gladiador cuando no está ejecutando un ataque activo). Inspecciona los nodos de la mano dominante y no dominante. Según la experiencia compartida por jugadores en los foros de Steam, muchos olvidan que ambas manos deben cambiarse individualmente a "Hold" en la postura de reposo. Si la mano secundaria se deja en "Free" (Libre) o "Ragdoll", colgará suelta a tu costado.
+
+### 3. Ancla las manos a los huesos del arma
+Encaja el punto IK (Cinemática Inversa) de la mano objetivo directamente sobre la ranura designada para el agarre del arma. Asegúrate de que el radio de colisión del agarre se superponga limpiamente con el modelo del arma.
+
+| Paso de configuración | Objetivo del ajuste | Ajuste recomendado | Error común |
+| :--- | :--- | :--- | :--- |
+| **Paso 1: Estado de postura** | Propiedad de agarre manual | `Hold` / `Lock to Object` | Dejar la mano secundaria como `Relaxed` |
+| **Paso 2: Ajuste IK** | Hueso de posición de mano | Encajar al hueso del astil/empuñadura | Dejar la mano en el aire sin acoplar al hueso |
+| **Paso 3: Verificación temporal** | Transición en fotograma 0 | Mantener agarre a lo largo del bucle | El agarre se desactiva en el bucle de postura |
+| **Paso 4: Tensión muscular** | Rigidez de muñeca/codo | Media-Alta (65–85%) | Ajustar a cero, provocando muñecas flácidas |
+
+---
+
+## Configuración de fotogramas clave (keyframes) para armas a dos manos
+
+Una vez que tu postura de reposo agarre correctamente el arma con ambas manos, debes preservar esa conexión a través de todos tus fotogramas clave de combate. Al aprender **cómo agarrar en Gladio Mori** a lo largo de un ataque completo, entender la herencia en la línea temporal es vital.
+
+Si la animación de un ataque pasa de una postura de reposo a una fase de preparación (wind-up), el sistema de animación lee cada fotograma clave para verificar la persistencia del agarre. Si un fotograma carece de la marca de agarre en la mano secundaria, esta se soltará de inmediato, convirtiendo el golpe con tu mandoble en un ataque a una mano torpe y débil.
+
+| Fase del fotograma clave | Estado de mano izquierda | Estado de mano derecha | Propósito cinético |
+| :--- | :--- | :--- | :--- |
+| **Fotograma 0 (Neutral)** | Bloqueado (Hold) | Bloqueado (Hold) | Estabiliza el equilibrio y alineación del arma |
+| **Fotograma 1 (Preparación)** | Bloqueado (Hold) | Bloqueado (Hold) | Genera torsión en hombros y torso |
+| **Fotograma 2 (Ápice / Carga)** | Bloqueado (Hold) | Bloqueado (Hold) | Máxima energía potencial del brazo de palanca |
+| **Fotograma 3 (Impacto)** | Bloqueado (Hold) | Bloqueado (Hold) | Transfiere masa mediante caja de colisión rígida |
+| **Fotograma 4 (Seguimiento)** | Bloqueado o Liberado* | Bloqueado (Hold) | Liberación opcional para un mayor alcance a una mano |
+
+*\*Nota: Reportes de la comunidad indican que soltar deliberadamente la mano secundaria durante la fase final de seguimiento (Fotograma 4) puede extender el alcance del arma hasta en un 15%, aunque reduce temporalmente la velocidad de recuperación.*
+
+### Mantener la estabilidad del agarre bajo torsión física
+En *Gladio Mori*, las colisiones de armas pesadas ejercen una fuerza de torsión rotacional que se transmite de vuelta a las articulaciones de tu personaje. Si la restricción de agarre de tu mano tiene baja rigidez, los choques de hojas a gran velocidad arrancarán el arma de tus dedos.
+
+Dentro del editor:
+- Ajusta la **Fuerza de agarre (Grip Strength)** al máximo para armas principales.
+- Configura la **Rigidez articular (Joint Rigidity)** en los antebrazos al menos al 70% para evitar que la mano secundaria se suelte durante los bloqueos y desvíos (parries).
+- Comprueba siempre que las curvas de interpolación de tus fotogramas clave no separen las manos más allá de la envergadura natural de tu personaje, o el motor de físicas forzará el desprendimiento de una mano.
+
+---
+
+## Forcejeo y agarres dinámicos en combate
+
+Más allá de sostener armas, los jugadores buscan constantemente **cómo agarrar en Gladio Mori** a sus oponentes para desarmarlos, desequilibrarlos o inmovilizarlos. El forcejeo dinámico es una de las mecánicas más técnicas del juego porque depende de la física de colisión ragdoll activa en lugar de cinemáticas predeterminadas de lanzamiento.
+
+```
+Ángulo de aproximación (Diagonal) ──> Esquivar alcance del arma ──> Extender IK de mano abierta
+                                                                         │
+Desarmar arma <── Bloquear nodo de mano a muñeca / clavícula rival <────┘
+```
+
+Para ejecutar un agarre o clinch efectivo en pleno combate:
+
+1. **Crea una postura desarmada o con mano libre:** No puedes agarrar el cuerpo de un oponente con una mano que actualmente esté asignada al agarre de un arma a dos manos. Debes diseñar una postura o movimiento donde una mano quede libre (por ejemplo, usando una espada de una mano, una daga o puños limpios).
+2. **Configura la colisión de la mano en modo de agarre:** En tu movimiento personalizado, configura un fotograma clave de extensión con la palma abierta donde la mano pase a un estado de agarre activo al colisionar con una extremidad enemiga.
+3. **Apunta a zonas de colisión de alto apalancamiento:** Los mejores objetivos para agarrar son la muñeca que sostiene el arma, el cuello/clavícula y la cintura. Sujetar la muñeca armada del enemigo neutraliza la inercia de su ataque, permitiéndote contraatacar con un golpe rápido de pomo o una estocada de daga.
+
+| Técnica de clinch | Articulación objetivo | Objetivo táctico | Contraestrategia |
+| :--- | :--- | :--- | :--- |
+| **Control de muñeca** | Muñeca del lado armado | Desarma al oponente o frena un tajo hacia adelante | Salto rápido hacia atrás o empuje con el pomo |
+| **Tirón de clavícula** | Pecho superior / Cuello | Desestabiliza el equilibrio, facilitando un barrido | Codazo descendente pesado |
+| **Placaje a la cintura** | Pelvis / Columna baja | Derriba al oponente al suelo para inmovilizarlo | Sprawl hacia atrás e impacto ascendente de rodilla |
+| **Atrape de hoja (Arriesgado)** | Astil del arma enemiga | Detiene el apalancamiento de armas de asta al instante | Tirón de hoja hacia atrás, cortando dedos |
+
+---
+
+## Solución de errores comunes de agarre
+
+Dado que *Gladio Mori* combina líneas temporales de animación con físicas de muñeco de trapo (ragdoll), varios fallos de configuración habituales pueden romper las interacciones de las manos. A continuación se explica cómo diagnosticar y resolver los problemas más frecuentes.
+
+### El error de "Solo la mano inicial sostiene el arma"
+Los reportes de la comunidad señalan con frecuencia un problema en el que un gladiador entra al combate sosteniendo su arma con una sola mano, ignorando el agarre secundario.
+
+* **Causa:** La mano secundaria se posicionó visualmente sobre el arma en el editor, pero la opción "Hold" no se activó en la postura base, o el IK de la mano se vinculó al espacio global en lugar de al hueso del arma.
+* **Solución:** Vuelve a entrar al Editor de Movimientos, selecciona tu postura de reposo, haz clic en la articulación de la mano secundaria y verifica que el objetivo de anclaje esté emparentado directamente al hueso del agarre secundario del arma.
+
+### Expulsión del arma al iniciar el ataque
+A veces un luchador inicia un ataque y el arma sale disparada inmediatamente de sus manos antes de hacer cualquier contacto.
+
+* **Causa:** El espaciado de las manos a través de los fotogramas clave supera el alcance de los brazos del personaje. Si el Fotograma 1 separa las manos más allá de lo que permite la geometría del brazo, el motor de físicas interpreta la tensión como un estado articular imposible y rompe la restricción de agarre.
+* **Solución:** Revisa la distancia entre las manos de tu personaje en la vista 3D a través de todos los fotogramas. Mantén la distancia entre ambas muñecas constante a lo largo de todo el balanceo.
+
+| Síntoma | Causa raíz | Solución |
+| :--- | :--- | :--- |
+| La mano secundaria suelta la hoja al instante | Falta la marca de agarre en la postura | Ajusta la mano secundaria a `Hold` en el fotograma 0 de la postura de reposo |
+| El arma vibra y sale volando por los aires | Cinemática Inversa sobreextendida | Acorta el alcance; acerca los codos al torso |
+| La mano secundaria falla al intentar un clinch | Trayectoria de alcance demasiado estrecha | Ensancha la caja de colisión de la palma durante el fotograma de alcance |
+| La hoja gira sin control en la mano | Rigidez de agarre demasiado baja | Aumenta la fricción rotacional de la muñeca en las propiedades de la postura |
+
+---
+
+## Personalización avanzada de agarres: Una mano vs. Dos manos
+
+Elegir cómo sujetas tu arma altera drásticamente tu perfil de combate. Cambiar entre diferentes tipos de agarre dentro de tu repertorio te permite adaptarte sobre la marcha a oponentes con o sin armadura.
+
+Al dominar **cómo agarrar en Gladio Mori**, ten en cuenta las ventajas tácticas y sacrificios entre posturas dedicadas a una mano, a dos manos o variantes híbridas:
+
+| Atributo | Agarre a una mano | Agarre doble a dos manos | Agarre de media espada |
+| :--- | :--- | :--- | :--- |
+| **Alcance efectivo** | Alto (100% de extensión del brazo) | Medio (65–80% de extensión) | Bajo (40–55% de extensión) |
+| **Energía cinética de impacto** | Moderada | Muy alta | Estocada concentrada |
+| **Resistencia al desvío** | Baja (Fácilmente desviable) | Alta (Mantiene el arco de golpe) | Máxima (Palanca rígida) |
+| **Vulnerabilidad a desarmes** | 35% en choques intensos | Menos del 10% en choques intensos | Cercana al 0% |
+| **Utilidad de la mano libre** | Permite agarres/golpes de puño | Nula (ambas manos ocupadas) | Permite tropiezos/ganchos al escudo |
+
+Comprender a fondo **cómo agarrar en Gladio Mori** es la base del diseño competitivo de movimientos. Al configurar ambas manos en tu postura de reposo, asegurar los estados en la línea temporal de fotogramas clave y diseñar arcos de alcance físico inteligentes, eliminarás los molestos fallos de sujeción y dominarás la arena con una precisión letal.
+
+---
+
+## Preguntas frecuentes (FAQ)
+
+### En Gladio Mori, ¿cómo agarrar un arma con ambas manos si solo la sostiene con una?
+Para solucionar este problema tan común, abre el Editor de Movimientos e inspecciona tu **Postura de reposo (Idle Stance)** base. Haz clic en el nodo de la mano secundaria de tu gladiador, establece su estado en **Hold** y acopla el IK de la mano directamente al hueso del agarre secundario del arma. Asegúrate de que este indicador de sujeción esté habilitado en el fotograma 0; de lo contrario, el juego volverá de forma predeterminada al modo a una mano al iniciar la partida.
+
+### ¿Se puede desarmar a los oponentes agarrando sus armas en Gladio Mori?
+Sí. Si diseñas un movimiento con una mano libre y abierta dirigido a la muñeca o al astil del arma enemiga, la colisión física puede interrumpir la inercia de su ataque. Combinar un agarre de muñeca con un tirón del torso o una patada de barrido genera suficiente torsión para arrancar el arma de sus manos.
+
+### ¿Por qué mi personaje suelta el arma en cuanto inicio un ataque?
+Esto suele ocurrir cuando los fotogramas clave de tu animación de ataque estiran los brazos de tu personaje más allá de su longitud física real. Cuando la distancia entre las manos excede los límites anatómicos del modelo, el motor de físicas rompe de forma forzada la unión del agarre para evitar deformaciones esqueléticas. Acerca los fotogramas clave de las manos entre sí para resolverlo.
+
+### ¿Puedo cambiar de un agarre a dos manos a uno a una mano en medio del combate?
+Sí. Puedes programar cadenas de movimientos separadas dentro de tu perfil de animaciones. Por ejemplo, puedes diseñar una secuencia de ataque que comience con un golpe descendente a dos manos, suelte la mano secundaria durante el fotograma de seguimiento y transicione hacia una estocada a una mano para lograr el máximo alcance.

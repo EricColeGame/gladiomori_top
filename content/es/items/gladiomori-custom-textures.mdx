@@ -1,0 +1,136 @@
+export const metadata = {
+  title: "Guía de texturas personalizadas de GladioMori: Modifica armas, armaduras y arenas",
+  description: "Aprende a instalar, crear y optimizar texturas personalizadas en GladioMori. Mejora la armadura, las armas y las arenas de tu gladiador con skins de la comunidad.",
+  category: "items",
+  date: "2026-09-18",
+};
+
+El esgrima de precisión, las decapitaciones en cámara lenta y el combate basado en la física hacen que cada duelo sea memorable, pero dominar las **gladiomori custom textures** es lo que te permite forjar tu propia identidad visual en la arena. Si quieres que tu gladiador vista acero oscurecido, filigranas de oro ornamentadas o vibrantes pinturas de combate, trabajar con **gladiomori custom textures** te otorga un control total sobre la apariencia de tu guerrero y su equipo en el campo de batalla. En lugar de conformarte con los tonos grises predeterminados y las placas de metal básicas, personalizar los elementos visuales de tu juego eleva cada repetición, captura de pantalla y enfrentamiento.
+
+A medida que la comunidad de modding del juego crece en plataformas como mod.io, los jugadores descubren constantemente nuevas formas de renovar su apartado visual. Ya sea que desees descargar rediseños creados por la comunidad o construir tus propios mapas de texturas desde cero, esta guía completa cubre todo lo que necesitas saber.
+
+---
+
+## Por qué importan las texturas personalizadas en Gladio Mori
+
+Gladio Mori se basa en gran medida en hitboxes precisos y en la localización anatómica de los impactos. Aunque la jugabilidad gira en torno al daño muscular y la trayectoria del arma, la claridad visual es igualmente crucial. Aplicar texturas personalizadas permite a los luchadores distinguir las uniones de la armadura, identificar el alcance de las armas modificadas con mayor facilidad y personalizar el armamento añadido a través de mods comunitarios.
+
+Más allá de la estética, el texturizado desempeña un papel funcional durante los frenéticos duelos multijugador. Una paleta de colores distintiva hace que sea mucho más fácil interpretar la orientación de un oponente en mapas con poca luz o en caóticas batallas campales de hasta 16 combatientes.
+
+### Resumen de categorías de texturas
+
+| Tipo de recurso | Resolución de textura | Canales de mapas principales | Impacto visual | Coste de rendimiento |
+| :--- | :--- | :--- | :--- | :--- |
+| **Armadura de gladiador** | 2048 x 2048 | Diffuse, Normal, Roughness | Alto (centrado en el personaje) | Bajo |
+| **Espadas y armas** | 1024 x 2048 | Albedo, Metallic, Normal | Crítico (foco del combate) | Insignificante |
+| **Entorno de la arena** | 2048 x 2048 / 4096 x 4096 | Base Color, Normal, Height | Moderado (inmersión) | Medio |
+| **Sangre y calcomanías** | 1024 x 1024 | Opacity, Specular, Diffuse | Alto (respuesta del combate) | Bajo |
+
+---
+
+## Cómo instalar texturas personalizadas en GladioMori
+
+La instalación de packs de apariencias personalizadas y modificaciones de texturas depende de si estás sustituyendo archivos directamente en las carpetas del juego o administrando mods mediante repositorios dedicados. Muchos jugadores recurren al portal oficial de [Gladio Mori en mod.io](https://mod.io/g/gladio-mori) para explorar armas, mapas y conjuntos de texturas listos para usar creados por otros miembros de la comunidad.
+
+### Proceso de instalación paso a paso
+
+Sigue estos pasos prácticos para importar apariencias personalizadas y archivos de reemplazo en el directorio de tu juego:
+
+1. **Localiza el directorio raíz del juego**: Dirígete a la carpeta de instalación, que normalmente se encuentra en `SteamLibrary/steamapps/common/Gladio Mori/`.
+2. **Haz una copia de seguridad de los archivos originales**: Duplica siempre los archivos del juego base antes de sustituir o modificar cualquier paquete de texturas.
+3. **Descarga los paquetes de texturas**: Obtén los archivos `.png`, `.tga` o paquetes comprimidos `.pak`/archivos mod de fuentes fiables de la comunidad.
+4. **Implementa los archivos**: Coloca las texturas comunitarias en la carpeta designada `Mods` o `Content/Textures` siguiendo las instrucciones del autor.
+5. **Ajusta la configuración gráfica**: Configura la calidad de las texturas en **Alta** o **Ultra** en el menú de pantalla del juego para evitar que la reducción de escala del mipmapping desenfoque tus nuevos diseños.
+
+### Comparativa de formatos de mods
+
+| Formato de distribución | Método de instalación | Facilidad de uso | Facilidad para revertir cambios |
+| :--- | :--- | :--- | :--- |
+| **Archivos de textura sueltos (.png/.dds)** | Copia manual en carpeta | Moderada | Requiere copia de seguridad manual |
+| **Paks / Archivos comprimidos** | Inyección en carpeta de mods | Fácil | Eliminar o deshabilitar el paquete |
+| **Suscripciones del gestor de mods** | Sincronización automática vía mod.io | Muy fácil | Desuscripción con un solo clic |
+
+---
+
+## Creación de tus propias texturas personalizadas: Herramientas y formatos
+
+Si quieres diseñar placas de armadura a medida, heráldica personalizada o mandobles desgastados por la batalla, no necesitas el equipo de un estudio profesional. Los editores de imágenes habituales y los programas de horneado de texturas funcionan a la perfección tanto con modelos de pocos polígonos como con diseños muy detallados.
+
+### Suite de software esencial
+
+- **Photoshop o GIMP**: Ideal para pintar colores base, calcomanías de equipo y detalles con líneas finas.
+- **Substance 3D Painter / ArmorPaint**: Perfecto para pintar directamente en 3D sobre el mapeado UV del gladiador, generando mapas PBR precisos.
+- **Krita**: Una herramienta de código abierto excelente para añadir toques artísticos estilizados a mano.
+
+### Mapas de textura compatibles
+
+Para lograr que las **gladiomori custom textures** reaccionen adecuadamente a la iluminación del escenario, debes configurar múltiples capas de texturas en lugar de depender únicamente de una imagen difusa plana.
+
+| Mapa de textura | Formato | Profundidad de bits | Función en Gladio Mori |
+| :--- | :--- | :--- | :--- |
+| **Albedo / Base Color** | PNG / DDS (BC7) | 8 bits / 24 bits | Define los pigmentos de la superficie sin sombras predeterminadas |
+| **Normal Map** | PNG / DDS (BC5) | 16 bits (DirectX/OpenGL) | Simula abolladuras, arañazos y relieves metálicos |
+| **Roughness Map** | PNG en escala de grises | 8 bits | Determina el brillo, los reflejos y el acabado mate |
+| **Metallic Map** | PNG en escala de grises | 8 bits | Separa las zonas metálicas conductoras (espadas, cascos) de las telas |
+| **Ambient Occlusion (AO)** | PNG en escala de grises | 8 bits | Resalta las sombras de contacto en hendiduras y articulaciones |
+
+---
+
+## Optimización de skins personalizadas para el multijugador competitivo
+
+Los informes de la comunidad indican que cargar texturas 4K sin comprimir en varios gladiadores de forma simultánea puede provocar caídas repentinas de fotogramas durante los cálculos dinámicos de desmembramiento. Dado que Gladio Mori procesa las físicas, el momento de inercia y los impactos corporales en tiempo real, mantener una tasa fluida y constante de más de 60 FPS es prioritario frente a una resolución de superficie excesiva.
+
+### Recomendaciones de resolución de texturas según el caso de uso
+
+| Tipo de elemento | Resolución recomendada | Tamaño de archivo estimado | Tipo de compresión | Uso recomendado |
+| :--- | :--- | :--- | :--- | :--- |
+| **Armas de duelo** | 1024 x 1024 | ~1.5 MB | DXT1 / BC1 | Duelos competitivos 1v1 |
+| **Cuerpo/Armadura de gladiador** | 2048 x 2048 | ~4.0 MB | BC7 | Partidas estándar |
+| **Objetos de arena personalizados**| 1024 x 1024 | ~2.0 MB | DXT5 / BC3 | Todos contra todos a gran escala |
+| **Exhibición / Modo repetición** | 4096 x 4096 | ~16.0 MB | PNG sin comprimir | Cinemáticas y capturas de pantalla |
+
+### Consejos prácticos de optimización
+
+- **Potencias de dos**: Asegúrate siempre de que las dimensiones de tus imágenes sean potencias de dos (por ejemplo, 512x512, 1024x1024, 2048x2048). Las proporciones irregulares impiden que el motor genere los niveles de mipmap de forma correcta.
+- **Empaquetado de Roughness/Metallic**: Combina la rugosidad, la propiedad metálica y la oclusión ambiental en los canales RGB individuales de un único mapa de imagen para ahorrar ancho de banda de la memoria de la GPU.
+- **Evita el exceso de nitidez**: Los mapas de normales con frecuencias muy altas pueden generar artefactos de parpadeo sobre la arena cuando los ajustes de suavizado de bordes (anti-aliasing) están en valores bajos.
+
+---
+
+## Personalización de armaduras, armas y mapas
+
+La experiencia de los jugadores demuestra que el aspecto más gratificante al crear **gladiomori custom textures** es diseñar conjuntos temáticos completos. En lugar de modificar una única espada, los creadores suelen empaquetar aspectos de armadura, fundas de armas a juego y marcas de sangre para la arena en lotes visualmente coherentes.
+
+### Estilos temáticos populares en la comunidad
+
+1. **Acero de Damasco e incrustaciones ornamentales**: Con patrones ondulados en las hojas de acero y empuñaduras de latón pulido.
+2. **Desgaste de combate de arena**: Texturas de placas de armadura con marcados arañazos, salpicaduras de sangre seca y barro.
+3. **Skins minimalistas de alta visibilidad**: Conjuntos de armadura monocromáticos limpios, pensados específicamente para retransmisiones de torneos competitivos.
+4. **Indumentaria ceremonial y dorada**: Túnicas de intenso color carmesí acompañadas de grebas y cascos de oro pulido reflectante.
+
+### Errores comunes de texturizado y soluciones
+
+| Síntoma | Causa principal | Solución |
+| :--- | :--- | :--- |
+| **Iluminación invertida / Brillos anómalos** | Canal verde invertido en el mapa de normales | Invierte el canal verde (estándar DirectX vs. OpenGL) |
+| **El arma aparece completamente negra** | Canal Albedo/Metallic inexistente o con valores a cero | Asegúrate de que el canal alfa no esté anulando el RGB base |
+| **Texturas muy borrosas a distancia** | Mipmaps ausentes o dañados | Vuelve a exportar la textura en DDS generando los mipmaps automáticos |
+| **Piezas de armadura invisibles** | Configuración incorrecta de Opacity/Alpha | Revisa los modos de fusión (blend mode) en el editor de materiales |
+
+Al compartir o empaquetar tus **gladiomori custom textures**, asegúrate de probar los materiales bajo distintos ángulos de iluminación en la arena. Las sombras y la luz solar directa pueden cambiar drásticamente la apariencia de los componentes metálicos en pleno movimiento.
+
+---
+
+## Preguntas frecuentes (FAQ)
+
+### ¿Puedo usar gladiomori custom textures en el multijugador online?
+Sí, las texturas personalizadas instaladas en el cliente se verán en tu pantalla durante los duelos online sin desincronizar la partida. Sin embargo, los demás combatientes solo verán tus texturas si tienen instalado exactamente el mismo mod o paquete de texturas en su propio equipo.
+
+### ¿Instalar paquetes de texturas personalizadas desactiva los logros?
+Las modificaciones puramente cosméticas, como editar las texturas de las armas o los colores de la armadura del gladiador, no alteran las variables físicas ni los valores de salud. La experiencia de los jugadores confirma que los reemplazos visuales de texturas estándar no impiden desbloquear logros de combate.
+
+### ¿Cuál es el formato de archivo ideal para las texturas personalizadas de GladioMori?
+Para obtener el mejor rendimiento y fidelidad visual, utiliza el formato `.dds` con compresión BC7 para mapas de color y normales. Si realizas cambios de color sencillos mediante carpetas sueltas, los archivos `.png` de 8 bits sin compresión son los más cómodos de editar y revisar.
+
+### ¿Cómo restauro las texturas originales predeterminadas?
+Si utilizaste un gestor de mods o la integración con mod.io, basta con desuscribirte o desactivar el mod correspondiente. Si reemplazaste los archivos del juego de forma manual, elimina los recursos modificados y selecciona la opción "Verificar la integridad de los archivos del juego" desde la biblioteca de Steam para recuperar los archivos originales limpios de manera automática.

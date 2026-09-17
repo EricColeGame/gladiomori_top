@@ -1,0 +1,107 @@
+export const metadata = {
+  title: "Gladiomori Einsteiger-Guide: Wichtige Kampf-Tipps, Animationstricks und Taktiken",
+  description: "Meistere den physikbasierten Arenakampf mit diesem Gladiomori Einsteiger-Guide. Lerne eigene Movesets, Ausdauermanagement, tödliche Hitboxen und Waffen-Builds.",
+  category: "guide",
+  date: "2026-09-18",
+}
+
+Das Betreten der blutgetränkten Arenen von *Gladio Mori* kann eine ernüchternde Erfahrung sein, in der ein einziger Hieb über Leben und Tod entscheidet. Wenn du Schwierigkeiten hast, saubere Treffer zu landen, oder bereits in den ersten Sekunden enthauptet wirst, baut dieser umfassende **Gladiomori Einsteiger-Guide** deine Grundlagen von Grund auf neu auf. Das Beherrschen von Richtungsphysik, Schwungmoment und individuellem Animations-Framing verwandelt Chaos in kalkulierte Präzision – was einen fundierten **Gladiomori Einsteiger-Guide** zu deiner wertvollsten Ressource vor dem Betreten der Arena macht.
+
+Im Gegensatz zu traditionellen Kampfspielen, die von starren Unverwundbarkeits-Frames (I-Frames) und fest geskripteten Combo-Ketten bestimmt werden, basiert das Kampfsystem hier vollständig auf Echtzeitphysik, anatomischen Hitboxen und kinetischem Momentum. Egal, ob du ein schweres Claymore, ein wendiges Rapier oder ein ausgewogenes Gladius führst: Das Überleben erfordert bei jedem einzelnen Schlag die genaue Berechnung von Klingengeschwindigkeit, Reichweite und Körperhaltung.
+
+## Die grundlegende Kampfphysik verstehen
+
+Das Fundament von *Gladio Mori* beruht auf realistischer Biomechanik und Waffenmasse. Dein Charakter verursacht nicht einfach deshalb Schaden, weil eine Angriffsanimation abgespielt wird; die Klinge der Waffe muss mit ausreichender Geschwindigkeit physischen Kontakt herstellen, um Fleisch zu durchtrennen, Knochen zu brechen oder lebenswichtige Organe zu durchbohren.
+
+Jeder Angriff verbraucht Ausdauer und hängt stark vom Rotationsschwung deines Charakters ab. Wenn du ein Großschwert im Rückwärtsgehen schwingst, sinkt die relative Geschwindigkeit drastisch, was zu einem abrutschenden Streifhieb führt, der die Rüstung kaum ankratzt. Machst du hingegen einen Ausfallschritt in den Schlag hinein und drehst deinen Oberkörper mit, verstärkst du die kinetische Wucht enorm und verwandelst einen simplen horizontalen Hieb in einen sofortigen Knockout.
+
+| Kampfmechanik | Funktionsweise | Taktische Bedeutung |
+| :--- | :--- | :--- |
+| **Schneidenausrichtung (Edge Alignment)** | Ausrichtung der Klinge relativ zur Oberfläche des Ziels | Verhindert Treffer mit der Breitseite; sorgt für maximale Schnitttiefe |
+| **Rotationsimpuls** | Hinzunahme von Torso- und Fußarbeitsrotation bei Schlägen | Erhöht den kinetischen Einschlag und macht Standardschläge zu tödlichen Enthauptungen |
+| **Anatomische Hitboxen** | Schaden wird anhand biologischer Trefferzonen berechnet (Hals, Herz, Organe) | Umgeht klassische Lebensbalken durch sofort tödliche Treffer |
+| **Physikbasiertes Parieren** | Direkte Klinge-auf-Klinge-Kollisionsabfrage | Lenkt eingehende kinetische Wucht ab – ohne vorgegebene Eingabe-Sperren |
+
+Das Verständnis dieser zugrundeliegenden Systeme verändert deine Herangehensweise grundlegend. Anstatt unkontrolliert Tasten zu drücken, musst du jede Auseinandersetzung als hochriskantes Duell begreifen, in dem Timing, Abstand und der Anstellwinkel den Sieger bestimmen.
+
+## Waffenklassen und -auswahl
+
+Die Wahl des richtigen Werkzeugs für deinen Kampfstil ist entscheidend zu Beginn deiner Arenakarriere. Jede Waffe im Spiel besitzt eine einzigartige Gewichtsverteilung, eigene Balancepunkte und individuelle Führungsgeschwindigkeiten. Laufende Updates zur Waffenbalance und Patchnotizen kannst du direkt im [Gladio Mori Steam Community Hub](https://store.steampowered.com/app/2689190/Gladio_Mori/) verfolgen.
+
+Erfahrungsberichte und Community-Feedback verdeutlichen, wie radikal unterschiedlich sich die einzelnen Archetypen in realen Matches anfühlen. Anfänger greifen oft zu langen Waffen wegen der Reichweite; erfahrene Nahkämpfer können diese Distanz jedoch schnell unterlaufen, wenn du den Abstand der Klingenspitze falsch einschätzt.
+
+| Waffen-Archetyp | Effektive Reichweite | Geschwindigkeitswert | Rüstungsdurchdringung | Am besten geeignet für |
+| :--- | :--- | :--- | :--- | :--- |
+| **Gladius & Schild** | Nah | Schnell | Moderat | Defensive Konter-Kämpfer, disziplinierte Duellanten |
+| **Langschwert** | Mittel bis Lang | Ausgewogen | Hoch | Vielseitige Kämpfer, die fließende Stosshieb-Übergänge nutzen |
+| **Rapier / Estoc** | Lang (Stich) | Sehr schnell | Hoch (Gezielt) | Präzise Duellanten, die auf Kehle, Augen und Lücken zielen |
+| **Dänenaxt / Mordaxt** | Lang | Langsam | Verheerend | Spieler, die auf Raumkontrolle (Zoning) und wuchtige Schwünge setzen |
+| **Dolch / Scheibendolch**| Direkt am Mann | Extrem schnell | Niedrig (Hoch bei Vitalpunkten)| Ringer und Infighter, die verfehlte Angriffe sofort bestrafen |
+
+Für Neulinge, die diesen **Gladiomori Einsteiger-Guide** lesen, bieten das standardmäßige Langschwert oder das Gladius in Kombination mit einem Faustschild (Buckler) die fehlerverzeihendste Lernkurve. Diese Waffen ermöglichen es dir, Schneidenausrichtung und Blockwinkel zu verinnerlichen, ohne dich bei Fehlschlägen mit zu langen Erholungsphasen (Recovery Frames) zu bestrafen.
+
+## Grundlagen zu Custom-Animationen und Move-Erstellung
+
+Eines der herausragenden Features in *Gladio Mori* ist der Animationseditor, mit dem Spieler eigene Angriffe choreografieren, bearbeiten und abstimmen können. Obwohl das Herunterladen von Movesets aus der Community weit verbreitet ist, hilft dir das Wissen um die Balance aus Animationsphasen, Geschwindigkeit und Erholungszeit dabei, wirklich wettbewerbsfähige Manöver für gewertete Duelle zu bauen.
+
+Jeder benutzerdefinierte Angriff besteht aus drei Phasen: Ausholbewegung (Wind-Up), Trefferausführung (Strike) und Erholungsphase (Recovery). Wenn du das Ausholen zu kurz ansetzt, straft das Spiel den Schlag mit geringerer kinetischer Energie ab; vernachlässigst du die Erholungshaltung, bleibt dein Gladiator völlig ungeschützt gegen Gegenstöße.
+
+| Animationsphase | Hauptfokus | Häufiger Anfängerfehler | Ideale Konfiguration |
+| :--- | :--- | :--- | :--- |
+| **Phase 1: Ausholen (Wind-Up)** | Schwung aufbauen und Schwerpunkt verlagern | Zu auffällige Ausholbewegungen von über 0,5 Sekunden | Kompaktes Eindrehen des Oberkörpers mit vorbereitendem Schritt |
+| **Phase 2: Ausführung** | Klingengeschwindigkeit und Vorwärtsschub aus der Hüfte | Überdrehen weit über die Ziellinie hinaus | Schnappen der Klinge exakt durch die Körpermitte des Ziels |
+| **Phase 3: Erholung (Recovery)** | Waffe zügig in defensive Ausgangsposition zurückführen | Gliedmaßen nach dem Trefferfenster ausgestreckt lassen | Ellbogen eng anziehen und sofort in eine hohe oder tiefe Hut/Garde gehen |
+
+Achte bei der Erstellung deines ersten Movesets vor allem auf Bewegungseffizienz. Ausladende, akrobatische Drehungen sehen im Trainingsmodus spektakulär aus, doch die Praxis zeigt: Disziplinierte, geradlinige Stiche und kurze Hiebbögen gewinnen Duelle.
+
+```
+Schritt-für-Schritt-Erstellung eines eigenen Angriffs:
+1. Öffne den Move-Editor und wähle eine neutrale Ausgangshaltung.
+2. Setze Keyframe 1: Gewicht leicht auf den hinteren Fuß verlagern, Klinge auf Schulterhöhe führen.
+3. Setze Keyframe 2: Hüfte um ca. 0,25 Meter nach vorne schieben und Schultern eindrehen.
+4. Setze Keyframe 3: Schneide horizontal exakt auf Halshöhe des Ziels ausrichten.
+5. Setze Keyframe 4: Hände innerhalb von 8 Frames zurück in eine Ochs- oder Dach-Haltung ziehen.
+6. Teste den Angriff an Ragdoll-Zielen, um Schnittgeschwindigkeit und Körperstabilität zu prüfen.
+```
+
+## Defensive Meisterschaft: Beinarbeit, Spacing und Parieren
+
+Die Offensive sorgt für spektakuläre Momente, aber fehlerfreie Verteidigung sichert das Überleben über mehrere Runden hinweg. In *Gladio Mori* ist das dauerhafte Verschanzen hinter einem Schild selten die Lösung, da schwere Treffer deine Haltung brechen oder deine Waffe zur Seite schleudern können. Echte Verteidigung basiert auf der Kontrolle der Distanz (oft als *Spacing* oder *Footsies* bezeichnet).
+
+Das Meistern der folgenden Defensivtechniken reduziert frühe Tode drastisch:
+
+*   **Slipping the Jab:** Tritt bei einem geradlinigen Stich des Gegners leicht schräg nach vorne aus der Angriffslinie heraus – dies eröffnet sofort einen Winkel auf den ungeschützten Hals.
+*   **Aktives Abwehren (Deflection):** Schlage aktiv mit der eigenen Parierstange oder der Klingenstärke (Bereich nahe am Griff) in die gegnerische Angriffsbahn, anstatt passiv abzuwarten.
+*   **Zonen-Rückzug (Zone Retreat):** Senke deine Deckung für den Bruchteil einer Sekunde in eine Sprint-Haltung, um deinen Torso knapp hinter die Reichweite der Klingenspitze zu ziehen, und setze sofort nach, während der Gegner sich erholt.
+*   **Versetzen/Chambering (Chamber Parries):** Starte im Moment des gegnerischen Schlags einen spiegelnden Gegenangriff: Die Klingen treffen aufeinander, prallen ab und deine eigene Waffe führt den Treffer zum Ziel fort.
+
+Indem du dich auf Beinarbeit und Distanz statt auf reine Klingenblocks verlässt, sparst du wertvolle Ausdauer. Verfehlt der Gegner sein Ziel und ermüdet, reicht eine einzige kalkulierte Riposte, um das Duell zu beenden.
+
+## Fortgeschrittene Taktiken und Trainingsübungen
+
+Sobald du die Grundlagen beherrschst, erfordert der Fortschritt gezielte Trainingsabläufe. Wer sich ohne verinnerlichte Bewegungsmuster direkt in den Mehrspielermodus stürzt, gewöhnt sich schnell Fehler an – wie unüberlegtes Dauerschlagen oder das Ignorieren der eigenen Balance.
+
+Integriere diese Übungen in deinen Trainingsplan, bevor du die Spielersuche startest:
+
+| Übungsname | Ziel | Richtwert | Trainierte Kernfähigkeit |
+| :--- | :--- | :--- | :--- |
+| **Die Guillotine** | Dynamische Ziele mit sauberen horizontalen Hieben enthaupten | 10 One-Hit-Kills in Folge | Schneidenausrichtung und Höheneinteilung |
+| **Das Nadelöhr** | Durch hohe Schilddeckungen gezielt die Kehle treffen | 80 % Trefferquote mit Stichen | Zielgenauigkeit und Winkelanpassung |
+| **Ausdauer-Ökonomie** | 5 durchgehende Angriffs-Verteidigungs-Kombinationen ausführen | Niemals in die komplette Erschöpfung geraten | Pacing, Rhythmusgefühl und Pausenmanagement |
+| **Die Spiegelparade** | Dynamische Bot-Schläge mittels Chambering neutralisieren | 15 Paraden ohne Körperschaden | Reaktionszeit und Klingen-Kollisionsphysik |
+
+Diese Übungen spiegeln wider, was erfahrene Spieler betonen: Geduld und bewusste Aktionen schlagen unüberlegtes Button-Mashing jedes Mal. Bewege dich kontrolliert, respektiere die Reichweite jeder Waffenklasse und betrachte jedes Duell als taktisches Rätsel.
+
+## Häufig gestellte Fragen (FAQ)
+
+### Warum prallen meine Schläge wirkungslos ab, ohne Schaden zu verursachen?
+Streifhiebe entstehen, wenn deiner Klinge beim Einschlag die nötige Geschwindigkeit fehlt oder der Schnittwinkel falsch ist. Achte darauf, deinen Torso in den Schlag einzudrehen und mit dem optimalen Treffpunkt (dem oberen Drittel) der Klinge zu treffen, anstatt den Gegner mit der flachen Seite oder nahe der Parierstange zu berühren.
+
+### Wie verhindere ich, direkt in den ersten Sekunden mit einem Treffer zu sterben?
+Stürme zu Beginn einer Runde niemals frontal auf deinen Gegner zu. Viele frühe Tode passieren, weil Spieler unbedacht in einen ausgestreckten Speer oder einen Langschwertstich laufen. Nähere dich leicht versetzt an, provoziere den ersten Schlag, indem du kurz in seine Reichweite hinein- und wieder heraustrittst, und greife an, wenn er sich in der Erholungsphase befindet.
+
+### Kann ich nur mit den Standard-Movesets aus diesem Gladiomori Einsteiger-Guide konkurrenzfähig sein?
+Ja. Die Standard-Movesets sind hervorragend ausbalanciert, besitzen verlässliche Erholungszeiten, neutrale Haltungen und sichere Hitboxen. Zwar erlauben Custom-Moves kreative Winkel und Überraschungsmomente, doch saubere Grundlagen, gutes Spacing und perfektes Timing mit Standardangriffen schlagen unausgereifte Custom-Builds jederzeit.
+
+### Wie wirkt sich Ausdauer auf den Waffenschaden in Gladio Mori aus?
+Fällt deine Ausdauer in den roten Bereich, verliert dein Charakter drastisch an Schwunggeschwindigkeit und Stabilität. Da der kinetische Schaden direkt an die Klingengeschwindigkeit gekoppelt ist, führen ermüdete Schläge nur zu kraftlosen Streifern, die an Rüstungen abgleiten oder die Trefferwirkung verfehlen.
