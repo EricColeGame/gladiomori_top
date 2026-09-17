@@ -19,19 +19,19 @@ export interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  name: "My Seafood Stand Wiki",
-  shortName: "My Seafood Stand",
-  logoText: "SS",
-  tagline: "Complete Guides, Codes, Recipes & Tier Lists",
-  description: "Your ultimate guide to My Seafood Stand on Roblox! Explore active working codes, seafood recipes, best upgrades, profit strategies, and progression guides.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://myseafoodstand.top",
-  supportEmail: `support@${new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://myseafoodstand.top").hostname.replace(/^www\./, "")}`,
-  gameUrl: "https://www.roblox.com/games/my-seafood-stand",
-  heroVideoId: "M8DvcwoFRrk", // Roblox My Seafood Stand codes & gameplay video
+  name: "Gladio Mori Wiki",
+  shortName: "Gladio Mori",
+  logoText: "GM",
+  tagline: "Physics-Based Gladiator Combat, Weapons, Movesets & Armor",
+  description: "Gladio Mori is a physics-driven gladiator fighting game with organ-based damage, customizable movesets, brutal weapon combat, and up to four-player cross-platform PvP.",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://gladiomori.top",
+  supportEmail: `support@${new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://gladiomori.top").hostname.replace(/^www\./, "")}`,
+  gameUrl: "https://store.steampowered.com/app/2689120/Gladio_Mori/",
+  heroVideoId: "VqC5SpypaOg", // Gladio Mori Official Release Window Trailer
   social: {
-    discord: "https://discord.gg/roblox",
-    youtube: "https://www.youtube.com/@roblox",
+    discord: "https://discord.gg/gladiomori",
+    youtube: "https://www.youtube.com/watch?v=VqC5SpypaOg",
   },
-  locales: ["en", "es", "pt", "de", "fr"],
+  locales: ["en", "de", "es", "ja"],
   defaultLocale: "en",
 };
